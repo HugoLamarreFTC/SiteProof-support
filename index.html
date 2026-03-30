@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteProof — Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAF8;
+      --surface: #FFFFFF;
+      --text: #1A1A1A;
+      --text-secondary: #6B6B6B;
+      --accent: #FF6B35;
+      --accent-soft: #FFF0E8;
+      --border: #E8E8E6;
+      --radius: 14px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .app-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      margin: 0 auto 24px;
+      display: block;
+      box-shadow: 0 8px 32px rgba(255, 107, 53, 0.2);
+    }
+
+    .header h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .header .tagline {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      font-weight: 300;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+
+    .contact-card h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .email-link:hover {
+      background: #FFE0D0;
+      transform: translateY(-1px);
+    }
+
+    .email-link svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ── FAQ ── */
+    .faq { margin-bottom: 32px; }
+
+    .faq h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    details[open] {
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    summary {
+      padding: 18px 24px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    details .answer {
+      padding: 0 24px 18px;
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 500px) {
+      .page { padding: 48px 18px 80px; }
+      .header h1 { font-size: 1.6rem; }
+      .contact-card, details { padding: 24px; }
+      summary { padding: 16px 20px; }
+      details .answer { padding: 0 20px 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ━━ Header ━━ -->
+    <header class="header">
+      <img class="app-icon" src="SiteProofAppIcon.png" alt="SiteProof icon">
+      <h1>SiteProof</h1>
+      <p class="tagline">Before &amp; after proof for every job. Document, verify, get paid.</p>
+    </header>
+
+    <!-- ━━ Contact ━━ -->
+    <section class="contact-card">
+      <h2>Get in Touch</h2>
+      <p>Have a question, found a bug, or want to request a feature? We typically respond within 24&nbsp;hours.</p>
+      <a class="email-link" href="mailto:forthemcreation@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        forthemcreation@gmail.com
+      </a>
+    </section>
+
+    <!-- ━━ FAQ ━━ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is SiteProof?</summary>
+        <div class="answer">SiteProof is a proof-of-work documentation app for contractors and trade professionals. Capture before and after photos at the job site, generate branded comparisons and PDF reports, and optionally seal everything with cryptographic proof and client sign-off.</div>
+      </details>
+
+      <details>
+        <summary>How does the before/after capture work?</summary>
+        <div class="answer">Open SiteProof at the job site and capture a <strong>Before</strong> photo. The app records the timestamp, GPS location, and device info automatically. When the work is done, switch to <strong>After</strong> mode — a ghost overlay of the original photo helps you align the shot precisely. The app also matches flash/torch settings from the Before photo.</div>
+      </details>
+
+      <details>
+        <summary>What export formats are available?</summary>
+        <div class="answer">SiteProof can generate <strong>side-by-side comparisons</strong> (horizontal or vertical), <strong>slider reveal videos</strong> (Pro), and <strong>professional PDF reports</strong> with your branding. You can share exports via Messages, email, AirDrop, or save them to your photo library.</div>
+      </details>
+
+      <details>
+        <summary>What is Dispute-Proof Mode?</summary>
+        <div class="answer">Dispute-Proof Mode (Pro) cryptographically hashes every photo with <strong>SHA-256</strong> at the moment of capture. If anyone modifies the file afterwards, verification will detect it. You can re-verify any job's photos at any time from within the app. This creates tamper-evident documentation that protects you in disputes.</div>
+      </details>
+
+      <details>
+        <summary>How does client sign-off work?</summary>
+        <div class="answer">When a job is complete, hand your device to the client. They review the work with date-time ranges for each task, read the agreement text, enter their full name, and draw their signature directly on screen. The signature, agreement, name, and timestamp are sealed together with the job.</div>
+      </details>
+
+      <details>
+        <summary>What is the evidence package?</summary>
+        <div class="answer">The evidence package is a ZIP file containing all original photos, a machine-readable proof manifest (SHA-256 hashes, GPS, timestamps), the PDF report, and the client signature. It includes a README explaining how anyone can independently verify the hashes using standard tools like <strong>shasum</strong>.</div>
+      </details>
+
+      <details>
+        <summary>What's included in Free vs Pro?</summary>
+        <div class="answer"><strong>Free</strong> includes before/after capture, comparison exports, PDF reports, and up to 3 jobs. <strong>Pro ($9.99 once)</strong> unlocks Dispute-Proof Mode, client sign-off, slider video export, company branding, HD/Print quality, and unlimited jobs and tasks. No subscription — one purchase, forever.</div>
+      </details>
+
+      <details>
+        <summary>Can I add my company branding?</summary>
+        <div class="answer">Yes (Pro). Upload your company logo, set a brand color, and enter your company name, phone, email, and website. Your branding appears on all comparison exports, slider videos, and PDF reports.</div>
+      </details>
+
+      <details>
+        <summary>Does the app work offline?</summary>
+        <div class="answer">Yes. SiteProof is fully offline. All photo capture, report generation, cryptographic verification, and client sign-off work without an internet connection. The only network activity is StoreKit purchase validation through Apple.</div>
+      </details>
+
+      <details>
+        <summary>Does the app support landscape photos?</summary>
+        <div class="answer">Yes. Landscape photos are first-class citizens. Wide scenes like kitchens, decks, and rooflines capture and display without cropping. The app tracks whether the Before photo was taken in landscape and enforces matching orientation for the After shot to ensure consistent pairs.</div>
+      </details>
+
+      <details>
+        <summary>Is my data private?</summary>
+        <div class="answer">Yes. All data stays entirely on your device. SiteProof does not collect, transmit, or share any personal information. There are no analytics, tracking SDKs, or advertising frameworks. No account is required. See our <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> for full details.</div>
+      </details>
+
+      <details>
+        <summary>The app crashed — what should I do?</summary>
+        <div class="answer">First, make sure you're running the latest version from the App Store. If the issue persists, please email us at <strong>forthemcreation@gmail.com</strong> with your device model and iOS version so we can investigate.</div>
+      </details>
+    </section>
+
+    <!-- ━━ Footer ━━ -->
+    <footer>
+      <p>&copy; 2026 ForThemCreation. All rights reserved. &middot; <a href="https://hugolamarreftc.github.io/SiteProof-legal/">Privacy Policy</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>
