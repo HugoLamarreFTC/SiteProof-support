@@ -63,6 +63,38 @@
       font-weight: 300;
     }
 
+    /* ── Language nav ── */
+    .lang-nav {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      justify-content: center;
+      font-size: 0.93rem;
+    }
+
+    .lang-nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .lang-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .lang-nav .note {
+      width: 100%;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
     /* ── Contact card ── */
     .contact-card {
       background: var(--surface);
@@ -167,6 +199,21 @@
       line-height: 1.7;
     }
 
+    /* ── Lang divider ── */
+    .lang-divider {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 56px 0;
+    }
+
+    .lang-label {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
     /* ── Footer ── */
     footer {
       text-align: center;
@@ -201,6 +248,24 @@
       <h1>SiteProof</h1>
       <p class="tagline">Before &amp; after proof for every job. Document, verify, get paid.</p>
     </header>
+
+    <!-- ━━ Language nav ━━ -->
+    <nav class="lang-nav">
+      <a href="#en">English</a>
+      <a href="#fr">Fran&ccedil;ais</a>
+      <a href="#es">Espa&ntilde;ol</a>
+      <a href="#de">Deutsch</a>
+      <div class="note">
+        Une version fran&ccedil;aise suit la version anglaise. &middot;
+        Una versi&oacute;n en espa&ntilde;ol sigue a la versi&oacute;n en ingl&eacute;s. &middot;
+        Eine deutsche Version folgt der englischen Version.
+      </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- ENGLISH                                                       -->
+    <!-- ============================================================ -->
+    <div id="en">
 
     <!-- ━━ Contact ━━ -->
     <section class="contact-card">
@@ -276,6 +341,257 @@
         <div class="answer">First, make sure you're running the latest version from the App Store. If the issue persists, please email us at <strong>forthemcreation@gmail.com</strong> with your device model and iOS version so we can investigate.</div>
       </details>
     </section>
+
+    </div>
+
+    <hr class="lang-divider" />
+
+    <!-- ============================================================ -->
+    <!-- FRENCH                                                        -->
+    <!-- ============================================================ -->
+    <div id="fr">
+    <p class="lang-label">Fran&ccedil;ais</p>
+
+    <section class="contact-card">
+      <h2>Nous contacter</h2>
+      <p>Vous avez une question, trouv&eacute; un bogue ou souhaitez demander une fonctionnalit&eacute;&nbsp;? Nous r&eacute;pondons g&eacute;n&eacute;ralement dans les 24&nbsp;heures.</p>
+      <a class="email-link" href="mailto:forthemcreation@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        forthemcreation@gmail.com
+      </a>
+    </section>
+
+    <section class="faq">
+      <h2>Foire aux questions</h2>
+
+      <details>
+        <summary>Qu'est-ce que SiteProof&nbsp;?</summary>
+        <div class="answer">SiteProof est une application de documentation de preuve de travail pour les entrepreneurs et les professionnels du b&acirc;timent. Prenez des photos avant et apr&egrave;s sur le chantier, g&eacute;n&eacute;rez des comparaisons avec votre image de marque et des rapports PDF, et scellez le tout avec une preuve cryptographique et l'approbation du client.</div>
+      </details>
+
+      <details>
+        <summary>Comment fonctionne la capture avant/apr&egrave;s&nbsp;?</summary>
+        <div class="answer">Ouvrez SiteProof sur le chantier et prenez une photo <strong>Avant</strong>. L'application enregistre automatiquement l'horodatage, la localisation GPS et les informations de l'appareil. Une fois le travail termin&eacute;, passez en mode <strong>Apr&egrave;s</strong> — une superposition fant&ocirc;me de la photo originale vous aide &agrave; aligner le cadrage pr&eacute;cis&eacute;ment. L'application reproduit &eacute;galement les r&eacute;glages du flash de la photo Avant.</div>
+      </details>
+
+      <details>
+        <summary>Quels formats d'exportation sont disponibles&nbsp;?</summary>
+        <div class="answer">SiteProof peut g&eacute;n&eacute;rer des <strong>comparaisons c&ocirc;te &agrave; c&ocirc;te</strong> (horizontales ou verticales), des <strong>vid&eacute;os &agrave; curseur</strong> (Pro) et des <strong>rapports PDF professionnels</strong> avec votre image de marque. Vous pouvez partager les exports via Messages, courriel, AirDrop ou les enregistrer dans votre phototh&egrave;que.</div>
+      </details>
+
+      <details>
+        <summary>Qu'est-ce que le mode Anti-litige&nbsp;?</summary>
+        <div class="answer">Le mode Anti-litige (Pro) hache cryptographiquement chaque photo avec <strong>SHA-256</strong> au moment de la capture. Si quelqu'un modifie le fichier par la suite, la v&eacute;rification le d&eacute;tectera. Vous pouvez rev&eacute;rifier les photos de n'importe quel chantier &agrave; tout moment depuis l'application. Cela cr&eacute;e une documentation infalsifiable qui vous prot&egrave;ge en cas de litige.</div>
+      </details>
+
+      <details>
+        <summary>Comment fonctionne l'approbation du client&nbsp;?</summary>
+        <div class="answer">Lorsqu'un chantier est termin&eacute;, remettez votre appareil au client. Il examine le travail avec les plages horaires de chaque t&acirc;che, lit le texte de l'accord, saisit son nom complet et dessine sa signature directement &agrave; l'&eacute;cran. La signature, l'accord, le nom et l'horodatage sont scell&eacute;s avec le chantier.</div>
+      </details>
+
+      <details>
+        <summary>Qu'est-ce que le dossier de preuves&nbsp;?</summary>
+        <div class="answer">Le dossier de preuves est un fichier ZIP contenant toutes les photos originales, un manifeste de preuves lisible par machine (hachages SHA-256, GPS, horodatages), le rapport PDF et la signature du client. Il comprend un fichier README expliquant comment v&eacute;rifier ind&eacute;pendamment les hachages &agrave; l'aide d'outils standards comme <strong>shasum</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Que comprend la version Gratuite vs Pro&nbsp;?</summary>
+        <div class="answer"><strong>Gratuit</strong> inclut la capture avant/apr&egrave;s, les exports de comparaison, les rapports PDF et jusqu'&agrave; 3 chantiers. <strong>Pro (9,99&nbsp;$ une fois)</strong> d&eacute;bloque le mode Anti-litige, l'approbation du client, l'export vid&eacute;o &agrave; curseur, l'image de marque, la qualit&eacute; HD/Impression et un nombre illimit&eacute; de chantiers et de t&acirc;ches. Pas d'abonnement — un seul achat, pour toujours.</div>
+      </details>
+
+      <details>
+        <summary>Puis-je ajouter l'image de marque de mon entreprise&nbsp;?</summary>
+        <div class="answer">Oui (Pro). T&eacute;l&eacute;versez le logo de votre entreprise, d&eacute;finissez une couleur de marque et entrez le nom, le t&eacute;l&eacute;phone, le courriel et le site web de votre entreprise. Votre image de marque appara&icirc;t sur tous les exports de comparaison, les vid&eacute;os &agrave; curseur et les rapports PDF.</div>
+      </details>
+
+      <details>
+        <summary>L'application fonctionne-t-elle hors ligne&nbsp;?</summary>
+        <div class="answer">Oui. SiteProof fonctionne enti&egrave;rement hors ligne. La capture de photos, la g&eacute;n&eacute;ration de rapports, la v&eacute;rification cryptographique et l'approbation du client fonctionnent sans connexion Internet. La seule activit&eacute; r&eacute;seau est la validation des achats via Apple.</div>
+      </details>
+
+      <details>
+        <summary>L'application prend-elle en charge les photos en paysage&nbsp;?</summary>
+        <div class="answer">Oui. Les photos en paysage sont pleinement prises en charge. Les sc&egrave;nes larges comme les cuisines, les terrasses et les toitures sont captur&eacute;es et affich&eacute;es sans recadrage. L'application d&eacute;tecte si la photo Avant a &eacute;t&eacute; prise en paysage et impose la m&ecirc;me orientation pour la photo Apr&egrave;s afin de garantir des paires coh&eacute;rentes.</div>
+      </details>
+
+      <details>
+        <summary>Mes donn&eacute;es sont-elles priv&eacute;es&nbsp;?</summary>
+        <div class="answer">Oui. Toutes les donn&eacute;es restent enti&egrave;rement sur votre appareil. SiteProof ne collecte, ne transmet et ne partage aucune information personnelle. Il n'y a pas d'outils d'analyse, de SDK de suivi ni de cadres publicitaires. Aucun compte n'est requis. Consultez notre <a href="https://hugolamarreftc.github.io/SiteProof-legal/">politique de confidentialit&eacute;</a> pour tous les d&eacute;tails.</div>
+      </details>
+
+      <details>
+        <summary>L'application a plant&eacute; — que dois-je faire&nbsp;?</summary>
+        <div class="answer">Assurez-vous d'abord d'utiliser la derni&egrave;re version disponible sur l'App Store. Si le probl&egrave;me persiste, envoyez-nous un courriel &agrave; <strong>forthemcreation@gmail.com</strong> en indiquant le mod&egrave;le de votre appareil et votre version d'iOS afin que nous puissions enquêter.</div>
+      </details>
+    </section>
+
+    </div>
+
+    <hr class="lang-divider" />
+
+    <!-- ============================================================ -->
+    <!-- SPANISH                                                       -->
+    <!-- ============================================================ -->
+    <div id="es">
+    <p class="lang-label">Espa&ntilde;ol</p>
+
+    <section class="contact-card">
+      <h2>Cont&aacute;ctenos</h2>
+      <p>&iquest;Tiene una pregunta, encontr&oacute; un error o desea solicitar una funci&oacute;n? Generalmente respondemos en un plazo de 24&nbsp;horas.</p>
+      <a class="email-link" href="mailto:forthemcreation@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        forthemcreation@gmail.com
+      </a>
+    </section>
+
+    <section class="faq">
+      <h2>Preguntas frecuentes</h2>
+
+      <details>
+        <summary>&iquest;Qu&eacute; es SiteProof?</summary>
+        <div class="answer">SiteProof es una aplicaci&oacute;n de documentaci&oacute;n de prueba de trabajo para contratistas y profesionales de la construcci&oacute;n. Capture fotos antes y despu&eacute;s en el sitio de trabajo, genere comparaciones con su marca e informes PDF, y selle todo con prueba criptogr&aacute;fica y la aprobaci&oacute;n del cliente.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;C&oacute;mo funciona la captura antes/despu&eacute;s?</summary>
+        <div class="answer">Abra SiteProof en el sitio de trabajo y capture una foto <strong>Antes</strong>. La aplicaci&oacute;n registra autom&aacute;ticamente la marca de tiempo, la ubicaci&oacute;n GPS y la informaci&oacute;n del dispositivo. Cuando el trabajo est&eacute; terminado, cambie al modo <strong>Despu&eacute;s</strong> — una superposici&oacute;n fantasma de la foto original le ayuda a alinear la toma con precisi&oacute;n. La aplicaci&oacute;n tambi&eacute;n reproduce los ajustes del flash de la foto Antes.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Qu&eacute; formatos de exportaci&oacute;n est&aacute;n disponibles?</summary>
+        <div class="answer">SiteProof puede generar <strong>comparaciones lado a lado</strong> (horizontales o verticales), <strong>videos con deslizador</strong> (Pro) e <strong>informes PDF profesionales</strong> con su marca. Puede compartir las exportaciones por Mensajes, correo electr&oacute;nico, AirDrop o guardarlas en su fototeca.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Qu&eacute; es el Modo Anti-disputas?</summary>
+        <div class="answer">El Modo Anti-disputas (Pro) genera un hash criptogr&aacute;fico de cada foto con <strong>SHA-256</strong> en el momento de la captura. Si alguien modifica el archivo despu&eacute;s, la verificaci&oacute;n lo detectar&aacute;. Puede volver a verificar las fotos de cualquier trabajo en cualquier momento desde la aplicaci&oacute;n. Esto crea documentaci&oacute;n a prueba de manipulaciones que le protege en disputas.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;C&oacute;mo funciona la aprobaci&oacute;n del cliente?</summary>
+        <div class="answer">Cuando un trabajo est&aacute; completo, entregue su dispositivo al cliente. Este revisa el trabajo con los rangos horarios de cada tarea, lee el texto del acuerdo, ingresa su nombre completo y dibuja su firma directamente en la pantalla. La firma, el acuerdo, el nombre y la marca de tiempo se sellan junto con el trabajo.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Qu&eacute; es el paquete de evidencia?</summary>
+        <div class="answer">El paquete de evidencia es un archivo ZIP que contiene todas las fotos originales, un manifiesto de pruebas legible por m&aacute;quina (hashes SHA-256, GPS, marcas de tiempo), el informe PDF y la firma del cliente. Incluye un archivo README que explica c&oacute;mo cualquier persona puede verificar independientemente los hashes usando herramientas est&aacute;ndar como <strong>shasum</strong>.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Qu&eacute; incluye la versi&oacute;n Gratuita vs Pro?</summary>
+        <div class="answer"><strong>Gratuito</strong> incluye captura antes/despu&eacute;s, exportaciones de comparaci&oacute;n, informes PDF y hasta 3 trabajos. <strong>Pro ($9.99 una vez)</strong> desbloquea el Modo Anti-disputas, la aprobaci&oacute;n del cliente, la exportaci&oacute;n de video con deslizador, la marca de la empresa, calidad HD/Impresi&oacute;n y trabajos y tareas ilimitados. Sin suscripci&oacute;n — una compra, para siempre.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Puedo agregar la marca de mi empresa?</summary>
+        <div class="answer">S&iacute; (Pro). Suba el logotipo de su empresa, defina un color de marca e ingrese el nombre, tel&eacute;fono, correo electr&oacute;nico y sitio web de su empresa. Su marca aparece en todas las exportaciones de comparaci&oacute;n, videos con deslizador e informes PDF.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;La aplicaci&oacute;n funciona sin conexi&oacute;n?</summary>
+        <div class="answer">S&iacute;. SiteProof funciona completamente sin conexi&oacute;n. La captura de fotos, la generaci&oacute;n de informes, la verificaci&oacute;n criptogr&aacute;fica y la aprobaci&oacute;n del cliente funcionan sin conexi&oacute;n a Internet. La &uacute;nica actividad de red es la validaci&oacute;n de compras a trav&eacute;s de Apple.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;La aplicaci&oacute;n admite fotos en horizontal?</summary>
+        <div class="answer">S&iacute;. Las fotos en horizontal son ciudadanos de primera clase. Las escenas amplias como cocinas, terrazas y tejados se capturan y muestran sin recorte. La aplicaci&oacute;n detecta si la foto Antes se tom&oacute; en horizontal e impone la misma orientaci&oacute;n para la foto Despu&eacute;s para garantizar pares consistentes.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Mis datos son privados?</summary>
+        <div class="answer">S&iacute;. Todos los datos permanecen completamente en su dispositivo. SiteProof no recopila, transmite ni comparte ninguna informaci&oacute;n personal. No hay herramientas de an&aacute;lisis, SDK de seguimiento ni frameworks publicitarios. No se requiere cuenta. Consulte nuestra <a href="https://hugolamarreftc.github.io/SiteProof-legal/">pol&iacute;tica de privacidad</a> para todos los detalles.</div>
+      </details>
+
+      <details>
+        <summary>La aplicaci&oacute;n se cerr&oacute; inesperadamente — &iquest;qu&eacute; debo hacer?</summary>
+        <div class="answer">Primero, aseg&uacute;rese de estar usando la &uacute;ltima versi&oacute;n del App Store. Si el problema persiste, env&iacute;enos un correo electr&oacute;nico a <strong>forthemcreation@gmail.com</strong> indicando el modelo de su dispositivo y la versi&oacute;n de iOS para que podamos investigar.</div>
+      </details>
+    </section>
+
+    </div>
+
+    <hr class="lang-divider" />
+
+    <!-- ============================================================ -->
+    <!-- GERMAN                                                        -->
+    <!-- ============================================================ -->
+    <div id="de">
+    <p class="lang-label">Deutsch</p>
+
+    <section class="contact-card">
+      <h2>Kontakt</h2>
+      <p>Haben Sie eine Frage, einen Fehler gefunden oder m&ouml;chten eine Funktion vorschlagen? Wir antworten in der Regel innerhalb von 24&nbsp;Stunden.</p>
+      <a class="email-link" href="mailto:forthemcreation@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        forthemcreation@gmail.com
+      </a>
+    </section>
+
+    <section class="faq">
+      <h2>H&auml;ufig gestellte Fragen</h2>
+
+      <details>
+        <summary>Was ist SiteProof?</summary>
+        <div class="answer">SiteProof ist eine App zur Dokumentation von Arbeitsnachweisen f&uuml;r Auftragnehmer und Handwerker. Nehmen Sie Vorher- und Nachher-Fotos auf der Baustelle auf, erstellen Sie Vergleiche mit Ihrem Firmendesign und PDF-Berichte, und versiegeln Sie alles mit kryptografischem Nachweis und Kundenabnahme.</div>
+      </details>
+
+      <details>
+        <summary>Wie funktioniert die Vorher/Nachher-Aufnahme?</summary>
+        <div class="answer">&Ouml;ffnen Sie SiteProof auf der Baustelle und nehmen Sie ein <strong>Vorher</strong>-Foto auf. Die App zeichnet automatisch Zeitstempel, GPS-Standort und Ger&auml;teinformationen auf. Wenn die Arbeit abgeschlossen ist, wechseln Sie in den <strong>Nachher</strong>-Modus — eine Geister&uuml;berlagerung des Originalfotos hilft Ihnen, die Aufnahme pr&auml;zise auszurichten. Die App &uuml;bernimmt auch die Blitzeinstellungen vom Vorher-Foto.</div>
+      </details>
+
+      <details>
+        <summary>Welche Exportformate sind verf&uuml;gbar?</summary>
+        <div class="answer">SiteProof kann <strong>Seite-an-Seite-Vergleiche</strong> (horizontal oder vertikal), <strong>Schieberegler-Videos</strong> (Pro) und <strong>professionelle PDF-Berichte</strong> mit Ihrem Firmendesign erstellen. Sie k&ouml;nnen Exporte &uuml;ber Nachrichten, E-Mail, AirDrop teilen oder in Ihrer Fotomediathek speichern.</div>
+      </details>
+
+      <details>
+        <summary>Was ist der Streitschutz-Modus?</summary>
+        <div class="answer">Der Streitschutz-Modus (Pro) erzeugt zum Zeitpunkt der Aufnahme einen kryptografischen Hash jedes Fotos mit <strong>SHA-256</strong>. Wenn jemand die Datei nachtr&auml;glich &auml;ndert, erkennt die Verifizierung dies. Sie k&ouml;nnen die Fotos jedes Auftrags jederzeit in der App erneut &uuml;berpr&uuml;fen. Dies schafft manipulationssichere Dokumentation, die Sie bei Streitigkeiten sch&uuml;tzt.</div>
+      </details>
+
+      <details>
+        <summary>Wie funktioniert die Kundenabnahme?</summary>
+        <div class="answer">Wenn ein Auftrag abgeschlossen ist, &uuml;bergeben Sie Ihr Ger&auml;t dem Kunden. Dieser &uuml;berpr&uuml;ft die Arbeit mit Zeitspannen f&uuml;r jede Aufgabe, liest den Vereinbarungstext, gibt seinen vollst&auml;ndigen Namen ein und zeichnet seine Unterschrift direkt auf dem Bildschirm. Die Unterschrift, die Vereinbarung, der Name und der Zeitstempel werden zusammen mit dem Auftrag versiegelt.</div>
+      </details>
+
+      <details>
+        <summary>Was ist das Beweispaket?</summary>
+        <div class="answer">Das Beweispaket ist eine ZIP-Datei mit allen Originalfotos, einem maschinenlesbaren Nachweismanifest (SHA-256-Hashes, GPS, Zeitstempel), dem PDF-Bericht und der Kundenunterschrift. Es enth&auml;lt eine README-Datei, die erkl&auml;rt, wie jeder die Hashes unabh&auml;ngig mit Standardtools wie <strong>shasum</strong> &uuml;berpr&uuml;fen kann.</div>
+      </details>
+
+      <details>
+        <summary>Was ist in Kostenlos vs Pro enthalten?</summary>
+        <div class="answer"><strong>Kostenlos</strong> umfasst Vorher/Nachher-Aufnahme, Vergleichsexporte, PDF-Berichte und bis zu 3 Auftr&auml;ge. <strong>Pro (einmalig 9,99&nbsp;$)</strong> schaltet den Streitschutz-Modus, Kundenabnahme, Schieberegler-Videoexport, Firmendesign, HD/Druckqualit&auml;t und unbegrenzte Auftr&auml;ge und Aufgaben frei. Kein Abonnement — ein Kauf, f&uuml;r immer.</div>
+      </details>
+
+      <details>
+        <summary>Kann ich mein Firmendesign hinzuf&uuml;gen?</summary>
+        <div class="answer">Ja (Pro). Laden Sie Ihr Firmenlogo hoch, legen Sie eine Markenfarbe fest und geben Sie Firmennamen, Telefon, E-Mail und Website ein. Ihr Firmendesign erscheint auf allen Vergleichsexporten, Schieberegler-Videos und PDF-Berichten.</div>
+      </details>
+
+      <details>
+        <summary>Funktioniert die App offline?</summary>
+        <div class="answer">Ja. SiteProof funktioniert vollst&auml;ndig offline. Fotoaufnahme, Berichterstellung, kryptografische Verifizierung und Kundenabnahme funktionieren ohne Internetverbindung. Die einzige Netzwerkaktivit&auml;t ist die Kaufvalidierung &uuml;ber Apple.</div>
+      </details>
+
+      <details>
+        <summary>Unterst&uuml;tzt die App Querformat-Fotos?</summary>
+        <div class="answer">Ja. Querformat-Fotos werden vollst&auml;ndig unterst&uuml;tzt. Breite Szenen wie K&uuml;chen, Terrassen und Dachlinien werden ohne Beschnitt aufgenommen und angezeigt. Die App erkennt, ob das Vorher-Foto im Querformat aufgenommen wurde, und erzwingt die gleiche Ausrichtung f&uuml;r das Nachher-Foto, um konsistente Paare zu gew&auml;hrleisten.</div>
+      </details>
+
+      <details>
+        <summary>Sind meine Daten privat?</summary>
+        <div class="answer">Ja. Alle Daten verbleiben vollst&auml;ndig auf Ihrem Ger&auml;t. SiteProof erhebt, &uuml;bermittelt und teilt keine pers&ouml;nlichen Daten. Es gibt keine Analysetools, Tracking-SDKs oder Werbeframeworks. Kein Konto erforderlich. Lesen Sie unsere <a href="https://hugolamarreftc.github.io/SiteProof-legal/">Datenschutzerkl&auml;rung</a> f&uuml;r alle Details.</div>
+      </details>
+
+      <details>
+        <summary>Die App ist abgest&uuml;rzt — was soll ich tun?</summary>
+        <div class="answer">Stellen Sie zun&auml;chst sicher, dass Sie die neueste Version aus dem App Store verwenden. Wenn das Problem weiterhin besteht, senden Sie uns bitte eine E-Mail an <strong>forthemcreation@gmail.com</strong> mit Ihrem Ger&auml;temodell und Ihrer iOS-Version, damit wir das Problem untersuchen k&ouml;nnen.</div>
+      </details>
+    </section>
+
+    </div>
 
     <!-- ━━ Footer ━━ -->
     <footer>
