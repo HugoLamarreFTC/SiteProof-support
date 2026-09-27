@@ -297,57 +297,97 @@
 
       <details>
         <summary>What is SiteProof?</summary>
-        <div class="answer">SiteProof is a proof-of-work documentation app for contractors and trade professionals. Capture before and after photos at the job site, generate branded comparisons and PDF reports, and optionally seal everything with cryptographic proof and client sign-off.</div>
+        <div class="answer">SiteProof is a proof-of-work documentation app for contractors and trade professionals. Capture before and after photos at the job site and turn them into comparison images and PDF reports. With Pro, add your company branding, slider reveal videos, tamper-evident proof, and client sign-off.</div>
+      </details>
+
+      <details>
+        <summary>Where are Settings and the Showroom?</summary>
+        <div class="answer">SiteProof has three tabs at the bottom of the screen: <strong>Jobs</strong>, <strong>Showroom</strong>, and <strong>Settings</strong>. Settings holds your company branding, Dispute-Proof options, Data &amp; Privacy, Restore Purchase, What's New, and feedback. The Showroom collects your best before-and-afters so you can show them to clients.</div>
       </details>
 
       <details>
         <summary>How does the before/after capture work?</summary>
-        <div class="answer">Open SiteProof at the job site and capture a <strong>Before</strong> photo. The app records the timestamp, GPS location, and device info automatically. When the work is done, switch to <strong>After</strong> mode — a ghost overlay of the original photo helps you align the shot precisely. The app also matches flash/torch settings from the Before photo.</div>
+        <div class="answer">Create a job, add a task, and tap <strong>Capture Before</strong> at the job site. The app records the date, time, and device, and, when Auto-GPS Tagging is on, the location and street address. When the work is done, open the job and tap the task's empty <strong>AFTER</strong> tile: the camera shows your Before photo as a see-through ghost so you can frame the same shot.</div>
+      </details>
+
+      <details>
+        <summary>How do I line up the After photo?</summary>
+        <div class="answer">The Before photo appears as a see-through ghost over the camera. Drag the slider to make it stronger or fainter, or tap the eye to hide it. Move until the scene matches: the ring around the shutter turns <strong>green</strong> when you're lined up. Tap to focus, pinch to zoom (up to 5&times;), and turn on the grid for straight lines. If the Before photo used the flash, the flash turns on to match.</div>
+      </details>
+
+      <details>
+        <summary>Can I use photos from my photo library?</summary>
+        <div class="answer">Yes. In the camera, tap the photo library button to pick a Before or After photo. Imported photos are fingerprinted when you import them, so later edits are still detected. But SiteProof can't know when or where they were really taken, so they're marked <strong>Imported</strong> on the task, in PDF reports, and in the evidence package, and are never shown as <strong>Verified Capture</strong>.</div>
+      </details>
+
+      <details>
+        <summary>How do I reorder tasks or retake a photo?</summary>
+        <div class="answer">In a job, drag a task card to move it, or use <strong>Move Up</strong> / <strong>Move Down</strong> in the task's menu. To retake a photo, choose <strong>Retake Before</strong> or <strong>Retake After</strong> from the same menu, or tap the photo to open it full screen and tap <strong>Retake</strong>.</div>
+      </details>
+
+      <details>
+        <summary>How do I delete a job?</summary>
+        <div class="answer">On the Jobs tab, long-press the job's card and tap <strong>Delete Job</strong>, or open the job and tap the trash button at the top. This removes the job and all of its photos from your device and can't be undone.</div>
       </details>
 
       <details>
         <summary>What export formats are available?</summary>
-        <div class="answer">SiteProof can generate <strong>side-by-side comparisons</strong> (horizontal or vertical), <strong>slider reveal videos</strong> (Pro), and <strong>professional PDF reports</strong> with your branding. You can share exports via Messages, email, AirDrop, or save them to your photo library.</div>
+        <div class="answer">SiteProof creates <strong>side-by-side comparisons</strong> (horizontal or vertical) and <strong>professional PDF reports</strong>, plus <strong>slider reveal videos</strong> with Pro. Free exports carry a small SiteProof watermark; with Pro, your branding replaces it. Share via Messages, email, or AirDrop, save images and videos to Photos, and save PDF reports to Files.</div>
       </details>
 
       <details>
         <summary>What is Dispute-Proof Mode?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) cryptographically hashes every photo with <strong>SHA-256</strong> at the moment of capture. If anyone modifies the file afterwards, verification will detect it. You can re-verify any job's photos at any time from within the app. This creates tamper-evident documentation that protects you in disputes.</div>
+        <div class="answer">Dispute-Proof Mode (Pro) fingerprints every photo the moment it's taken: a <strong>SHA-256</strong> hash, signed with a key that never leaves your device. If anyone changes the file afterwards, verification detects it. Check any job at any time with the shield button at the top of the job. Photos imported from your library are fingerprinted when imported and marked <strong>Imported</strong>, never <strong>Verified Capture</strong>.</div>
       </details>
 
       <details>
         <summary>How does client sign-off work?</summary>
-        <div class="answer">When a job is complete, hand your device to the client. They review the work with date-time ranges for each task, read the agreement text, enter their full name, and draw their signature directly on screen. The signature, agreement, name, and timestamp are sealed together with the job.</div>
+        <div class="answer">When a job is complete, tap <strong>Get Client Sign-Off</strong> (Pro) and hand your device to the client. They review each task with its dates, read the agreement, enter their full name, and sign on the screen. The signature, agreement, name, time, and the fingerprints of every photo in the job are sealed together.</div>
+      </details>
+
+      <details>
+        <summary>Why can't I change photos after the client signs?</summary>
+        <div class="answer">The client's signature seals the job's photos as they were when they signed. Changing a photo afterwards would break that proof, so once a job is signed, its photos are locked: no retakes, new captures, or task deletions. You can still edit titles, notes, and the task order.</div>
       </details>
 
       <details>
         <summary>What is the evidence package?</summary>
-        <div class="answer">The evidence package is a ZIP file containing all original photos, a machine-readable proof manifest (SHA-256 hashes, GPS, timestamps), the PDF report, and the client signature. It includes a README explaining how anyone can independently verify the hashes using standard tools like <strong>shasum</strong>.</div>
+        <div class="answer">The evidence package is a ZIP file containing all original photos, a machine-readable proof manifest (SHA-256 hashes, GPS, timestamps, and, for imported photos, where they came from and when they were imported), the PDF report, and the client signature. It includes a README explaining how anyone can independently verify the hashes using standard tools like <strong>shasum</strong>.</div>
       </details>
 
       <details>
         <summary>What's included in Free vs Pro?</summary>
-        <div class="answer"><strong>Free</strong> includes before/after capture, comparison exports, PDF reports, and up to 3 jobs. <strong>Pro ($9.99 once)</strong> unlocks Dispute-Proof Mode, client sign-off, slider video export, company branding, HD/Print quality, and unlimited jobs and tasks. No subscription — one purchase, forever.</div>
+        <div class="answer"><strong>Free</strong> includes before/after capture, comparison images, and PDF reports for up to 3 jobs, 3 tasks per job, and 3 Showroom projects; free exports carry a small SiteProof watermark, and the example job doesn't count. <strong>Pro</strong> is a one-time purchase that unlocks Dispute-Proof Mode, client sign-off, slider video export, your company branding with no watermark, HD/Print quality, and unlimited jobs, tasks, and Showroom projects. No subscription: one purchase, forever.</div>
+      </details>
+
+      <details>
+        <summary>How do I restore my Pro purchase?</summary>
+        <div class="answer">Pro turns on by itself when you're signed in to the App Store with the Apple ID you bought it with. If it doesn't, open the <strong>Settings</strong> tab and tap <strong>Restore Purchase</strong>. Once Pro is on, it stays on even if the device is later signed out of the App Store; only a refund removes it.</div>
+      </details>
+
+      <details>
+        <summary>What is the Kitchen Remodel example job?</summary>
+        <div class="answer">New installs include a finished example job so you can try exports, reports, and verification right away. It doesn't count toward the free limits, its photos can't be changed, and you can delete it whenever you like (long-press its card, then <strong>Delete Job</strong>). Once deleted, it doesn't come back.</div>
       </details>
 
       <details>
         <summary>Can I add my company branding?</summary>
-        <div class="answer">Yes (Pro). Upload your company logo, set a brand color, and enter your company name, phone, email, and website. Your branding appears on all comparison exports, slider videos, and PDF reports.</div>
+        <div class="answer">Yes (Pro). In the <strong>Settings</strong> tab, add your company logo, a brand color, and your company name, phone, email, and website. Your branding appears on comparison images, slider videos, and PDF reports, in place of the SiteProof watermark.</div>
       </details>
 
       <details>
         <summary>Does the app work offline?</summary>
-        <div class="answer">Yes. All photo capture, report generation, cryptographic verification, and client sign-off work without an internet connection. The only network activity is StoreKit purchase validation through Apple and, if enabled, usage analytics and crash reports via Google Firebase (which you can turn off in Settings).</div>
+        <div class="answer">Yes. Photo capture, report generation, cryptographic verification, and client sign-off all work without an internet connection. The app only goes online for App Store purchases (through Apple), to look up a street address from GPS when Auto-GPS Tagging is on (through Apple's location services), and, if you allow it, for usage analytics and crash reports via Google Firebase (which you can turn off in Settings).</div>
       </details>
 
       <details>
         <summary>Does the app support landscape photos?</summary>
-        <div class="answer">Yes. Landscape photos are first-class citizens. Wide scenes like kitchens, decks, and rooflines capture and display without cropping. The app tracks whether the Before photo was taken in landscape and enforces matching orientation for the After shot to ensure consistent pairs.</div>
+        <div class="answer">Yes. Landscape photos are first-class citizens: wide scenes like kitchens, decks, and rooflines capture and display without cropping. If you hold the phone differently from the Before photo, the camera reminds you to rotate and hides the ghost overlay until the orientation matches, but it never stops you from taking the shot.</div>
       </details>
 
       <details>
         <summary>Is my data private?</summary>
-        <div class="answer">Yes. Your photos, job details, client information, and signatures stay entirely on your device &mdash; they are never uploaded, and no account is required. To improve the app, SiteProof collects usage analytics and crash reports via Google Firebase &mdash; including which features are used and a random identifier that links this activity across sessions to an install (never to you personally). This never includes your content and is not used for advertising. You can turn it off anytime in <strong>Settings &rarr; Data &amp; Privacy</strong>, and in the EU/UK/Switzerland it stays off unless you opt in. See our <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> for full details.</div>
+        <div class="answer">Yes. Your photos, job details, client information, and signatures stay entirely on your device &mdash; they are never uploaded, and no account is required. To improve the app, SiteProof collects usage analytics and crash reports via Google Firebase &mdash; including which features are used and a random identifier that links this activity across sessions to an install (never to you personally). This never includes your content and is not used for advertising. You can turn it off anytime in <strong>Settings &rarr; Data &amp; Privacy</strong>, and in the EU, EEA, UK, and Switzerland it stays off unless you opt in. See our <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> for full details.</div>
       </details>
 
       <details>
@@ -380,57 +420,97 @@
 
       <details>
         <summary>Qu'est-ce que SiteProof&nbsp;?</summary>
-        <div class="answer">SiteProof est une application de documentation de preuve de travail pour les entrepreneurs et les professionnels du b&acirc;timent. Prenez des photos avant et apr&egrave;s sur le chantier, g&eacute;n&eacute;rez des comparaisons avec votre image de marque et des rapports PDF, et scellez le tout avec une preuve cryptographique et l'approbation du client.</div>
+        <div class="answer">SiteProof est une application de documentation de preuve de travail pour les entrepreneurs et les professionnels du b&acirc;timent. Prenez des photos avant et apr&egrave;s sur le chantier et transformez-les en images comparatives et en rapports PDF. Avec Pro, ajoutez l'image de marque de votre entreprise, des vid&eacute;os &agrave; curseur, une preuve infalsifiable et l'approbation du client.</div>
+      </details>
+
+      <details>
+        <summary>O&ugrave; se trouvent les R&eacute;glages et le Showroom&nbsp;?</summary>
+        <div class="answer">SiteProof comporte trois onglets en bas de l'&eacute;cran&nbsp;: <strong>Chantiers</strong>, <strong>Showroom</strong> et <strong>R&eacute;glages</strong>. Les R&eacute;glages regroupent l'image de marque de votre entreprise, les options Dispute-Proof, Donn&eacute;es et confidentialit&eacute;, Restaurer l'achat, Nouveaut&eacute;s et l'envoi de commentaires. Le Showroom rassemble vos meilleurs avant-apr&egrave;s pour que vous puissiez les montrer &agrave; vos clients.</div>
       </details>
 
       <details>
         <summary>Comment fonctionne la capture avant/apr&egrave;s&nbsp;?</summary>
-        <div class="answer">Ouvrez SiteProof sur le chantier et prenez une photo <strong>Avant</strong>. L'application enregistre automatiquement l'horodatage, la localisation GPS et les informations de l'appareil. Une fois le travail termin&eacute;, passez en mode <strong>Apr&egrave;s</strong> — une superposition fant&ocirc;me de la photo originale vous aide &agrave; aligner le cadrage pr&eacute;cis&eacute;ment. L'application reproduit &eacute;galement les r&eacute;glages du flash de la photo Avant.</div>
+        <div class="answer">Cr&eacute;ez un chantier, ajoutez une t&acirc;che et touchez <strong>Capturer Avant</strong> sur le chantier. L'application enregistre la date, l'heure et l'appareil et, lorsque l'option G&eacute;olocalisation automatique est activ&eacute;e, la position et l'adresse. Une fois le travail termin&eacute;, ouvrez le chantier et touchez la vignette <strong>APR&Egrave;S</strong> vide de la t&acirc;che&nbsp;: l'appareil photo affiche votre photo Avant en superposition fant&ocirc;me transparente pour que vous puissiez reprendre le m&ecirc;me cadrage.</div>
+      </details>
+
+      <details>
+        <summary>Comment aligner la photo Apr&egrave;s&nbsp;?</summary>
+        <div class="answer">La photo Avant appara&icirc;t en superposition fant&ocirc;me transparente sur l'image de l'appareil photo. Faites glisser le curseur pour l'accentuer ou l'att&eacute;nuer, ou touchez l'&oelig;il pour la masquer. D&eacute;placez-vous jusqu'&agrave; ce que la sc&egrave;ne corresponde&nbsp;: l'anneau autour du d&eacute;clencheur devient <strong>vert</strong> lorsque le cadrage est align&eacute;. Touchez l'&eacute;cran pour faire la mise au point, pincez pour zoomer (jusqu'&agrave; 5&times;) et activez la grille pour des lignes bien droites. Si la photo Avant a &eacute;t&eacute; prise avec le flash, le flash s'active pour reproduire le m&ecirc;me &eacute;clairage.</div>
+      </details>
+
+      <details>
+        <summary>Puis-je utiliser des photos de ma phototh&egrave;que&nbsp;?</summary>
+        <div class="answer">Oui. Dans l'appareil photo, touchez le bouton de la phototh&egrave;que pour choisir une photo Avant ou Apr&egrave;s. Les photos import&eacute;es re&ccedil;oivent leur empreinte au moment o&ugrave; vous les importez, si bien que les modifications ult&eacute;rieures sont tout de m&ecirc;me d&eacute;tect&eacute;es. Mais comme SiteProof ne peut pas savoir quand ni o&ugrave; elles ont r&eacute;ellement &eacute;t&eacute; prises, elles sont marqu&eacute;es <strong>Import&eacute;e</strong> sur la t&acirc;che, dans les rapports PDF et dans le dossier de preuves, et ne sont jamais pr&eacute;sent&eacute;es comme <strong>Capture v&eacute;rifi&eacute;e</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Comment r&eacute;organiser les t&acirc;ches ou reprendre une photo&nbsp;?</summary>
+        <div class="answer">Dans un chantier, faites glisser une fiche de t&acirc;che pour la d&eacute;placer, ou utilisez <strong>D&eacute;placer vers le haut</strong> / <strong>D&eacute;placer vers le bas</strong> dans le menu de la t&acirc;che. Pour reprendre une photo, choisissez <strong>Reprendre Avant</strong> ou <strong>Reprendre Apr&egrave;s</strong> dans ce m&ecirc;me menu, ou touchez la photo pour l'ouvrir en plein &eacute;cran, puis touchez <strong>Reprendre</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Comment supprimer un chantier&nbsp;?</summary>
+        <div class="answer">Dans l'onglet Chantiers, maintenez le doigt sur la fiche du chantier et touchez <strong>Supprimer le chantier</strong>, ou ouvrez le chantier et touchez le bouton en forme de corbeille en haut de l'&eacute;cran. Cette action supprime de votre appareil le chantier et toutes ses photos, et elle est irr&eacute;versible.</div>
       </details>
 
       <details>
         <summary>Quels formats d'exportation sont disponibles&nbsp;?</summary>
-        <div class="answer">SiteProof peut g&eacute;n&eacute;rer des <strong>comparaisons c&ocirc;te &agrave; c&ocirc;te</strong> (horizontales ou verticales), des <strong>vid&eacute;os &agrave; curseur</strong> (Pro) et des <strong>rapports PDF professionnels</strong> avec votre image de marque. Vous pouvez partager les exports via Messages, courriel, AirDrop ou les enregistrer dans votre phototh&egrave;que.</div>
+        <div class="answer">SiteProof cr&eacute;e des <strong>comparaisons c&ocirc;te &agrave; c&ocirc;te</strong> (horizontales ou verticales) et des <strong>rapports PDF professionnels</strong>, ainsi que des <strong>vid&eacute;os &agrave; curseur</strong> avec Pro. Les exports gratuits portent un petit filigrane SiteProof&nbsp;; avec Pro, votre image de marque le remplace. Partagez-les via Messages, courriel ou AirDrop, enregistrez les images et les vid&eacute;os dans Photos, et les rapports PDF dans Fichiers.</div>
       </details>
 
       <details>
-        <summary>Qu'est-ce que le mode Anti-litige&nbsp;?</summary>
-        <div class="answer">Le mode Anti-litige (Pro) hache cryptographiquement chaque photo avec <strong>SHA-256</strong> au moment de la capture. Si quelqu'un modifie le fichier par la suite, la v&eacute;rification le d&eacute;tectera. Vous pouvez rev&eacute;rifier les photos de n'importe quel chantier &agrave; tout moment depuis l'application. Cela cr&eacute;e une documentation infalsifiable qui vous prot&egrave;ge en cas de litige.</div>
+        <summary>Qu'est-ce que Dispute-Proof Mode&nbsp;?</summary>
+        <div class="answer">Dispute-Proof Mode (Pro) calcule l'empreinte de chaque photo d&egrave;s la prise de vue&nbsp;: un hachage <strong>SHA-256</strong>, sign&eacute; avec une cl&eacute; qui ne quitte jamais votre appareil. Si quelqu'un modifie le fichier par la suite, la v&eacute;rification le d&eacute;tecte. V&eacute;rifiez n'importe quel chantier &agrave; tout moment avec le bouton en forme de bouclier en haut de l'&eacute;cran du chantier. Les photos import&eacute;es depuis votre phototh&egrave;que re&ccedil;oivent leur empreinte lors de l'importation et sont marqu&eacute;es <strong>Import&eacute;e</strong>, jamais <strong>Capture v&eacute;rifi&eacute;e</strong>.</div>
       </details>
 
       <details>
         <summary>Comment fonctionne l'approbation du client&nbsp;?</summary>
-        <div class="answer">Lorsqu'un chantier est termin&eacute;, remettez votre appareil au client. Il examine le travail avec les plages horaires de chaque t&acirc;che, lit le texte de l'accord, saisit son nom complet et dessine sa signature directement &agrave; l'&eacute;cran. La signature, l'accord, le nom et l'horodatage sont scell&eacute;s avec le chantier.</div>
+        <div class="answer">Lorsqu'un chantier est termin&eacute;, touchez <strong>Obtenir l'approbation client</strong> (Pro) et remettez votre appareil au client. Il examine chaque t&acirc;che avec ses dates, lit l'accord, saisit son nom complet et signe &agrave; l'&eacute;cran. La signature, l'accord, le nom, l'heure et les empreintes de toutes les photos du chantier sont scell&eacute;s ensemble.</div>
+      </details>
+
+      <details>
+        <summary>Pourquoi ne puis-je plus modifier les photos une fois que le client a sign&eacute;&nbsp;?</summary>
+        <div class="answer">La signature du client scelle les photos du chantier telles qu'elles &eacute;taient au moment o&ugrave; il a sign&eacute;. Modifier une photo par la suite invaliderait cette preuve&nbsp;; c'est pourquoi, une fois un chantier sign&eacute;, ses photos sont verrouill&eacute;es&nbsp;: pas de reprise, pas de nouvelle capture, pas de suppression de t&acirc;che. Vous pouvez toujours modifier les titres, les notes et l'ordre des t&acirc;ches.</div>
       </details>
 
       <details>
         <summary>Qu'est-ce que le dossier de preuves&nbsp;?</summary>
-        <div class="answer">Le dossier de preuves est un fichier ZIP contenant toutes les photos originales, un manifeste de preuves lisible par machine (hachages SHA-256, GPS, horodatages), le rapport PDF et la signature du client. Il comprend un fichier README expliquant comment v&eacute;rifier ind&eacute;pendamment les hachages &agrave; l'aide d'outils standards comme <strong>shasum</strong>.</div>
+        <div class="answer">Le dossier de preuves est un fichier ZIP contenant toutes les photos originales, un manifeste de preuves lisible par machine (hachages SHA-256, GPS, horodatages et, pour les photos import&eacute;es, leur provenance et la date de leur importation), le rapport PDF et la signature du client. Il comprend un fichier README expliquant comment v&eacute;rifier ind&eacute;pendamment les hachages &agrave; l'aide d'outils standards comme <strong>shasum</strong>.</div>
       </details>
 
       <details>
         <summary>Que comprend la version Gratuite vs Pro&nbsp;?</summary>
-        <div class="answer"><strong>Gratuit</strong> inclut la capture avant/apr&egrave;s, les exports de comparaison, les rapports PDF et jusqu'&agrave; 3 chantiers. <strong>Pro (9,99&nbsp;$ une fois)</strong> d&eacute;bloque le mode Anti-litige, l'approbation du client, l'export vid&eacute;o &agrave; curseur, l'image de marque, la qualit&eacute; HD/Impression et un nombre illimit&eacute; de chantiers et de t&acirc;ches. Pas d'abonnement — un seul achat, pour toujours.</div>
+        <div class="answer"><strong>Gratuit</strong> inclut la capture avant/apr&egrave;s, les images comparatives et les rapports PDF, dans la limite de 3 chantiers, 3 t&acirc;ches par chantier et 3 projets dans le Showroom&nbsp;; les exports gratuits portent un petit filigrane SiteProof, et le chantier d'exemple n'est pas comptabilis&eacute;. <strong>Pro</strong> est un achat unique qui d&eacute;bloque Dispute-Proof Mode, l'approbation du client, l'export vid&eacute;o &agrave; curseur, l'image de marque de votre entreprise sans filigrane, la qualit&eacute; HD/Impression et un nombre illimit&eacute; de chantiers, de t&acirc;ches et de projets dans le Showroom. Pas d'abonnement&nbsp;: un seul achat, pour toujours.</div>
+      </details>
+
+      <details>
+        <summary>Comment restaurer mon achat Pro&nbsp;?</summary>
+        <div class="answer">Pro s'active automatiquement lorsque vous &ecirc;tes connect&eacute; &agrave; l'App Store avec l'identifiant Apple utilis&eacute; pour l'achat. Sinon, ouvrez l'onglet <strong>R&eacute;glages</strong> et touchez <strong>Restaurer l'achat</strong>. Une fois activ&eacute;, Pro le reste m&ecirc;me si l'appareil est ensuite d&eacute;connect&eacute; de l'App Store&nbsp;; seul un remboursement le retire.</div>
+      </details>
+
+      <details>
+        <summary>Qu'est-ce que le chantier d'exemple &laquo;&nbsp;R&eacute;novation de cuisine&nbsp;&raquo;&nbsp;?</summary>
+        <div class="answer">Les nouvelles installations comprennent un chantier d'exemple termin&eacute; pour que vous puissiez essayer tout de suite les exports, les rapports et la v&eacute;rification. Il n'est pas comptabilis&eacute; dans les limites de la version gratuite, ses photos ne peuvent pas &ecirc;tre modifi&eacute;es, et vous pouvez le supprimer quand vous le souhaitez (maintenez le doigt sur sa fiche, puis touchez <strong>Supprimer le chantier</strong>). Une fois supprim&eacute;, il ne revient pas.</div>
       </details>
 
       <details>
         <summary>Puis-je ajouter l'image de marque de mon entreprise&nbsp;?</summary>
-        <div class="answer">Oui (Pro). T&eacute;l&eacute;versez le logo de votre entreprise, d&eacute;finissez une couleur de marque et entrez le nom, le t&eacute;l&eacute;phone, le courriel et le site web de votre entreprise. Votre image de marque appara&icirc;t sur tous les exports de comparaison, les vid&eacute;os &agrave; curseur et les rapports PDF.</div>
+        <div class="answer">Oui (Pro). Dans l'onglet <strong>R&eacute;glages</strong>, ajoutez le logo de votre entreprise, une couleur de marque, ainsi que le nom, le t&eacute;l&eacute;phone, le courriel et le site web de votre entreprise. Votre image de marque appara&icirc;t sur les images comparatives, les vid&eacute;os &agrave; curseur et les rapports PDF, &agrave; la place du filigrane SiteProof.</div>
       </details>
 
       <details>
         <summary>L'application fonctionne-t-elle hors ligne&nbsp;?</summary>
-        <div class="answer">Oui. La capture de photos, la g&eacute;n&eacute;ration de rapports, la v&eacute;rification cryptographique et l'approbation du client fonctionnent sans connexion Internet. Les seules activit&eacute;s r&eacute;seau sont la validation des achats via Apple et, si elles sont activ&eacute;es, les statistiques d'utilisation et rapports de plantage via Google Firebase (que vous pouvez d&eacute;sactiver dans les R&eacute;glages).</div>
+        <div class="answer">Oui. La capture de photos, la g&eacute;n&eacute;ration de rapports, la v&eacute;rification cryptographique et l'approbation du client fonctionnent sans connexion Internet. L'application ne se connecte que pour les achats sur l'App Store (via Apple), pour trouver l'adresse correspondant &agrave; la position GPS lorsque l'option G&eacute;olocalisation automatique est activ&eacute;e (via les services de localisation d'Apple) et, si vous l'autorisez, pour les statistiques d'utilisation et les rapports de plantage via Google Firebase (que vous pouvez d&eacute;sactiver dans les R&eacute;glages).</div>
       </details>
 
       <details>
         <summary>L'application prend-elle en charge les photos en paysage&nbsp;?</summary>
-        <div class="answer">Oui. Les photos en paysage sont pleinement prises en charge. Les sc&egrave;nes larges comme les cuisines, les terrasses et les toitures sont captur&eacute;es et affich&eacute;es sans recadrage. L'application d&eacute;tecte si la photo Avant a &eacute;t&eacute; prise en paysage et impose la m&ecirc;me orientation pour la photo Apr&egrave;s afin de garantir des paires coh&eacute;rentes.</div>
+        <div class="answer">Oui. Les photos en paysage sont pleinement prises en charge&nbsp;: les sc&egrave;nes larges comme les cuisines, les terrasses et les toitures sont captur&eacute;es et affich&eacute;es sans recadrage. Si vous tenez le t&eacute;l&eacute;phone dans une orientation diff&eacute;rente de celle de la photo Avant, l'appareil photo vous rappelle de le faire pivoter et masque la superposition fant&ocirc;me jusqu'&agrave; ce que l'orientation corresponde, mais il ne vous emp&ecirc;che jamais de prendre la photo.</div>
       </details>
 
       <details>
         <summary>Mes donn&eacute;es sont-elles priv&eacute;es&nbsp;?</summary>
-        <div class="answer">Oui. Vos photos, d&eacute;tails de chantier, informations client et signatures restent enti&egrave;rement sur votre appareil &mdash; ils ne sont jamais t&eacute;l&eacute;vers&eacute;s, et aucun compte n'est requis. Pour am&eacute;liorer l'application, SiteProof collecte des statistiques d'utilisation et des rapports de plantage via Google Firebase &mdash; y compris les fonctionnalit&eacute;s utilis&eacute;es et un identifiant al&eacute;atoire qui relie cette activit&eacute;, d'une session &agrave; l'autre, &agrave; une installation (jamais &agrave; vous personnellement). Cela n'inclut jamais votre contenu et n'est pas utilis&eacute; &agrave; des fins publicitaires. Vous pouvez le d&eacute;sactiver &agrave; tout moment dans <strong>R&eacute;glages &rarr; Donn&eacute;es et confidentialit&eacute;</strong>, et dans l'UE/au Royaume-Uni/en Suisse, cela reste d&eacute;sactiv&eacute; sauf si vous donnez votre consentement. Consultez notre <a href="https://hugolamarreftc.github.io/SiteProof-legal/">politique de confidentialit&eacute;</a> pour tous les d&eacute;tails.</div>
+        <div class="answer">Oui. Vos photos, d&eacute;tails de chantier, informations client et signatures restent enti&egrave;rement sur votre appareil &mdash; ils ne sont jamais t&eacute;l&eacute;vers&eacute;s, et aucun compte n'est requis. Pour am&eacute;liorer l'application, SiteProof collecte des statistiques d'utilisation et des rapports de plantage via Google Firebase &mdash; y compris les fonctionnalit&eacute;s utilis&eacute;es et un identifiant al&eacute;atoire qui relie cette activit&eacute;, d'une session &agrave; l'autre, &agrave; une installation (jamais &agrave; vous personnellement). Cela n'inclut jamais votre contenu et n'est pas utilis&eacute; &agrave; des fins publicitaires. Vous pouvez le d&eacute;sactiver &agrave; tout moment dans <strong>R&eacute;glages &rarr; Donn&eacute;es et confidentialit&eacute;</strong>, et dans l'UE, dans l'EEE, au Royaume-Uni et en Suisse, cela reste d&eacute;sactiv&eacute; sauf si vous donnez votre consentement. Consultez notre <a href="https://hugolamarreftc.github.io/SiteProof-legal/">politique de confidentialit&eacute;</a> pour tous les d&eacute;tails.</div>
       </details>
 
       <details>
@@ -463,57 +543,97 @@
 
       <details>
         <summary>&iquest;Qu&eacute; es SiteProof?</summary>
-        <div class="answer">SiteProof es una aplicaci&oacute;n de documentaci&oacute;n de prueba de trabajo para contratistas y profesionales de la construcci&oacute;n. Capture fotos antes y despu&eacute;s en el sitio de trabajo, genere comparaciones con su marca e informes PDF, y selle todo con prueba criptogr&aacute;fica y la aprobaci&oacute;n del cliente.</div>
+        <div class="answer">SiteProof es una aplicaci&oacute;n de documentaci&oacute;n de prueba de trabajo para contratistas y profesionales de la construcci&oacute;n. Capture fotos antes y despu&eacute;s en el sitio de trabajo y convi&eacute;rtalas en im&aacute;genes comparativas e informes PDF. Con Pro, a&ntilde;ada la marca de su empresa, videos con deslizador, evidencia a prueba de manipulaciones y la aprobaci&oacute;n del cliente.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;D&oacute;nde est&aacute;n Ajustes y el Showroom?</summary>
+        <div class="answer">SiteProof tiene tres pesta&ntilde;as en la parte inferior de la pantalla: <strong>Trabajos</strong>, <strong>Showroom</strong> y <strong>Ajustes</strong>. En Ajustes encontrar&aacute; la marca de su empresa, las opciones de Dispute-Proof, Datos y privacidad, Restaurar compra, Novedades y el env&iacute;o de comentarios. El Showroom re&uacute;ne sus mejores antes y despu&eacute;s para que pueda mostr&aacute;rselos a sus clientes.</div>
       </details>
 
       <details>
         <summary>&iquest;C&oacute;mo funciona la captura antes/despu&eacute;s?</summary>
-        <div class="answer">Abra SiteProof en el sitio de trabajo y capture una foto <strong>Antes</strong>. La aplicaci&oacute;n registra autom&aacute;ticamente la marca de tiempo, la ubicaci&oacute;n GPS y la informaci&oacute;n del dispositivo. Cuando el trabajo est&eacute; terminado, cambie al modo <strong>Despu&eacute;s</strong> — una superposici&oacute;n fantasma de la foto original le ayuda a alinear la toma con precisi&oacute;n. La aplicaci&oacute;n tambi&eacute;n reproduce los ajustes del flash de la foto Antes.</div>
+        <div class="answer">Cree un trabajo, a&ntilde;ada una tarea y toque <strong>Capturar Antes</strong> en el sitio de trabajo. La aplicaci&oacute;n registra la fecha, la hora y el dispositivo y, cuando la opci&oacute;n Geoetiquetado autom&aacute;tico est&aacute; activada, la ubicaci&oacute;n y la direcci&oacute;n. Cuando haya terminado, abra el trabajo y toque el recuadro <strong>DESPU&Eacute;S</strong> vac&iacute;o de la tarea: la c&aacute;mara muestra su foto Antes como una superposici&oacute;n fantasma transparente para que pueda encuadrar la misma toma.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;C&oacute;mo alineo la foto Despu&eacute;s?</summary>
+        <div class="answer">La foto Antes aparece como una superposici&oacute;n fantasma transparente sobre la imagen de la c&aacute;mara. Arrastre el control deslizante para hacerla m&aacute;s intensa o m&aacute;s tenue, o toque el ojo para ocultarla. Mu&eacute;vase hasta que la escena coincida: el anillo alrededor del obturador se vuelve <strong>verde</strong> cuando la toma est&aacute; alineada. Toque para enfocar, pellizque para hacer zoom (hasta 5&times;) y active la cuadr&iacute;cula para obtener l&iacute;neas rectas. Si la foto Antes se tom&oacute; con flash, el flash se activa para igualar la iluminaci&oacute;n.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Puedo usar fotos de mi fototeca?</summary>
+        <div class="answer">S&iacute;. En la c&aacute;mara, toque el bot&oacute;n de la fototeca para elegir una foto Antes o Despu&eacute;s. Las fotos importadas reciben su huella criptogr&aacute;fica en el momento en que las importa, as&iacute; que las ediciones posteriores se siguen detectando. Pero como SiteProof no puede saber cu&aacute;ndo ni d&oacute;nde se tomaron realmente, se marcan como <strong>Importada</strong> en la tarea, en los informes PDF y en el paquete de evidencias, y nunca se muestran como <strong>Captura verificada</strong>.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;C&oacute;mo reordeno las tareas o repito una foto?</summary>
+        <div class="answer">En un trabajo, arrastre la tarjeta de una tarea para moverla, o use <strong>Mover arriba</strong> / <strong>Mover abajo</strong> en el men&uacute; de la tarea. Para repetir una foto, elija <strong>Repetir Antes</strong> o <strong>Repetir Despu&eacute;s</strong> en ese mismo men&uacute;, o toque la foto para abrirla en pantalla completa y toque <strong>Repetir</strong>.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;C&oacute;mo elimino un trabajo?</summary>
+        <div class="answer">En la pesta&ntilde;a Trabajos, mantenga presionada la tarjeta del trabajo y toque <strong>Eliminar trabajo</strong>, o abra el trabajo y toque el bot&oacute;n de la papelera en la parte superior. Esto elimina de su dispositivo el trabajo y todas sus fotos, y no se puede deshacer.</div>
       </details>
 
       <details>
         <summary>&iquest;Qu&eacute; formatos de exportaci&oacute;n est&aacute;n disponibles?</summary>
-        <div class="answer">SiteProof puede generar <strong>comparaciones lado a lado</strong> (horizontales o verticales), <strong>videos con deslizador</strong> (Pro) e <strong>informes PDF profesionales</strong> con su marca. Puede compartir las exportaciones por Mensajes, correo electr&oacute;nico, AirDrop o guardarlas en su fototeca.</div>
+        <div class="answer">SiteProof crea <strong>comparaciones lado a lado</strong> (horizontales o verticales) e <strong>informes PDF profesionales</strong>, adem&aacute;s de <strong>videos con deslizador</strong> con Pro. Las exportaciones gratuitas llevan una peque&ntilde;a marca de agua de SiteProof; con Pro, su marca la reemplaza. Comparta por Mensajes, correo electr&oacute;nico o AirDrop, guarde im&aacute;genes y videos en Fotos, y guarde los informes PDF en Archivos.</div>
       </details>
 
       <details>
-        <summary>&iquest;Qu&eacute; es el Modo Anti-disputas?</summary>
-        <div class="answer">El Modo Anti-disputas (Pro) genera un hash criptogr&aacute;fico de cada foto con <strong>SHA-256</strong> en el momento de la captura. Si alguien modifica el archivo despu&eacute;s, la verificaci&oacute;n lo detectar&aacute;. Puede volver a verificar las fotos de cualquier trabajo en cualquier momento desde la aplicaci&oacute;n. Esto crea documentaci&oacute;n a prueba de manipulaciones que le protege en disputas.</div>
+        <summary>&iquest;Qu&eacute; es Dispute-Proof Mode?</summary>
+        <div class="answer">Dispute-Proof Mode (Pro) crea una huella criptogr&aacute;fica de cada foto en el momento en que se toma: un hash <strong>SHA-256</strong>, firmado con una clave que nunca sale de su dispositivo. Si alguien modifica el archivo despu&eacute;s, la verificaci&oacute;n lo detecta. Verifique cualquier trabajo en cualquier momento con el bot&oacute;n del escudo, en la parte superior de la pantalla del trabajo. Las fotos importadas de su fototeca reciben su huella al importarse y se marcan como <strong>Importada</strong>, nunca como <strong>Captura verificada</strong>.</div>
       </details>
 
       <details>
         <summary>&iquest;C&oacute;mo funciona la aprobaci&oacute;n del cliente?</summary>
-        <div class="answer">Cuando un trabajo est&aacute; completo, entregue su dispositivo al cliente. Este revisa el trabajo con los rangos horarios de cada tarea, lee el texto del acuerdo, ingresa su nombre completo y dibuja su firma directamente en la pantalla. La firma, el acuerdo, el nombre y la marca de tiempo se sellan junto con el trabajo.</div>
+        <div class="answer">Cuando un trabajo est&aacute; completo, toque <strong>Obtener aprobaci&oacute;n del cliente</strong> (Pro) y entregue su dispositivo al cliente. Este revisa cada tarea con sus fechas, lee el acuerdo, ingresa su nombre completo y firma en la pantalla. La firma, el acuerdo, el nombre, la hora y las huellas de todas las fotos del trabajo se sellan juntos.</div>
       </details>
 
       <details>
-        <summary>&iquest;Qu&eacute; es el paquete de evidencia?</summary>
-        <div class="answer">El paquete de evidencia es un archivo ZIP que contiene todas las fotos originales, un manifiesto de pruebas legible por m&aacute;quina (hashes SHA-256, GPS, marcas de tiempo), el informe PDF y la firma del cliente. Incluye un archivo README que explica c&oacute;mo cualquier persona puede verificar independientemente los hashes usando herramientas est&aacute;ndar como <strong>shasum</strong>.</div>
+        <summary>&iquest;Por qu&eacute; no puedo cambiar las fotos despu&eacute;s de que el cliente firme?</summary>
+        <div class="answer">La firma del cliente sella las fotos del trabajo tal como estaban en el momento de firmar. Cambiar una foto despu&eacute;s invalidar&iacute;a esa prueba, as&iacute; que, una vez firmado un trabajo, sus fotos quedan bloqueadas: no se pueden repetir fotos, hacer nuevas capturas ni eliminar tareas. A&uacute;n puede editar los t&iacute;tulos, las notas y el orden de las tareas.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Qu&eacute; es el paquete de evidencias?</summary>
+        <div class="answer">El paquete de evidencias es un archivo ZIP que contiene todas las fotos originales, un manifiesto de pruebas legible por m&aacute;quina (hashes SHA-256, GPS, marcas de tiempo y, en el caso de las fotos importadas, su procedencia y cu&aacute;ndo se importaron), el informe PDF y la firma del cliente. Incluye un archivo README que explica c&oacute;mo cualquier persona puede verificar independientemente los hashes usando herramientas est&aacute;ndar como <strong>shasum</strong>.</div>
       </details>
 
       <details>
         <summary>&iquest;Qu&eacute; incluye la versi&oacute;n Gratuita vs Pro?</summary>
-        <div class="answer"><strong>Gratuito</strong> incluye captura antes/despu&eacute;s, exportaciones de comparaci&oacute;n, informes PDF y hasta 3 trabajos. <strong>Pro ($9.99 una vez)</strong> desbloquea el Modo Anti-disputas, la aprobaci&oacute;n del cliente, la exportaci&oacute;n de video con deslizador, la marca de la empresa, calidad HD/Impresi&oacute;n y trabajos y tareas ilimitados. Sin suscripci&oacute;n — una compra, para siempre.</div>
+        <div class="answer"><strong>Gratuito</strong> incluye captura antes/despu&eacute;s, im&aacute;genes comparativas e informes PDF para un m&aacute;ximo de 3 trabajos, 3 tareas por trabajo y 3 proyectos en el Showroom; las exportaciones gratuitas llevan una peque&ntilde;a marca de agua de SiteProof, y el trabajo de ejemplo no cuenta. <strong>Pro</strong> es una compra &uacute;nica que desbloquea Dispute-Proof Mode, la aprobaci&oacute;n del cliente, la exportaci&oacute;n de video con deslizador, la marca de su empresa sin marca de agua, calidad HD/Impresi&oacute;n y trabajos, tareas y proyectos en el Showroom ilimitados. Sin suscripci&oacute;n: una compra, para siempre.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;C&oacute;mo restauro mi compra de Pro?</summary>
+        <div class="answer">Pro se activa autom&aacute;ticamente cuando ha iniciado sesi&oacute;n en el App Store con el ID de Apple con el que lo compr&oacute;. Si no es as&iacute;, abra la pesta&ntilde;a <strong>Ajustes</strong> y toque <strong>Restaurar compra</strong>. Una vez activado, Pro sigue activo aunque m&aacute;s adelante se cierre la sesi&oacute;n del App Store en el dispositivo; solo un reembolso lo retira.</div>
+      </details>
+
+      <details>
+        <summary>&iquest;Qu&eacute; es el trabajo de ejemplo &laquo;Remodelaci&oacute;n de cocina&raquo;?</summary>
+        <div class="answer">Las instalaciones nuevas incluyen un trabajo de ejemplo terminado para que pueda probar de inmediato las exportaciones, los informes y la verificaci&oacute;n. No cuenta para los l&iacute;mites de la versi&oacute;n gratuita, sus fotos no se pueden cambiar y puede eliminarlo cuando quiera (mantenga presionada su tarjeta y luego toque <strong>Eliminar trabajo</strong>). Una vez eliminado, no vuelve a aparecer.</div>
       </details>
 
       <details>
         <summary>&iquest;Puedo agregar la marca de mi empresa?</summary>
-        <div class="answer">S&iacute; (Pro). Suba el logotipo de su empresa, defina un color de marca e ingrese el nombre, tel&eacute;fono, correo electr&oacute;nico y sitio web de su empresa. Su marca aparece en todas las exportaciones de comparaci&oacute;n, videos con deslizador e informes PDF.</div>
+        <div class="answer">S&iacute; (Pro). En la pesta&ntilde;a <strong>Ajustes</strong>, agregue el logotipo de su empresa, un color de marca y el nombre, tel&eacute;fono, correo electr&oacute;nico y sitio web de su empresa. Su marca aparece en las im&aacute;genes comparativas, los videos con deslizador y los informes PDF, en lugar de la marca de agua de SiteProof.</div>
       </details>
 
       <details>
         <summary>&iquest;La aplicaci&oacute;n funciona sin conexi&oacute;n?</summary>
-        <div class="answer">S&iacute;. La captura de fotos, la generaci&oacute;n de informes, la verificaci&oacute;n criptogr&aacute;fica y la aprobaci&oacute;n del cliente funcionan sin conexi&oacute;n a Internet. Las &uacute;nicas actividades de red son la validaci&oacute;n de compras a trav&eacute;s de Apple y, si est&aacute;n habilitados, las estad&iacute;sticas de uso e informes de fallos a trav&eacute;s de Google Firebase (que puede desactivar en Ajustes).</div>
+        <div class="answer">S&iacute;. La captura de fotos, la generaci&oacute;n de informes, la verificaci&oacute;n criptogr&aacute;fica y la aprobaci&oacute;n del cliente funcionan sin conexi&oacute;n a Internet. La aplicaci&oacute;n solo se conecta a Internet para las compras en el App Store (a trav&eacute;s de Apple), para obtener la direcci&oacute;n a partir del GPS cuando la opci&oacute;n Geoetiquetado autom&aacute;tico est&aacute; activada (a trav&eacute;s de los servicios de ubicaci&oacute;n de Apple) y, si lo permite, para las estad&iacute;sticas de uso e informes de fallos a trav&eacute;s de Google Firebase (que puede desactivar en Ajustes).</div>
       </details>
 
       <details>
         <summary>&iquest;La aplicaci&oacute;n admite fotos en horizontal?</summary>
-        <div class="answer">S&iacute;. Las fotos en horizontal son ciudadanos de primera clase. Las escenas amplias como cocinas, terrazas y tejados se capturan y muestran sin recorte. La aplicaci&oacute;n detecta si la foto Antes se tom&oacute; en horizontal e impone la misma orientaci&oacute;n para la foto Despu&eacute;s para garantizar pares consistentes.</div>
+        <div class="answer">S&iacute;. Las fotos en horizontal son ciudadanos de primera clase: las escenas amplias como cocinas, terrazas y tejados se capturan y muestran sin recorte. Si sostiene el tel&eacute;fono en una orientaci&oacute;n distinta a la de la foto Antes, la c&aacute;mara le recuerda que lo gire y oculta la superposici&oacute;n fantasma hasta que la orientaci&oacute;n coincida, pero nunca le impide tomar la foto.</div>
       </details>
 
       <details>
         <summary>&iquest;Mis datos son privados?</summary>
-        <div class="answer">S&iacute;. Sus fotos, detalles de trabajos, informaci&oacute;n de clientes y firmas permanecen completamente en su dispositivo: nunca se suben, y no se requiere cuenta. Para mejorar la aplicaci&oacute;n, SiteProof recopila estad&iacute;sticas de uso e informes de fallos a trav&eacute;s de Google Firebase &mdash; incluidas las funciones que se utilizan y un identificador aleatorio que vincula esta actividad entre sesiones a una instalaci&oacute;n (nunca a usted personalmente). Esto nunca incluye su contenido ni se utiliza con fines publicitarios. Puede desactivarlo en cualquier momento en <strong>Ajustes &rarr; Datos y privacidad</strong>, y en la UE/Reino Unido/Suiza permanece desactivado a menos que d&eacute; su consentimiento. Consulte nuestra <a href="https://hugolamarreftc.github.io/SiteProof-legal/">pol&iacute;tica de privacidad</a> para todos los detalles.</div>
+        <div class="answer">S&iacute;. Sus fotos, detalles de trabajos, informaci&oacute;n de clientes y firmas permanecen completamente en su dispositivo &mdash; nunca se suben, y no se requiere cuenta. Para mejorar la aplicaci&oacute;n, SiteProof recopila estad&iacute;sticas de uso e informes de fallos a trav&eacute;s de Google Firebase &mdash; incluidas las funciones que se utilizan y un identificador aleatorio que vincula esta actividad entre sesiones a una instalaci&oacute;n (nunca a usted personalmente). Esto nunca incluye su contenido ni se utiliza con fines publicitarios. Puede desactivarlo en cualquier momento en <strong>Ajustes &rarr; Datos y privacidad</strong>, y en la UE, el EEE, el Reino Unido y Suiza permanece desactivado a menos que d&eacute; su consentimiento. Consulte nuestra <a href="https://hugolamarreftc.github.io/SiteProof-legal/">pol&iacute;tica de privacidad</a> para todos los detalles.</div>
       </details>
 
       <details>
@@ -546,57 +666,97 @@
 
       <details>
         <summary>Was ist SiteProof?</summary>
-        <div class="answer">SiteProof ist eine App zur Dokumentation von Arbeitsnachweisen f&uuml;r Auftragnehmer und Handwerker. Nehmen Sie Vorher- und Nachher-Fotos auf der Baustelle auf, erstellen Sie Vergleiche mit Ihrem Firmendesign und PDF-Berichte, und versiegeln Sie alles mit kryptografischem Nachweis und Kundenabnahme.</div>
+        <div class="answer">SiteProof ist eine App zur Dokumentation von Arbeitsnachweisen f&uuml;r Auftragnehmer und Handwerker. Nehmen Sie Vorher- und Nachher-Fotos auf der Baustelle auf und erstellen Sie daraus Vergleichsbilder und PDF-Berichte. Mit Pro f&uuml;gen Sie Ihr Firmendesign, Schieberegler-Videos, manipulationssichere Nachweise und die Kundenfreigabe hinzu.</div>
+      </details>
+
+      <details>
+        <summary>Wo finde ich die Einstellungen und den Showroom?</summary>
+        <div class="answer">SiteProof hat unten auf dem Bildschirm drei Tabs: <strong>Auftr&auml;ge</strong>, <strong>Showroom</strong> und <strong>Einstellungen</strong>. In den Einstellungen finden Sie Ihr Firmendesign, die Dispute-Proof-Optionen, Daten &amp; Datenschutz, Kauf wiederherstellen, Neuigkeiten und Feedback. Der Showroom sammelt Ihre besten Vorher-Nachher-Aufnahmen, damit Sie sie Kunden zeigen k&ouml;nnen.</div>
       </details>
 
       <details>
         <summary>Wie funktioniert die Vorher/Nachher-Aufnahme?</summary>
-        <div class="answer">&Ouml;ffnen Sie SiteProof auf der Baustelle und nehmen Sie ein <strong>Vorher</strong>-Foto auf. Die App zeichnet automatisch Zeitstempel, GPS-Standort und Ger&auml;teinformationen auf. Wenn die Arbeit abgeschlossen ist, wechseln Sie in den <strong>Nachher</strong>-Modus — eine Geister&uuml;berlagerung des Originalfotos hilft Ihnen, die Aufnahme pr&auml;zise auszurichten. Die App &uuml;bernimmt auch die Blitzeinstellungen vom Vorher-Foto.</div>
+        <div class="answer">Erstellen Sie einen Auftrag, f&uuml;gen Sie eine Aufgabe hinzu und tippen Sie auf der Baustelle auf <strong>Vorher aufnehmen</strong>. Die App erfasst Datum, Uhrzeit und Ger&auml;t sowie, wenn die Option Automatische GPS-Markierung aktiviert ist, Standort und Adresse. Wenn die Arbeit erledigt ist, &ouml;ffnen Sie den Auftrag und tippen Sie auf die leere <strong>NACHHER</strong>-Kachel der Aufgabe: Die Kamera zeigt Ihr Vorher-Foto als durchscheinende &Uuml;berlagerung, damit Sie denselben Bildausschnitt w&auml;hlen k&ouml;nnen.</div>
+      </details>
+
+      <details>
+        <summary>Wie richte ich das Nachher-Foto aus?</summary>
+        <div class="answer">Das Vorher-Foto erscheint als durchscheinende &Uuml;berlagerung auf dem Kamerabild. Ziehen Sie den Schieberegler, um es kr&auml;ftiger oder blasser darzustellen, oder tippen Sie auf das Auge, um es auszublenden. Bewegen Sie sich, bis die Szene &uuml;bereinstimmt: Der Ring um den Ausl&ouml;ser wird <strong>gr&uuml;n</strong>, sobald das Bild ausgerichtet ist. Tippen Sie zum Fokussieren auf das Bild, zoomen Sie mit zwei Fingern (bis zu 5&times;) und schalten Sie das Raster ein, um gerade Linien zu erhalten. Wurde das Vorher-Foto mit Blitz aufgenommen, schaltet sich der Blitz passend dazu ein.</div>
+      </details>
+
+      <details>
+        <summary>Kann ich Fotos aus meiner Fotomediathek verwenden?</summary>
+        <div class="answer">Ja. Tippen Sie in der Kamera auf das Fotomediathek-Symbol, um ein Vorher- oder Nachher-Foto auszuw&auml;hlen. Importierte Fotos erhalten ihren Fingerabdruck, wenn Sie sie importieren, sodass sp&auml;tere Bearbeitungen trotzdem erkannt werden. SiteProof kann jedoch nicht wissen, wann und wo sie tats&auml;chlich aufgenommen wurden, daher werden sie bei der Aufgabe, in PDF-Berichten und im Beweispaket als <strong>Importiert</strong> gekennzeichnet und nie als <strong>Verifizierte Aufnahme</strong> angezeigt.</div>
+      </details>
+
+      <details>
+        <summary>Wie &auml;ndere ich die Reihenfolge der Aufgaben oder nehme ein Foto erneut auf?</summary>
+        <div class="answer">Ziehen Sie in einem Auftrag eine Aufgabenkarte, um sie zu verschieben, oder verwenden Sie <strong>Nach oben</strong> / <strong>Nach unten</strong> im Men&uuml; der Aufgabe. Um ein Foto erneut aufzunehmen, w&auml;hlen Sie im selben Men&uuml; <strong>Vorher erneut aufnehmen</strong> oder <strong>Nachher erneut aufnehmen</strong>, oder tippen Sie auf das Foto, um es im Vollbild zu &ouml;ffnen, und tippen Sie dann auf <strong>Erneut aufnehmen</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Wie l&ouml;sche ich einen Auftrag?</summary>
+        <div class="answer">Halten Sie im Tab Auftr&auml;ge die Karte des Auftrags gedr&uuml;ckt und tippen Sie auf <strong>Auftrag l&ouml;schen</strong>, oder &ouml;ffnen Sie den Auftrag und tippen Sie oben auf das Papierkorb-Symbol. Dadurch werden der Auftrag und alle seine Fotos von Ihrem Ger&auml;t entfernt; das l&auml;sst sich nicht r&uuml;ckg&auml;ngig machen.</div>
       </details>
 
       <details>
         <summary>Welche Exportformate sind verf&uuml;gbar?</summary>
-        <div class="answer">SiteProof kann <strong>Seite-an-Seite-Vergleiche</strong> (horizontal oder vertikal), <strong>Schieberegler-Videos</strong> (Pro) und <strong>professionelle PDF-Berichte</strong> mit Ihrem Firmendesign erstellen. Sie k&ouml;nnen Exporte &uuml;ber Nachrichten, E-Mail, AirDrop teilen oder in Ihrer Fotomediathek speichern.</div>
+        <div class="answer">SiteProof erstellt <strong>Seite-an-Seite-Vergleiche</strong> (horizontal oder vertikal) und <strong>professionelle PDF-Berichte</strong>, mit Pro au&szlig;erdem <strong>Schieberegler-Videos</strong>. Kostenlose Exporte tragen ein kleines SiteProof-Wasserzeichen; mit Pro tritt Ihr Firmendesign an seine Stelle. Teilen Sie &uuml;ber Nachrichten, E-Mail oder AirDrop, speichern Sie Bilder und Videos in der Fotos-App und PDF-Berichte in der Dateien-App.</div>
       </details>
 
       <details>
-        <summary>Was ist der Streitschutz-Modus?</summary>
-        <div class="answer">Der Streitschutz-Modus (Pro) erzeugt zum Zeitpunkt der Aufnahme einen kryptografischen Hash jedes Fotos mit <strong>SHA-256</strong>. Wenn jemand die Datei nachtr&auml;glich &auml;ndert, erkennt die Verifizierung dies. Sie k&ouml;nnen die Fotos jedes Auftrags jederzeit in der App erneut &uuml;berpr&uuml;fen. Dies schafft manipulationssichere Dokumentation, die Sie bei Streitigkeiten sch&uuml;tzt.</div>
+        <summary>Was ist Dispute-Proof Mode?</summary>
+        <div class="answer">Dispute-Proof Mode (Pro) versieht jedes Foto im Moment der Aufnahme mit einem Fingerabdruck: einem <strong>SHA-256</strong>-Hash, signiert mit einem Schl&uuml;ssel, der Ihr Ger&auml;t nie verl&auml;sst. Wenn jemand die Datei nachtr&auml;glich &auml;ndert, erkennt die Verifizierung dies. Pr&uuml;fen Sie jeden Auftrag jederzeit &uuml;ber das Schild-Symbol oben in der Auftragsansicht. Aus Ihrer Fotomediathek importierte Fotos erhalten ihren Fingerabdruck beim Import und werden als <strong>Importiert</strong> gekennzeichnet, nie als <strong>Verifizierte Aufnahme</strong>.</div>
       </details>
 
       <details>
-        <summary>Wie funktioniert die Kundenabnahme?</summary>
-        <div class="answer">Wenn ein Auftrag abgeschlossen ist, &uuml;bergeben Sie Ihr Ger&auml;t dem Kunden. Dieser &uuml;berpr&uuml;ft die Arbeit mit Zeitspannen f&uuml;r jede Aufgabe, liest den Vereinbarungstext, gibt seinen vollst&auml;ndigen Namen ein und zeichnet seine Unterschrift direkt auf dem Bildschirm. Die Unterschrift, die Vereinbarung, der Name und der Zeitstempel werden zusammen mit dem Auftrag versiegelt.</div>
+        <summary>Wie funktioniert die Kundenfreigabe?</summary>
+        <div class="answer">Wenn ein Auftrag abgeschlossen ist, tippen Sie auf <strong>Kundenfreigabe einholen</strong> (Pro) und &uuml;bergeben Sie Ihr Ger&auml;t dem Kunden. Dieser pr&uuml;ft jede Aufgabe mit ihren Datumsangaben, liest die Vereinbarung, gibt seinen vollst&auml;ndigen Namen ein und unterschreibt auf dem Bildschirm. Unterschrift, Vereinbarung, Name, Uhrzeit und die Fingerabdr&uuml;cke aller Fotos des Auftrags werden gemeinsam versiegelt.</div>
+      </details>
+
+      <details>
+        <summary>Warum kann ich die Fotos nach der Unterschrift des Kunden nicht mehr &auml;ndern?</summary>
+        <div class="answer">Die Unterschrift des Kunden versiegelt die Fotos des Auftrags so, wie sie zum Zeitpunkt der Unterschrift waren. Eine nachtr&auml;gliche &Auml;nderung eines Fotos w&uuml;rde diesen Nachweis ung&uuml;ltig machen, daher sind die Fotos eines unterschriebenen Auftrags gesperrt: kein erneutes Aufnehmen, keine neuen Aufnahmen und kein L&ouml;schen von Aufgaben. Titel, Notizen und die Reihenfolge der Aufgaben k&ouml;nnen Sie weiterhin bearbeiten.</div>
       </details>
 
       <details>
         <summary>Was ist das Beweispaket?</summary>
-        <div class="answer">Das Beweispaket ist eine ZIP-Datei mit allen Originalfotos, einem maschinenlesbaren Nachweismanifest (SHA-256-Hashes, GPS, Zeitstempel), dem PDF-Bericht und der Kundenunterschrift. Es enth&auml;lt eine README-Datei, die erkl&auml;rt, wie jeder die Hashes unabh&auml;ngig mit Standardtools wie <strong>shasum</strong> &uuml;berpr&uuml;fen kann.</div>
+        <div class="answer">Das Beweispaket ist eine ZIP-Datei mit allen Originalfotos, einem maschinenlesbaren Nachweismanifest (SHA-256-Hashes, GPS, Zeitstempel und, bei importierten Fotos, deren Herkunft und Importzeitpunkt), dem PDF-Bericht und der Kundenunterschrift. Es enth&auml;lt eine README-Datei, die erkl&auml;rt, wie jeder die Hashes unabh&auml;ngig mit Standardtools wie <strong>shasum</strong> &uuml;berpr&uuml;fen kann.</div>
       </details>
 
       <details>
         <summary>Was ist in Kostenlos vs Pro enthalten?</summary>
-        <div class="answer"><strong>Kostenlos</strong> umfasst Vorher/Nachher-Aufnahme, Vergleichsexporte, PDF-Berichte und bis zu 3 Auftr&auml;ge. <strong>Pro (einmalig 9,99&nbsp;$)</strong> schaltet den Streitschutz-Modus, Kundenabnahme, Schieberegler-Videoexport, Firmendesign, HD/Druckqualit&auml;t und unbegrenzte Auftr&auml;ge und Aufgaben frei. Kein Abonnement — ein Kauf, f&uuml;r immer.</div>
+        <div class="answer"><strong>Kostenlos</strong> umfasst Vorher/Nachher-Aufnahme, Vergleichsbilder und PDF-Berichte f&uuml;r bis zu 3 Auftr&auml;ge, 3 Aufgaben pro Auftrag und 3 Showroom-Projekte; kostenlose Exporte tragen ein kleines SiteProof-Wasserzeichen, und der Beispielauftrag z&auml;hlt nicht mit. <strong>Pro</strong> ist ein Einmalkauf, der Dispute-Proof Mode, Kundenfreigabe, Schieberegler-Videoexport, Ihr Firmendesign ohne Wasserzeichen, HD/Druckqualit&auml;t sowie unbegrenzte Auftr&auml;ge, Aufgaben und Showroom-Projekte freischaltet. Kein Abonnement: ein Kauf, f&uuml;r immer.</div>
+      </details>
+
+      <details>
+        <summary>Wie stelle ich meinen Pro-Kauf wieder her?</summary>
+        <div class="answer">Pro wird automatisch aktiviert, wenn Sie im App Store mit der Apple-ID angemeldet sind, mit der Sie es gekauft haben. Falls nicht, &ouml;ffnen Sie den Tab <strong>Einstellungen</strong> und tippen Sie auf <strong>Kauf wiederherstellen</strong>. Ist Pro einmal aktiv, bleibt es aktiv, auch wenn das Ger&auml;t sp&auml;ter vom App Store abgemeldet wird; nur eine R&uuml;ckerstattung entfernt es.</div>
+      </details>
+
+      <details>
+        <summary>Was ist der Beispielauftrag &bdquo;K&uuml;chenumbau&ldquo;?</summary>
+        <div class="answer">Neue Installationen enthalten einen fertigen Beispielauftrag, damit Sie Exporte, Berichte und die Verifizierung sofort ausprobieren k&ouml;nnen. Er wird nicht auf die Limits der kostenlosen Version angerechnet, seine Fotos k&ouml;nnen nicht ge&auml;ndert werden, und Sie k&ouml;nnen ihn jederzeit l&ouml;schen (seine Karte gedr&uuml;ckt halten, dann <strong>Auftrag l&ouml;schen</strong>). Einmal gel&ouml;scht, kommt er nicht zur&uuml;ck.</div>
       </details>
 
       <details>
         <summary>Kann ich mein Firmendesign hinzuf&uuml;gen?</summary>
-        <div class="answer">Ja (Pro). Laden Sie Ihr Firmenlogo hoch, legen Sie eine Markenfarbe fest und geben Sie Firmennamen, Telefon, E-Mail und Website ein. Ihr Firmendesign erscheint auf allen Vergleichsexporten, Schieberegler-Videos und PDF-Berichten.</div>
+        <div class="answer">Ja (Pro). F&uuml;gen Sie im Tab <strong>Einstellungen</strong> Ihr Firmenlogo, eine Markenfarbe sowie Firmennamen, Telefon, E-Mail und Website hinzu. Ihr Firmendesign erscheint auf Vergleichsbildern, Schieberegler-Videos und PDF-Berichten anstelle des SiteProof-Wasserzeichens.</div>
       </details>
 
       <details>
         <summary>Funktioniert die App offline?</summary>
-        <div class="answer">Ja. Fotoaufnahme, Berichterstellung, kryptografische Verifizierung und Kundenabnahme funktionieren ohne Internetverbindung. Die einzigen Netzwerkaktivit&auml;ten sind die Kaufvalidierung &uuml;ber Apple und, falls aktiviert, Nutzungsstatistiken und Absturzberichte &uuml;ber Google Firebase (die Sie in den Einstellungen deaktivieren k&ouml;nnen).</div>
+        <div class="answer">Ja. Fotoaufnahme, Berichterstellung, kryptografische Verifizierung und Kundenfreigabe funktionieren ohne Internetverbindung. Online geht die App nur f&uuml;r K&auml;ufe im App Store (&uuml;ber Apple), zum Ermitteln einer Adresse aus dem GPS-Standort, wenn die Option Automatische GPS-Markierung aktiviert ist (&uuml;ber die Ortungsdienste von Apple), und, sofern Sie es erlauben, f&uuml;r Nutzungsstatistiken und Absturzberichte &uuml;ber Google Firebase (die Sie in den Einstellungen deaktivieren k&ouml;nnen).</div>
       </details>
 
       <details>
         <summary>Unterst&uuml;tzt die App Querformat-Fotos?</summary>
-        <div class="answer">Ja. Querformat-Fotos werden vollst&auml;ndig unterst&uuml;tzt. Breite Szenen wie K&uuml;chen, Terrassen und Dachlinien werden ohne Beschnitt aufgenommen und angezeigt. Die App erkennt, ob das Vorher-Foto im Querformat aufgenommen wurde, und erzwingt die gleiche Ausrichtung f&uuml;r das Nachher-Foto, um konsistente Paare zu gew&auml;hrleisten.</div>
+        <div class="answer">Ja. Querformat-Fotos werden vollst&auml;ndig unterst&uuml;tzt: Breite Szenen wie K&uuml;chen, Terrassen und Dachlinien werden ohne Beschnitt aufgenommen und angezeigt. Halten Sie das Smartphone anders als beim Vorher-Foto, erinnert die Kamera Sie daran, es zu drehen, und blendet die Vorschau-&Uuml;berlagerung aus, bis die Ausrichtung &uuml;bereinstimmt; sie hindert Sie aber nie daran, das Foto aufzunehmen.</div>
       </details>
 
       <details>
         <summary>Sind meine Daten privat?</summary>
-        <div class="answer">Ja. Ihre Fotos, Auftragsdetails, Kundeninformationen und Unterschriften verbleiben vollst&auml;ndig auf Ihrem Ger&auml;t &mdash; sie werden niemals hochgeladen, und es ist kein Konto erforderlich. Zur Verbesserung der App erhebt SiteProof Nutzungsstatistiken und Absturzberichte &uuml;ber Google Firebase &mdash; einschlie&szlig;lich der genutzten Funktionen und einer zuf&auml;lligen Kennung, die diese Aktivit&auml;t sitzungs&uuml;bergreifend mit einer Installation verkn&uuml;pft (niemals mit Ihnen pers&ouml;nlich). Dies umfasst niemals Ihre Inhalte und wird nicht f&uuml;r Werbung verwendet. Sie k&ouml;nnen dies jederzeit unter <strong>Einstellungen &rarr; Daten &amp; Datenschutz</strong> deaktivieren, und in der EU/im UK/in der Schweiz bleibt es deaktiviert, sofern Sie nicht zustimmen. Lesen Sie unsere <a href="https://hugolamarreftc.github.io/SiteProof-legal/">Datenschutzerkl&auml;rung</a> f&uuml;r alle Details.</div>
+        <div class="answer">Ja. Ihre Fotos, Auftragsdetails, Kundeninformationen und Unterschriften verbleiben vollst&auml;ndig auf Ihrem Ger&auml;t &mdash; sie werden niemals hochgeladen, und es ist kein Konto erforderlich. Zur Verbesserung der App erhebt SiteProof Nutzungsstatistiken und Absturzberichte &uuml;ber Google Firebase &mdash; einschlie&szlig;lich der genutzten Funktionen und einer zuf&auml;lligen Kennung, die diese Aktivit&auml;t sitzungs&uuml;bergreifend mit einer Installation verkn&uuml;pft (niemals mit Ihnen pers&ouml;nlich). Dies umfasst niemals Ihre Inhalte und wird nicht f&uuml;r Werbung verwendet. Sie k&ouml;nnen dies jederzeit unter <strong>Einstellungen &rarr; Daten &amp; Datenschutz</strong> deaktivieren, und in der EU, im EWR, im UK und in der Schweiz bleibt es deaktiviert, sofern Sie nicht zustimmen. Lesen Sie unsere <a href="https://hugolamarreftc.github.io/SiteProof-legal/">Datenschutzerkl&auml;rung</a> f&uuml;r alle Details.</div>
       </details>
 
       <details>
@@ -629,57 +789,97 @@
 
       <details>
         <summary>O que é o SiteProof?</summary>
-        <div class="answer">O SiteProof é uma aplicação de documentação de comprovação de trabalho para empreiteiros e profissionais de ofícios. Capture fotos de antes e depois no local da obra, gere comparações com marca própria e relatórios em PDF e, opcionalmente, proteja tudo com comprovação criptográfica e aprovação do cliente.</div>
+        <div class="answer">O SiteProof é uma aplicação de documentação de comprovação de trabalho para empreiteiros e profissionais de ofícios. Capture fotos de antes e depois no local da obra e transforme-as em imagens comparativas e relatórios em PDF. Com o Pro, adicione a marca da sua empresa, vídeos com revelação por deslize, comprovação à prova de adulteração e a aprovação do cliente.</div>
+      </details>
+
+      <details>
+        <summary>Onde estão as Definições e o Showroom?</summary>
+        <div class="answer">O SiteProof tem três separadores na parte inferior do ecrã: <strong>Trabalhos</strong>, <strong>Showroom</strong> e <strong>Definições</strong>. As Definições incluem a marca da sua empresa, as opções Dispute-Proof, Dados e Privacidade, Restaurar compra, Novidades e o envio de comentários. O Showroom reúne os seus melhores antes e depois, para que os possa mostrar aos clientes.</div>
       </details>
 
       <details>
         <summary>Como funciona a captura de antes/depois?</summary>
-        <div class="answer">Abra o SiteProof no local da obra e capture uma foto de <strong>Antes</strong>. A aplicação regista automaticamente a data e hora, a localização GPS e as informações do dispositivo. Quando o trabalho estiver concluído, mude para o modo <strong>Depois</strong> — uma sobreposição translúcida da foto original ajuda a alinhar o enquadramento com precisão. A aplicação também replica as definições de flash/lanterna da foto de Antes.</div>
+        <div class="answer">Crie um trabalho, adicione uma tarefa e toque em <strong>Capturar Antes</strong> no local da obra. A aplicação regista a data, a hora e o dispositivo e, quando a opção Marcação GPS automática está ativada, a localização e o endereço. Quando terminar, abra o trabalho e toque no espaço <strong>DEPOIS</strong> vazio da tarefa: a câmara mostra a sua foto de Antes como uma sobreposição fantasma transparente, para que possa repetir o mesmo enquadramento.</div>
+      </details>
+
+      <details>
+        <summary>Como alinho a foto de Depois?</summary>
+        <div class="answer">A foto de Antes aparece como uma sobreposição fantasma transparente sobre a imagem da câmara. Arraste o cursor para a tornar mais forte ou mais ténue, ou toque no olho para a ocultar. Mova-se até a cena coincidir: o anel à volta do obturador fica <strong>verde</strong> quando a imagem estiver alinhada. Toque para focar, use o gesto de pinça para ampliar (até 5&times;) e ative a grelha para obter linhas direitas. Se a foto de Antes tiver sido tirada com flash, o flash liga-se para igualar a iluminação.</div>
+      </details>
+
+      <details>
+        <summary>Posso usar fotos da minha fototeca?</summary>
+        <div class="answer">Sim. Na câmara, toque no botão da fototeca para escolher uma foto de Antes ou de Depois. As fotos importadas recebem a impressão digital no momento em que as importa, pelo que as edições posteriores continuam a ser detetadas. Mas, como o SiteProof não consegue saber quando nem onde foram realmente tiradas, são marcadas como <strong>Importada</strong> na tarefa, nos relatórios em PDF e no pacote de evidências, e nunca são apresentadas como <strong>Captura verificada</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Como reordeno as tarefas ou refaço uma foto?</summary>
+        <div class="answer">Num trabalho, arraste o cartão de uma tarefa para o mover, ou use <strong>Mover para cima</strong> / <strong>Mover para baixo</strong> no menu da tarefa. Para refazer uma foto, escolha <strong>Refazer Antes</strong> ou <strong>Refazer Depois</strong> no mesmo menu, ou toque na foto para a abrir em ecrã inteiro e toque em <strong>Refazer</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Como elimino um trabalho?</summary>
+        <div class="answer">No separador Trabalhos, mantenha premido o cartão do trabalho e toque em <strong>Eliminar trabalho</strong>, ou abra o trabalho e toque no botão do caixote do lixo, no topo. Isto remove o trabalho e todas as suas fotos do dispositivo e não pode ser anulado.</div>
       </details>
 
       <details>
         <summary>Que formatos de exportação estão disponíveis?</summary>
-        <div class="answer">O SiteProof pode gerar <strong>comparações lado a lado</strong> (horizontais ou verticais), <strong>vídeos com revelação por deslize</strong> (Pro) e <strong>relatórios profissionais em PDF</strong> com a sua marca. Pode partilhar as exportações por Mensagens, e-mail, AirDrop ou guardá-las na sua biblioteca de fotos.</div>
+        <div class="answer">O SiteProof cria <strong>comparações lado a lado</strong> (horizontais ou verticais) e <strong>relatórios profissionais em PDF</strong> e, com o Pro, também <strong>vídeos com revelação por deslize</strong>. As exportações gratuitas têm uma pequena marca d'água do SiteProof; com o Pro, a sua marca substitui-a. Partilhe por Mensagens, e-mail ou AirDrop, guarde imagens e vídeos na app Fotografias e guarde relatórios em PDF na app Ficheiros.</div>
       </details>
 
       <details>
-        <summary>O que é o Modo Antidisputa?</summary>
-        <div class="answer">O Modo Antidisputa (Pro) gera criptograficamente um resumo (hash) de cada foto com <strong>SHA-256</strong> no momento da captura. Se alguém modificar o ficheiro posteriormente, a verificação irá detetá-lo. Pode reverificar as fotos de qualquer trabalho a qualquer momento dentro da aplicação. Isto cria uma documentação à prova de adulteração que o protege em caso de disputas.</div>
+        <summary>O que é o Dispute-Proof Mode?</summary>
+        <div class="answer">O Dispute-Proof Mode (Pro) cria uma impressão digital de cada foto no momento em que é tirada: um resumo (hash) <strong>SHA-256</strong>, assinado com uma chave que nunca sai do seu dispositivo. Se alguém modificar o ficheiro posteriormente, a verificação deteta-o. Verifique qualquer trabalho a qualquer momento com o botão do escudo, no topo do ecrã do trabalho. As fotos importadas da sua fototeca recebem a impressão digital no momento da importação e são marcadas como <strong>Importada</strong>, nunca como <strong>Captura verificada</strong>.</div>
       </details>
 
       <details>
         <summary>Como funciona a aprovação do cliente?</summary>
-        <div class="answer">Quando um trabalho está concluído, entregue o seu dispositivo ao cliente. Ele analisa o trabalho com os intervalos de data e hora de cada tarefa, lê o texto do acordo, introduz o seu nome completo e desenha a sua assinatura diretamente no ecrã. A assinatura, o acordo, o nome e a data e hora são selados em conjunto com o trabalho.</div>
+        <div class="answer">Quando um trabalho está concluído, toque em <strong>Obter aprovação do cliente</strong> (Pro) e entregue o seu dispositivo ao cliente. Ele analisa cada tarefa com as respetivas datas, lê o acordo, introduz o seu nome completo e assina no ecrã. A assinatura, o acordo, o nome, a hora e as impressões digitais de todas as fotos do trabalho são selados em conjunto.</div>
       </details>
 
       <details>
-        <summary>O que é o pacote de provas?</summary>
-        <div class="answer">O pacote de provas é um ficheiro ZIP que contém todas as fotos originais, um manifesto de provas legível por máquina (resumos SHA-256, GPS, datas e horas), o relatório em PDF e a assinatura do cliente. Inclui um README que explica como qualquer pessoa pode verificar os resumos de forma independente utilizando ferramentas padrão como o <strong>shasum</strong>.</div>
+        <summary>Porque é que não posso alterar as fotos depois de o cliente assinar?</summary>
+        <div class="answer">A assinatura do cliente sela as fotos do trabalho tal como estavam no momento em que assinou. Alterar uma foto depois disso invalidaria essa comprovação; por isso, depois de um trabalho ser assinado, as suas fotos ficam bloqueadas: não é possível refazer fotos, fazer novas capturas nem eliminar tarefas. Continua a poder editar os títulos, as notas e a ordem das tarefas.</div>
+      </details>
+
+      <details>
+        <summary>O que é o pacote de evidências?</summary>
+        <div class="answer">O pacote de evidências é um ficheiro ZIP que contém todas as fotos originais, um manifesto de provas legível por máquina (resumos SHA-256, GPS, datas e horas e, no caso das fotos importadas, a sua origem e o momento da importação), o relatório em PDF e a assinatura do cliente. Inclui um README que explica como qualquer pessoa pode verificar os resumos de forma independente utilizando ferramentas padrão como o <strong>shasum</strong>.</div>
       </details>
 
       <details>
         <summary>O que está incluído na versão Gratuita e na Pro?</summary>
-        <div class="answer">A versão <strong>Gratuita</strong> inclui a captura de antes/depois, exportações de comparações, relatórios em PDF e até 3 trabalhos. A versão <strong>Pro (9,99 USD, pagamento único)</strong> desbloqueia o Modo Antidisputa, a aprovação do cliente, a exportação de vídeos com deslize, a marca da empresa, a qualidade HD/Impressão e trabalhos e tarefas ilimitados. Sem subscrição — uma única compra, para sempre.</div>
+        <div class="answer">A versão <strong>Gratuita</strong> inclui a captura de antes/depois, imagens comparativas e relatórios em PDF para até 3 trabalhos, 3 tarefas por trabalho e 3 projetos no Showroom; as exportações gratuitas têm uma pequena marca d'água do SiteProof, e o trabalho de exemplo não conta. A versão <strong>Pro</strong> é uma compra única que desbloqueia o Dispute-Proof Mode, a aprovação do cliente, a exportação de vídeos com deslize, a marca da sua empresa sem marca d'água, a qualidade HD/Impressão e trabalhos, tarefas e projetos no Showroom ilimitados. Sem subscrição: uma única compra, para sempre.</div>
+      </details>
+
+      <details>
+        <summary>Como restauro a minha compra do Pro?</summary>
+        <div class="answer">O Pro é ativado automaticamente quando tem sessão iniciada na App Store com o ID Apple com que o comprou. Se isso não acontecer, abra o separador <strong>Definições</strong> e toque em <strong>Restaurar compra</strong>. Depois de ativado, o Pro mantém-se ativo mesmo que, mais tarde, seja terminada a sessão da App Store no dispositivo; só um reembolso o remove.</div>
+      </details>
+
+      <details>
+        <summary>O que é o trabalho de exemplo «Remodelação de cozinha»?</summary>
+        <div class="answer">As novas instalações incluem um trabalho de exemplo concluído, para que possa experimentar de imediato as exportações, os relatórios e a verificação. Não conta para os limites da versão gratuita, as suas fotos não podem ser alteradas e pode eliminá-lo quando quiser (mantenha premido o cartão e toque em <strong>Eliminar trabalho</strong>). Depois de eliminado, não volta a aparecer.</div>
       </details>
 
       <details>
         <summary>Posso adicionar a marca da minha empresa?</summary>
-        <div class="answer">Sim (Pro). Carregue o logótipo da sua empresa, defina uma cor de marca e introduza o nome, telefone, e-mail e site da sua empresa. A sua marca aparece em todas as exportações de comparações, vídeos com deslize e relatórios em PDF.</div>
+        <div class="answer">Sim (Pro). No separador <strong>Definições</strong>, adicione o logótipo da sua empresa, uma cor de marca e o nome, telefone, e-mail e site da sua empresa. A sua marca aparece nas imagens comparativas, nos vídeos com deslize e nos relatórios em PDF, em vez da marca d'água do SiteProof.</div>
       </details>
 
       <details>
         <summary>A aplicação funciona offline?</summary>
-        <div class="answer">Sim. Toda a captura de fotos, geração de relatórios, verificação criptográfica e aprovação do cliente funcionam sem ligação à Internet. A única atividade de rede é a validação da compra através do StoreKit pela Apple e, se ativado, análises de utilização e relatórios de falhas através do Google Firebase (que pode desativar nas Definições).</div>
+        <div class="answer">Sim. Toda a captura de fotos, geração de relatórios, verificação criptográfica e aprovação do cliente funcionam sem ligação à Internet. A aplicação só se liga à Internet para compras na App Store (através da Apple), para obter o endereço a partir do GPS quando a opção Marcação GPS automática está ativada (através dos serviços de localização da Apple) e, se o permitir, para análises de utilização e relatórios de falhas através do Google Firebase (que pode desativar nas Definições).</div>
       </details>
 
       <details>
         <summary>A aplicação suporta fotos na horizontal?</summary>
-        <div class="answer">Sim. As fotos na horizontal são tratadas como elementos de primeira classe. Cenas amplas como cozinhas, decks e linhas de telhado são capturadas e apresentadas sem recortes. A aplicação regista se a foto de Antes foi tirada na horizontal e impõe a correspondência de orientação na foto de Depois, para garantir pares consistentes.</div>
+        <div class="answer">Sim. As fotos na horizontal são tratadas como elementos de primeira classe: cenas amplas como cozinhas, decks e linhas de telhado são capturadas e apresentadas sem recortes. Se segurar o telemóvel numa orientação diferente da foto de Antes, a câmara lembra-lhe que deve rodá-lo e oculta a sobreposição fantasma até a orientação coincidir, mas nunca o impede de tirar a foto.</div>
       </details>
 
       <details>
         <summary>Os meus dados são privados?</summary>
-        <div class="answer">Sim. As suas fotos, detalhes de trabalhos, informações de clientes e assinaturas permanecem inteiramente no seu dispositivo &mdash; nunca são carregados e não é necessária qualquer conta. Para melhorar a aplicação, o SiteProof recolhe análises de utilização e relatórios de falhas através do Google Firebase &mdash; incluindo as funcionalidades utilizadas e um identificador aleatório que associa esta atividade, ao longo das sessões, a uma instalação (nunca a si pessoalmente). Isto nunca inclui o seu conteúdo e não é utilizado para publicidade. Pode desativá-lo a qualquer momento em <strong>Definições &rarr; Dados e Privacidade</strong> e, na UE/Reino Unido/Suíça, permanece desativado a menos que opte por ativá-lo. Consulte a nossa <a href="https://hugolamarreftc.github.io/SiteProof-legal/">política de privacidade</a> para todos os detalhes.</div>
+        <div class="answer">Sim. As suas fotos, detalhes de trabalhos, informações de clientes e assinaturas permanecem inteiramente no seu dispositivo &mdash; nunca são carregados e não é necessária qualquer conta. Para melhorar a aplicação, o SiteProof recolhe análises de utilização e relatórios de falhas através do Google Firebase &mdash; incluindo as funcionalidades utilizadas e um identificador aleatório que associa esta atividade, ao longo das sessões, a uma instalação (nunca a si pessoalmente). Isto nunca inclui o seu conteúdo e não é utilizado para publicidade. Pode desativá-lo a qualquer momento em <strong>Definições &rarr; Dados e Privacidade</strong> e, na UE, no EEE, no Reino Unido e na Suíça, permanece desativado a menos que opte por ativá-lo. Consulte a nossa <a href="https://hugolamarreftc.github.io/SiteProof-legal/">política de privacidade</a> para todos os detalhes.</div>
       </details>
 
       <details>
@@ -712,57 +912,97 @@
 
       <details>
         <summary>SiteProof とは何ですか。</summary>
-        <div class="answer">SiteProof は、施工業者や職人の方々のための作業実績記録アプリです。現場で作業前と作業後の写真を撮影し、ブランド入りの比較画像や PDF レポートを作成できます。さらに、暗号学的証明とお客様による署名ですべてを封印することも可能です。</div>
+        <div class="answer">SiteProof は、施工業者や職人の方々のための作業実績記録アプリです。現場でビフォー・アフターの写真を撮影し、比較画像や PDF レポートを作成できます。Pro では、会社のブランディング、スライダー演出の動画、改ざん検出可能な証明、クライアントの承認を追加できます。</div>
       </details>
 
       <details>
-        <summary>作業前・作業後の撮影はどのように行いますか。</summary>
-        <div class="answer">現場で SiteProof を開き、<strong>作業前</strong>の写真を撮影します。アプリが撮影日時、GPS による位置情報、デバイス情報を自動的に記録します。作業が完了したら<strong>作業後</strong>モードに切り替えてください。元の写真のゴースト（半透明）オーバーレイが表示され、構図を正確に合わせるのに役立ちます。アプリは作業前の写真のフラッシュ／トーチ設定も再現します。</div>
+        <summary>設定とショールームはどこにありますか。</summary>
+        <div class="answer">SiteProof の画面下部には、<strong>案件</strong>、<strong>ショールーム</strong>、<strong>設定</strong>の3つのタブがあります。設定には、会社のブランディング、Dispute-Proof のオプション、「データとプライバシー」、「購入を復元」、「新機能」、フィードバックがあります。ショールームには自慢のビフォー・アフターを集めて、クライアントに見せることができます。</div>
+      </details>
+
+      <details>
+        <summary>ビフォー・アフターの撮影はどのように行いますか。</summary>
+        <div class="answer">案件を作成してタスクを追加し、現場で<strong>ビフォーを撮影</strong>をタップします。アプリは日付、時刻、デバイス情報を記録し、「GPS 自動タグ付け」がオンの場合は位置情報と住所も記録します。作業が完了したら、案件を開き、タスクの空いている<strong>アフター</strong>のタイルをタップします。カメラにビフォー写真が半透明のゴーストとして表示されるので、同じ構図で撮影できます。</div>
+      </details>
+
+      <details>
+        <summary>アフター写真をビフォー写真に合わせるにはどうすればよいですか。</summary>
+        <div class="answer">カメラの映像にビフォー写真が半透明のゴーストとして重なって表示されます。スライダーをドラッグしてゴーストを濃くしたり薄くしたりでき、目のアイコンをタップすると非表示になります。構図が合うまでカメラを動かしてください。位置が合うと、シャッターの周りのリングが<strong>緑色</strong>になります。タップでフォーカス、ピンチでズーム（最大5&times;）ができ、グリッドをオンにすると線をまっすぐに揃えやすくなります。ビフォー写真でフラッシュを使った場合は、それに合わせてフラッシュがオンになります。</div>
+      </details>
+
+      <details>
+        <summary>写真ライブラリの写真を使えますか。</summary>
+        <div class="answer">はい。カメラで写真ライブラリのボタンをタップすると、ビフォー写真またはアフター写真を選べます。インポートした写真にはインポートした時点でフィンガープリントが付けられるため、後から編集されても検出されます。ただし、実際にいつどこで撮影されたかは SiteProof にはわからないため、タスク、PDF レポート、証拠パッケージでは<strong>インポート済み</strong>と表示され、<strong>検証済みの撮影</strong>として表示されることはありません。</div>
+      </details>
+
+      <details>
+        <summary>タスクの並べ替えや写真の撮り直しはどうすればよいですか。</summary>
+        <div class="answer">案件の中でタスクカードをドラッグして移動するか、タスクのメニューで<strong>上へ移動</strong>／<strong>下へ移動</strong>を使います。写真を撮り直すには、同じメニューから<strong>ビフォーを撮り直す</strong>または<strong>アフターを撮り直す</strong>を選ぶか、写真をタップしてフルスクリーンで開き、<strong>撮り直す</strong>をタップします。</div>
+      </details>
+
+      <details>
+        <summary>案件を削除するにはどうすればよいですか。</summary>
+        <div class="answer">「案件」タブで案件のカードを長押しして<strong>案件を削除</strong>をタップするか、案件を開いて上部のゴミ箱ボタンをタップします。案件とそのすべての写真がデバイスから削除され、元に戻すことはできません。</div>
       </details>
 
       <details>
         <summary>どのようなエクスポート形式が利用できますか。</summary>
-        <div class="answer">SiteProof では、<strong>左右並びの比較画像</strong>（横並びまたは縦並び）、<strong>スライダー演出の動画</strong>（Pro）、そしてご自身のブランドを反映した<strong>プロ仕様の PDF レポート</strong>を作成できます。エクスポートしたものは、メッセージ、メール、AirDrop で共有したり、写真ライブラリに保存したりできます。</div>
+        <div class="answer">SiteProof では、<strong>左右並びの比較画像</strong>（横並びまたは縦並び）と<strong>プロ仕様の PDF レポート</strong>を作成でき、Pro では<strong>スライダー演出の動画</strong>も作成できます。Free 版のエクスポートには小さな SiteProof の透かしが入りますが、Pro では透かしの代わりにあなたのブランディングが入ります。メッセージ、メール、AirDrop で共有できるほか、画像と動画は「写真」に、PDF レポートは「ファイル」に保存できます。</div>
       </details>
 
       <details>
-        <summary>ディスピュートプルーフモードとは何ですか。</summary>
-        <div class="answer">ディスピュートプルーフモード（Pro）は、撮影した瞬間にすべての写真を <strong>SHA-256</strong> で暗号学的にハッシュ化します。その後に誰かがファイルを改変した場合、検証によってそれを検出できます。アプリ内からいつでも、任意のジョブの写真を再検証できます。これにより改ざんが検出可能な記録が作成され、紛争の際にあなたを守ります。</div>
+        <summary>Dispute-Proof Mode とは何ですか。</summary>
+        <div class="answer">Dispute-Proof Mode（Pro）は、撮影した瞬間にすべての写真にフィンガープリントを付けます。これは、お使いのデバイスから外に出ることのないキーで署名された <strong>SHA-256</strong> ハッシュです。その後に誰かがファイルを改変した場合、検証によってそれを検出できます。どの案件も、案件画面の上部にある盾のボタンからいつでも確認できます。ライブラリからインポートした写真には、インポート時にフィンガープリントが付けられ、<strong>インポート済み</strong>と表示されます。<strong>検証済みの撮影</strong>と表示されることはありません。</div>
       </details>
 
       <details>
-        <summary>お客様による署名はどのように行いますか。</summary>
-        <div class="answer">ジョブが完了したら、お使いのデバイスをお客様にお渡しください。お客様は各タスクの日時の範囲とともに作業内容を確認し、同意文を読み、氏名を入力して、画面上に直接署名を描きます。署名、同意文、氏名、タイムスタンプはジョブと一緒にまとめて封印されます。</div>
+        <summary>クライアントの承認はどのように行いますか。</summary>
+        <div class="answer">案件が完了したら、<strong>クライアントの承認を取得</strong>（Pro）をタップし、お使いのデバイスをクライアントにお渡しください。クライアントは各タスクとその日付を確認し、同意文を読み、氏名を入力して、画面上に署名します。署名、同意文、氏名、時刻、そして案件内のすべての写真のフィンガープリントが、まとめて封印されます。</div>
+      </details>
+
+      <details>
+        <summary>クライアントが署名した後、写真を変更できないのはなぜですか。</summary>
+        <div class="answer">クライアントの署名によって、案件の写真は署名した時点の状態のまま封印されます。その後に写真を変更するとこの証明が成り立たなくなるため、署名済みの案件では写真がロックされ、撮り直し、新しい撮影、タスクの削除はできません。タイトル、メモ、タスクの順序は引き続き編集できます。</div>
       </details>
 
       <details>
         <summary>証拠パッケージとは何ですか。</summary>
-        <div class="answer">証拠パッケージは、すべての元の写真、機械可読の証明マニフェスト（SHA-256 ハッシュ、GPS、タイムスタンプ）、PDF レポート、そしてお客様の署名を含む ZIP ファイルです。<strong>shasum</strong> などの標準的なツールを使って、誰でも独立してハッシュを検証する方法を説明した README が含まれています。</div>
+        <div class="answer">証拠パッケージは、すべての元の写真、機械可読の証明マニフェスト（SHA-256 ハッシュ、GPS、タイムスタンプ、さらにインポートした写真についてはその取り込み元とインポート日時）、PDF レポート、そしてクライアントの署名を含む ZIP ファイルです。<strong>shasum</strong> などの標準的なツールを使って、誰でも独立してハッシュを検証する方法を説明した README が含まれています。</div>
       </details>
 
       <details>
         <summary>Free 版と Pro 版の違いは何ですか。</summary>
-        <div class="answer"><strong>Free 版</strong>には、作業前・作業後の撮影、比較画像のエクスポート、PDF レポート、最大3件までのジョブが含まれます。<strong>Pro 版（1回限り 9.99 米ドル）</strong>では、ディスピュートプルーフモード、お客様による署名、スライダー動画のエクスポート、会社ブランディング、HD／印刷品質、そしてジョブとタスクの無制限利用が解放されます。サブスクリプションはありません。1回のご購入で、ずっとお使いいただけます。</div>
+        <div class="answer"><strong>Free 版</strong>には、ビフォー・アフターの撮影、比較画像、PDF レポートが含まれ、案件は最大3件、タスクは案件ごとに最大3つ、ショールームのプロジェクトは最大3件まで利用できます。Free 版のエクスポートには小さな SiteProof の透かしが入ります。なお、サンプルの案件はこの件数に含まれません。<strong>Pro 版</strong>は1回限りの購入で、Dispute-Proof Mode、クライアントの承認、スライダー動画のエクスポート、透かしなしの会社のブランディング、HD／印刷品質、そして案件、タスク、ショールームのプロジェクトの無制限利用が解放されます。サブスクリプションはありません。1回のご購入で、ずっとお使いいただけます。</div>
+      </details>
+
+      <details>
+        <summary>Pro の購入を復元するにはどうすればよいですか。</summary>
+        <div class="answer">購入に使用した Apple ID で App Store にサインインしていれば、Pro は自動的に有効になります。有効にならない場合は、<strong>設定</strong>タブを開いて<strong>購入を復元</strong>をタップしてください。Pro は一度有効になると、その後デバイスが App Store からサインアウトしても有効なままです。無効になるのは返金された場合だけです。</div>
+      </details>
+
+      <details>
+        <summary>サンプルの案件「キッチン改装」とは何ですか。</summary>
+        <div class="answer">新しくインストールすると、完了済みのサンプルの案件が1件用意されているので、エクスポート、レポート、検証をすぐに試せます。この案件は Free 版の上限に数えられず、写真は変更できません。また、いつでも削除できます（カードを長押しして<strong>案件を削除</strong>をタップします）。一度削除すると、再び表示されることはありません。</div>
       </details>
 
       <details>
         <summary>会社のブランディングを追加できますか。</summary>
-        <div class="answer">はい、できます（Pro）。会社のロゴをアップロードし、ブランドカラーを設定し、会社名、電話番号、メールアドレス、ウェブサイトを入力できます。設定したブランディングは、すべての比較画像、スライダー動画、PDF レポートに表示されます。</div>
+        <div class="answer">はい、できます（Pro）。<strong>設定</strong>タブで、会社のロゴとブランドカラーを追加し、会社名、電話番号、メールアドレス、ウェブサイトを入力できます。設定したブランディングは、SiteProof の透かしの代わりに、比較画像、スライダー動画、PDF レポートに表示されます。</div>
       </details>
 
       <details>
         <summary>このアプリはオフラインで動作しますか。</summary>
-        <div class="answer">はい。すべての写真撮影、レポート生成、暗号学的検証、お客様による署名は、インターネット接続なしで動作します。ネットワーク通信が発生するのは、Apple を通じた StoreKit による購入確認のみです。また、有効にしている場合は、Google Firebase を通じた利用状況分析とクラッシュレポートも送信されます（設定でオフにできます）。</div>
+        <div class="answer">はい。写真撮影、レポート生成、暗号学的検証、クライアントの承認は、すべてインターネット接続なしで動作します。アプリがオンラインになるのは、App Store での購入時（Apple を通じて）、「GPS 自動タグ付け」がオンのときに GPS から住所を調べる場合（Apple の位置情報サービスを通じて）、そして許可している場合に Google Firebase を通じて利用状況分析とクラッシュレポートを送信するとき（設定でオフにできます）だけです。</div>
       </details>
 
       <details>
         <summary>このアプリは横向きの写真に対応していますか。</summary>
-        <div class="answer">はい。横向きの写真も第一級の対象として扱われます。キッチン、デッキ、屋根のラインなどの横長の場面も、トリミングされることなく撮影・表示されます。アプリは作業前の写真が横向きで撮影されたかどうかを記録し、作業後の撮影でも向きが一致するように制御することで、一貫したペアを確保します。</div>
+        <div class="answer">はい。横向きの写真も第一級の対象として扱われます。キッチン、デッキ、屋根のラインなどの横長の場面も、トリミングされることなく撮影・表示されます。ビフォー写真と異なる向きで構えると、カメラが向きを変えるよう促し、向きが一致するまでゴーストを非表示にしますが、撮影できなくなることはありません。</div>
       </details>
 
       <details>
         <summary>私のデータは保護されますか。</summary>
-        <div class="answer">はい。あなたの写真、ジョブの詳細、お客様の情報、署名は、すべてあなたのデバイス内にとどまります&mdash;これらがアップロードされることはなく、アカウントも不要です。アプリを改善するため、SiteProof は Google Firebase を通じて利用状況分析とクラッシュレポート（利用された機能、およびこの利用状況をセッションをまたいでインストール単位で関連付けるランダムな識別子を含みます。あなた個人に結び付くことはありません）を収集します。これにあなたのコンテンツが含まれることは決してなく、広告目的で使用されることもありません。<strong>設定 &rarr; データとプライバシー</strong>からいつでもオフにでき、EU／英国／スイスでは、あなたが同意しない限りオフのままです。詳しくは<a href="https://hugolamarreftc.github.io/SiteProof-legal/">プライバシーポリシー</a>をご覧ください。</div>
+        <div class="answer">はい。あなたの写真、案件の詳細、クライアントの情報、署名は、すべてあなたのデバイス内にとどまります&mdash;これらがアップロードされることはなく、アカウントも不要です。アプリを改善するため、SiteProof は Google Firebase を通じて利用状況分析とクラッシュレポートを収集します&mdash;これには、利用された機能、およびこの利用状況をセッションをまたいでインストール単位で関連付けるランダムな識別子が含まれます（あなた個人に結び付くことはありません）。これにあなたのコンテンツが含まれることは決してなく、広告目的で使用されることもありません。<strong>設定 &rarr; データとプライバシー</strong>からいつでもオフにでき、EU、EEA、英国、スイスでは、あなたが同意しない限りオフのままです。詳しくは<a href="https://hugolamarreftc.github.io/SiteProof-legal/">プライバシーポリシー</a>をご覧ください。</div>
       </details>
 
       <details>
@@ -795,57 +1035,97 @@
 
       <details>
         <summary>Czym jest SiteProof?</summary>
-        <div class="answer">SiteProof to aplikacja do dokumentowania wykonanych prac, przeznaczona dla wykonawców i specjalistów branży budowlanej. Pozwala wykonać zdjęcia przed i po na miejscu prac, generować markowane porównania oraz raporty PDF, a opcjonalnie zabezpieczyć całość kryptograficznym dowodem oraz akceptacją klienta.</div>
+        <div class="answer">SiteProof to aplikacja do dokumentowania wykonanych prac, przeznaczona dla wykonawców i specjalistów branży budowlanej. Pozwala wykonać zdjęcia przed i po na miejscu prac, a następnie przekształcić je w obrazy porównawcze i raporty PDF. W wersji Pro można dodać branding Państwa firmy, filmy z efektem suwaka, dowód odporny na manipulacje oraz akceptację klienta.</div>
+      </details>
+
+      <details>
+        <summary>Gdzie znajdują się Ustawienia i Showroom?</summary>
+        <div class="answer">SiteProof ma u dołu ekranu trzy zakładki: <strong>Zlecenia</strong>, <strong>Showroom</strong> i <strong>Ustawienia</strong>. W Ustawieniach znajdą Państwo branding swojej firmy, opcje Dispute-Proof, sekcję Dane i prywatność, pozycje Przywróć zakup i Co nowego oraz możliwość wysłania opinii. Showroom gromadzi Państwa najlepsze porównania przed i po, aby można je było pokazywać klientom.</div>
       </details>
 
       <details>
         <summary>Jak działa rejestracja zdjęć przed i po?</summary>
-        <div class="answer">Wystarczy otworzyć SiteProof na miejscu prac i wykonać zdjęcie w trybie <strong>Przed</strong>. Aplikacja automatycznie zapisuje znacznik czasu, lokalizację GPS oraz informacje o urządzeniu. Po zakończeniu prac należy przełączyć się w tryb <strong>Po</strong> — półprzezroczysta nakładka oryginalnego zdjęcia pomaga precyzyjnie wykadrować ujęcie. Aplikacja dopasowuje również ustawienia lampy błyskowej / latarki do zdjęcia w trybie Przed.</div>
+        <div class="answer">Wystarczy utworzyć zlecenie, dodać zadanie i na miejscu prac stuknąć <strong>Zrób zdjęcie Przed</strong>. Aplikacja zapisuje datę, godzinę i informacje o urządzeniu, a gdy włączone jest Automatyczne tagowanie GPS, także lokalizację i adres. Po zakończeniu prac należy otworzyć zlecenie i stuknąć pusty kafelek <strong>PO</strong> danego zadania: aparat pokaże zdjęcie Przed jako półprzezroczystą nakładkę, dzięki której można wykadrować to samo ujęcie.</div>
+      </details>
+
+      <details>
+        <summary>Jak wyrównać zdjęcie Po?</summary>
+        <div class="answer">Zdjęcie Przed jest wyświetlane na obrazie z aparatu jako półprzezroczysta nakładka. Suwakiem można zwiększyć lub zmniejszyć jej widoczność, a stuknięciem ikony oka ją ukryć. Należy przesuwać telefon, aż obraz pokryje się z nakładką: gdy ujęcie jest wyrównane, pierścień wokół przycisku migawki zmienia kolor na <strong>zielony</strong>. Stuknięcie w ekran ustawia ostrość, zsunięcie lub rozsunięcie palców zmienia powiększenie (do 5&times;), a po włączeniu siatki łatwiej zachować proste linie. Jeśli zdjęcie Przed zrobiono z lampą błyskową, lampa również się włącza, aby oświetlenie było takie samo.</div>
+      </details>
+
+      <details>
+        <summary>Czy mogę użyć zdjęć z galerii?</summary>
+        <div class="answer">Tak. W aparacie należy stuknąć przycisk biblioteki zdjęć i wybrać zdjęcie Przed lub Po. Zaimportowane zdjęcia otrzymują kryptograficzny odcisk w chwili importu, więc późniejsze zmiany i tak zostaną wykryte. SiteProof nie może jednak wiedzieć, kiedy ani gdzie naprawdę je zrobiono, dlatego w zadaniu, w raportach PDF i w pakiecie dowodowym są oznaczone jako <strong>Zaimportowane</strong> i nigdy nie są pokazywane jako <strong>Zweryfikowane wykonanie</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Jak zmienić kolejność zadań lub ponownie zrobić zdjęcie?</summary>
+        <div class="answer">W zleceniu wystarczy przeciągnąć kartę zadania, aby ją przenieść, albo wybrać <strong>Przenieś w górę</strong> / <strong>Przenieś w dół</strong> w menu zadania. Aby ponownie zrobić zdjęcie, należy wybrać <strong>Zrób Przed ponownie</strong> lub <strong>Zrób Po ponownie</strong> z tego samego menu albo stuknąć zdjęcie, aby otworzyć je na pełnym ekranie, i stuknąć <strong>Zrób ponownie</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Jak usunąć zlecenie?</summary>
+        <div class="answer">W zakładce Zlecenia należy przytrzymać kartę zlecenia i stuknąć <strong>Usuń zlecenie</strong> albo otworzyć zlecenie i stuknąć przycisk kosza u góry ekranu. Spowoduje to usunięcie zlecenia i wszystkich jego zdjęć z urządzenia; tej operacji nie można cofnąć.</div>
       </details>
 
       <details>
         <summary>Jakie formaty eksportu są dostępne?</summary>
-        <div class="answer">SiteProof potrafi generować <strong>porównania zestawione obok siebie</strong> (poziome lub pionowe), <strong>filmy z efektem suwaka</strong> (Pro) oraz <strong>profesjonalne raporty PDF</strong> z Państwa marką. Eksporty można udostępniać przez Wiadomości, e-mail, AirDrop lub zapisywać w bibliotece zdjęć.</div>
+        <div class="answer">SiteProof tworzy <strong>porównania zestawione obok siebie</strong> (poziome lub pionowe) i <strong>profesjonalne raporty PDF</strong>, a w wersji Pro także <strong>filmy z efektem suwaka</strong>. Eksporty w wersji Darmowej mają mały znak wodny SiteProof; w wersji Pro zastępuje go Państwa branding. Eksportowane pliki można udostępniać przez Wiadomości, e-mail lub AirDrop, obrazy i filmy zapisywać w aplikacji Zdjęcia, a raporty PDF w aplikacji Pliki.</div>
       </details>
 
       <details>
-        <summary>Czym jest tryb Dowodu na wypadek sporu?</summary>
-        <div class="answer">Tryb Dowodu na wypadek sporu (Pro) kryptograficznie hashuje każde zdjęcie algorytmem <strong>SHA-256</strong> w chwili jego wykonania. Jeśli ktokolwiek później zmodyfikuje plik, weryfikacja to wykryje. Zdjęcia z każdego zlecenia można ponownie zweryfikować w dowolnym momencie wewnątrz aplikacji. Powstaje w ten sposób dokumentacja odporna na manipulacje, która chroni Państwa w razie sporu.</div>
+        <summary>Czym jest Dispute-Proof Mode?</summary>
+        <div class="answer">Dispute-Proof Mode (Pro) zabezpiecza każde zdjęcie kryptograficznym odciskiem w chwili jego wykonania: skrótem <strong>SHA-256</strong> podpisanym kluczem, który nigdy nie opuszcza Państwa urządzenia. Jeśli ktokolwiek później zmieni plik, weryfikacja to wykryje. Każde zlecenie można w dowolnym momencie sprawdzić przyciskiem z tarczą u góry ekranu zlecenia. Zdjęcia zaimportowane z biblioteki otrzymują odcisk w chwili importu i są oznaczane jako <strong>Zaimportowane</strong>, nigdy jako <strong>Zweryfikowane wykonanie</strong>.</div>
       </details>
 
       <details>
-        <summary>Jak działa akceptacja przez klienta?</summary>
-        <div class="answer">Po zakończeniu zlecenia wystarczy przekazać urządzenie klientowi. Klient przegląda wykonane prace z zakresami daty i godziny dla każdego zadania, czyta treść porozumienia, wpisuje swoje imię i nazwisko oraz składa podpis bezpośrednio na ekranie. Podpis, treść porozumienia, imię i nazwisko oraz znacznik czasu zostają zapieczętowane razem ze zleceniem.</div>
+        <summary>Jak działa akceptacja klienta?</summary>
+        <div class="answer">Po zakończeniu zlecenia wystarczy stuknąć <strong>Uzyskaj akceptację klienta</strong> (Pro) i przekazać urządzenie klientowi. Klient przegląda każde zadanie wraz z jego datami, czyta treść porozumienia, wpisuje swoje imię i nazwisko oraz składa podpis na ekranie. Podpis, treść porozumienia, imię i nazwisko, czas oraz odciski wszystkich zdjęć w zleceniu zostają razem zapieczętowane.</div>
+      </details>
+
+      <details>
+        <summary>Dlaczego po podpisaniu przez klienta nie mogę zmieniać zdjęć?</summary>
+        <div class="answer">Podpis klienta pieczętuje zdjęcia zlecenia w takim stanie, w jakim były w chwili podpisania. Późniejsza zmiana zdjęcia podważyłaby ten dowód, dlatego po podpisaniu zlecenia jego zdjęcia są zablokowane: nie można ponownie robić zdjęć, wykonywać nowych ani usuwać zadań. Nadal można edytować tytuły, notatki i kolejność zadań.</div>
       </details>
 
       <details>
         <summary>Czym jest pakiet dowodowy?</summary>
-        <div class="answer">Pakiet dowodowy to plik ZIP zawierający wszystkie oryginalne zdjęcia, odczytywalny maszynowo manifest dowodowy (skróty SHA-256, GPS, znaczniki czasu), raport PDF oraz podpis klienta. Zawiera też plik README wyjaśniający, jak każdy może niezależnie zweryfikować skróty za pomocą standardowych narzędzi, takich jak <strong>shasum</strong>.</div>
+        <div class="answer">Pakiet dowodowy to plik ZIP zawierający wszystkie oryginalne zdjęcia, odczytywalny maszynowo manifest dowodowy (skróty SHA-256, GPS, znaczniki czasu, a w przypadku zaimportowanych zdjęć także dane o tym, skąd pochodzą i kiedy zostały zaimportowane), raport PDF oraz podpis klienta. Zawiera też plik README wyjaśniający, jak każdy może niezależnie zweryfikować skróty za pomocą standardowych narzędzi, takich jak <strong>shasum</strong>.</div>
       </details>
 
       <details>
         <summary>Co obejmuje wersja Darmowa, a co Pro?</summary>
-        <div class="answer">Wersja <strong>Darmowa</strong> obejmuje rejestrację zdjęć przed i po, eksport porównań, raporty PDF oraz maksymalnie 3 zlecenia. Wersja <strong>Pro (jednorazowo 9,99 USD)</strong> odblokowuje tryb Dowodu na wypadek sporu, akceptację przez klienta, eksport filmów z efektem suwaka, branding firmowy, jakość HD / do druku oraz nielimitowaną liczbę zleceń i zadań. Bez subskrypcji — jeden zakup, na zawsze.</div>
+        <div class="answer">Wersja <strong>Darmowa</strong> obejmuje rejestrację zdjęć przed i po, obrazy porównawcze oraz raporty PDF dla maksymalnie 3 zleceń, 3 zadań na zlecenie i 3 projektów w Showroomie; eksporty w wersji Darmowej mają mały znak wodny SiteProof, a przykładowe zlecenie nie wlicza się do limitów. Wersja <strong>Pro</strong> to jednorazowy zakup, który odblokowuje Dispute-Proof Mode, akceptację klienta, eksport filmów z efektem suwaka, branding Państwa firmy bez znaku wodnego, jakość HD / do druku oraz nielimitowaną liczbę zleceń, zadań i projektów w Showroomie. Bez subskrypcji: jeden zakup, na zawsze.</div>
+      </details>
+
+      <details>
+        <summary>Jak przywrócić zakup wersji Pro?</summary>
+        <div class="answer">Wersja Pro włącza się sama, gdy są Państwo zalogowani w App Store przy użyciu tego samego Apple ID, za pomocą którego dokonano zakupu. Jeśli tak się nie stanie, należy otworzyć zakładkę <strong>Ustawienia</strong> i stuknąć <strong>Przywróć zakup</strong>. Po włączeniu wersja Pro pozostaje aktywna, nawet jeśli urządzenie zostanie później wylogowane z App Store; odebrać ją może jedynie zwrot pieniędzy.</div>
+      </details>
+
+      <details>
+        <summary>Czym jest przykładowe zlecenie „Remont kuchni”?</summary>
+        <div class="answer">Nowo zainstalowana aplikacja zawiera ukończone przykładowe zlecenie, dzięki któremu można od razu wypróbować eksport, raporty i weryfikację. Nie wlicza się ono do limitów wersji Darmowej, jego zdjęć nie można zmieniać, a usunąć je można w dowolnym momencie (wystarczy przytrzymać jego kartę i stuknąć <strong>Usuń zlecenie</strong>). Po usunięciu już nie wraca.</div>
       </details>
 
       <details>
         <summary>Czy mogę dodać branding mojej firmy?</summary>
-        <div class="answer">Tak (Pro). Można przesłać logo firmy, ustawić kolor marki oraz wpisać nazwę firmy, telefon, e-mail i adres strony internetowej. Państwa branding pojawia się na wszystkich eksportach porównań, filmach z efektem suwaka oraz raportach PDF.</div>
+        <div class="answer">Tak (Pro). W zakładce <strong>Ustawienia</strong> można dodać logo firmy, kolor marki oraz nazwę firmy, telefon, e-mail i adres strony internetowej. Państwa branding pojawia się na obrazach porównawczych, filmach z efektem suwaka oraz raportach PDF w miejscu znaku wodnego SiteProof.</div>
       </details>
 
       <details>
         <summary>Czy aplikacja działa offline?</summary>
-        <div class="answer">Tak. Rejestracja zdjęć, generowanie raportów, weryfikacja kryptograficzna oraz akceptacja przez klienta działają bez połączenia z internetem. Jedyną aktywnością sieciową jest weryfikacja zakupu StoreKit za pośrednictwem Apple oraz — jeśli funkcja jest włączona — analityka użytkowania i raporty o awariach za pośrednictwem Google Firebase (które można wyłączyć w Ustawieniach).</div>
+        <div class="answer">Tak. Rejestracja zdjęć, generowanie raportów, weryfikacja kryptograficzna oraz akceptacja klienta działają bez połączenia z internetem. Aplikacja łączy się z internetem wyłącznie przy zakupach w App Store (za pośrednictwem Apple), w celu ustalenia adresu na podstawie współrzędnych GPS, gdy włączone jest Automatyczne tagowanie GPS (za pośrednictwem usług lokalizacji Apple), oraz, jeśli Państwo na to zezwolą, w celu przesyłania analityki użytkowania i raportów o awariach za pośrednictwem Google Firebase (które można wyłączyć w Ustawieniach).</div>
       </details>
 
       <details>
         <summary>Czy aplikacja obsługuje zdjęcia poziome?</summary>
-        <div class="answer">Tak. Zdjęcia poziome są w pełni wspierane. Szerokie ujęcia, takie jak kuchnie, tarasy czy linie dachów, są rejestrowane i wyświetlane bez przycinania. Aplikacja śledzi, czy zdjęcie w trybie Przed zostało wykonane w orientacji poziomej, i wymusza zgodną orientację dla ujęcia w trybie Po, aby zapewnić spójne pary.</div>
+        <div class="answer">Tak. Zdjęcia poziome są w pełni wspierane: szerokie ujęcia, takie jak kuchnie, tarasy czy linie dachów, są rejestrowane i wyświetlane bez przycinania. Jeśli trzymają Państwo telefon inaczej niż przy zdjęciu Przed, aparat przypomina o jego obróceniu i ukrywa nakładkę, dopóki orientacja nie będzie zgodna, ale nigdy nie uniemożliwia zrobienia zdjęcia.</div>
       </details>
 
       <details>
         <summary>Czy moje dane są prywatne?</summary>
-        <div class="answer">Tak. Państwa zdjęcia, szczegóły zleceń, informacje o klientach oraz podpisy pozostają w całości na urządzeniu &mdash; nigdy nie są przesyłane, a konto nie jest wymagane. Aby ulepszać aplikację, SiteProof zbiera analitykę użytkowania oraz raporty o awariach za pośrednictwem Google Firebase &mdash; w tym informacje o używanych funkcjach oraz losowy identyfikator, który łączy tę aktywność między sesjami z instalacją (nigdy z Państwem osobiście). Nigdy nie obejmuje to Państwa treści i nie jest wykorzystywane do celów reklamowych. Funkcję tę można wyłączyć w dowolnym momencie w sekcji <strong>Ustawienia &rarr; Dane i prywatność</strong>, a w UE / Wielkiej Brytanii / Szwajcarii pozostaje ona wyłączona, dopóki nie wyrażą Państwo zgody. Pełne informacje zawiera nasza <a href="https://hugolamarreftc.github.io/SiteProof-legal/">polityka prywatności</a>.</div>
+        <div class="answer">Tak. Państwa zdjęcia, szczegóły zleceń, informacje o klientach oraz podpisy pozostają w całości na urządzeniu &mdash; nigdy nie są przesyłane, a konto nie jest wymagane. Aby ulepszać aplikację, SiteProof zbiera analitykę użytkowania oraz raporty o awariach za pośrednictwem Google Firebase &mdash; w tym informacje o używanych funkcjach oraz losowy identyfikator, który łączy tę aktywność między sesjami z instalacją (nigdy z Państwem osobiście). Nigdy nie obejmuje to Państwa treści i nie jest wykorzystywane do celów reklamowych. Funkcję tę można wyłączyć w dowolnym momencie w sekcji <strong>Ustawienia &rarr; Dane i prywatność</strong>, a w UE, EOG, Wielkiej Brytanii i Szwajcarii pozostaje ona wyłączona, dopóki nie wyrażą Państwo zgody. Pełne informacje zawiera nasza <a href="https://hugolamarreftc.github.io/SiteProof-legal/">polityka prywatności</a>.</div>
       </details>
 
       <details>
@@ -878,57 +1158,97 @@
 
       <details>
         <summary>Что такое SiteProof?</summary>
-        <div class="answer">SiteProof — это приложение для документирования выполненных работ, предназначенное для подрядчиков и специалистов в строительной отрасли. Снимайте фотографии «до» и «после» прямо на объекте, создавайте фирменные сравнения и PDF-отчёты, а при необходимости заверяйте всё криптографическим доказательством и подписью клиента.</div>
+        <div class="answer">SiteProof — это приложение для документирования выполненных работ, предназначенное для подрядчиков и специалистов в строительной отрасли. Снимайте фотографии «до» и «после» прямо на объекте и превращайте их в сравнительные изображения и PDF-отчёты. В версии Pro можно добавить фирменное оформление Вашей компании, видео с движущимся ползунком, доказательства с защитой от подделки и одобрение клиента.</div>
+      </details>
+
+      <details>
+        <summary>Где находятся «Настройки» и «Showroom»?</summary>
+        <div class="answer">В SiteProof внизу экрана три вкладки: <strong>«Проекты»</strong>, <strong>«Showroom»</strong> и <strong>«Настройки»</strong>. В «Настройках» Вы найдёте фирменное оформление своей компании, параметры Dispute-Proof, раздел «Данные и конфиденциальность», пункты «Восстановить покупку» и «Что нового», а также отправку отзывов. В Showroom собираются Ваши лучшие сравнения «до и после», чтобы Вы могли показывать их клиентам.</div>
       </details>
 
       <details>
         <summary>Как работает съёмка «до» и «после»?</summary>
-        <div class="answer">Откройте SiteProof на объекте и сделайте фотографию <strong>«до»</strong>. Приложение автоматически записывает дату и время, GPS-координаты и сведения об устройстве. Когда работа завершена, переключитесь в режим <strong>«после»</strong> — полупрозрачное наложение исходного снимка помогает точно выровнять кадр. Приложение также подбирает настройки вспышки и фонарика по фотографии «до».</div>
+        <div class="answer">Создайте проект, добавьте задачу и на объекте нажмите <strong>Снять «До»</strong>. Приложение записывает дату, время и сведения об устройстве, а если включена «Автоматическая GPS-метка», то также местоположение и адрес. Когда работа завершена, откройте проект и коснитесь пустой плитки <strong>«ПОСЛЕ»</strong> в задаче: камера покажет фото «До» в виде полупрозрачного наложения, чтобы Вы могли повторить тот же кадр.</div>
+      </details>
+
+      <details>
+        <summary>Как выровнять фото «После»?</summary>
+        <div class="answer">Фото «До» отображается поверх изображения с камеры в виде полупрозрачного наложения. Перетащите ползунок, чтобы сделать наложение заметнее или прозрачнее, или коснитесь значка глаза, чтобы скрыть его. Перемещайте телефон, пока сцена не совпадёт: когда кадр выровнен, кольцо вокруг кнопки затвора становится <strong>зелёным</strong>. Коснитесь экрана, чтобы сфокусироваться, сведите или разведите пальцы, чтобы изменить масштаб (до 5&times;), и включите сетку, чтобы выдерживать ровные линии. Если фото «До» снималось со вспышкой, вспышка тоже включится, чтобы освещение совпадало.</div>
+      </details>
+
+      <details>
+        <summary>Можно ли использовать фото из медиатеки?</summary>
+        <div class="answer">Да. В камере нажмите кнопку медиатеки, чтобы выбрать фото «До» или «После». Импортированные фото получают криптографический отпечаток в момент импорта, поэтому последующие изменения всё равно будут обнаружены. Но SiteProof не может знать, когда и где они были сняты на самом деле, поэтому в задаче, в PDF-отчётах и в пакете доказательств они помечаются как <strong>«Импортировано»</strong> и никогда не отображаются как <strong>«Подтверждённая съёмка»</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Как изменить порядок задач или переснять фото?</summary>
+        <div class="answer">В проекте перетащите карточку задачи, чтобы переместить её, или выберите <strong>«Переместить вверх»</strong> / <strong>«Переместить вниз»</strong> в меню задачи. Чтобы переснять фото, выберите <strong>Переснять «До»</strong> или <strong>Переснять «После»</strong> в том же меню либо коснитесь фото, чтобы открыть его на весь экран, и нажмите <strong>«Переснять»</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Как удалить проект?</summary>
+        <div class="answer">На вкладке «Проекты» нажмите и удерживайте карточку проекта, затем нажмите <strong>«Удалить проект»</strong>. Также можно открыть проект и нажать кнопку с корзиной вверху экрана. Проект и все его фотографии будут удалены с Вашего устройства без возможности восстановления.</div>
       </details>
 
       <details>
         <summary>Какие форматы экспорта доступны?</summary>
-        <div class="answer">SiteProof может создавать <strong>сравнения рядом</strong> (по горизонтали или по вертикали), <strong>видео с движущимся ползунком</strong> (Pro) и <strong>профессиональные PDF-отчёты</strong> с вашим фирменным оформлением. Вы можете делиться экспортированными файлами через «Сообщения», электронную почту, AirDrop или сохранять их в медиатеку.</div>
+        <div class="answer">SiteProof создаёт <strong>сравнения рядом</strong> (по горизонтали или по вертикали) и <strong>профессиональные PDF-отчёты</strong>, а в версии Pro также <strong>видео с движущимся ползунком</strong>. На файлах, экспортированных в бесплатной версии, есть небольшой водяной знак SiteProof; в версии Pro его заменяет Ваше фирменное оформление. Делитесь файлами через «Сообщения», электронную почту или AirDrop, сохраняйте изображения и видео в приложение «Фото», а PDF-отчёты — в приложение «Файлы».</div>
       </details>
 
       <details>
-        <summary>Что такое режим защиты от споров?</summary>
-        <div class="answer">Режим защиты от споров (Pro) криптографически хеширует каждую фотографию с помощью <strong>SHA-256</strong> в момент съёмки. Если кто-либо изменит файл впоследствии, проверка это обнаружит. Вы можете в любой момент повторно проверить фотографии любой работы прямо в приложении. Это создаёт документацию с защитой от подделки, которая защитит Вас в спорных ситуациях.</div>
+        <summary>Что такое Dispute-Proof Mode?</summary>
+        <div class="answer">Dispute-Proof Mode (Pro) защищает каждое фото криптографическим отпечатком в момент съёмки: хешем <strong>SHA-256</strong>, подписанным ключом, который никогда не покидает Ваше устройство. Если кто-либо изменит файл впоследствии, проверка это обнаружит. Проверить любой проект можно в любой момент кнопкой со щитом вверху экрана проекта. Фото, импортированные из медиатеки, получают отпечаток при импорте и помечаются как <strong>«Импортировано»</strong>, но никогда как <strong>«Подтверждённая съёмка»</strong>.</div>
       </details>
 
       <details>
-        <summary>Как работает подпись клиента?</summary>
-        <div class="answer">Когда работа завершена, передайте устройство клиенту. Он просматривает работу с указанием диапазонов даты и времени для каждой задачи, читает текст соглашения, вводит своё полное имя и ставит подпись прямо на экране. Подпись, соглашение, имя и метка времени заверяются вместе с работой.</div>
+        <summary>Как работает одобрение клиента?</summary>
+        <div class="answer">Когда проект завершён, нажмите <strong>«Получить одобрение клиента»</strong> (Pro) и передайте устройство клиенту. Клиент просматривает каждую задачу с её датами, читает текст соглашения, вводит своё полное имя и ставит подпись на экране. Подпись, соглашение, имя, время и отпечатки всех фотографий проекта заверяются вместе.</div>
+      </details>
+
+      <details>
+        <summary>Почему после подписи клиента нельзя менять фото?</summary>
+        <div class="answer">Подпись клиента заверяет фотографии проекта в том виде, в каком они были на момент подписания. Изменение фото после этого сделало бы это доказательство недействительным, поэтому, как только проект подписан, его фотографии блокируются: нельзя переснимать фото, делать новые снимки или удалять задачи. Названия, заметки и порядок задач по-прежнему можно изменять.</div>
       </details>
 
       <details>
         <summary>Что такое пакет доказательств?</summary>
-        <div class="answer">Пакет доказательств — это ZIP-файл, содержащий все оригинальные фотографии, машиночитаемый манифест доказательств (хеши SHA-256, GPS, метки времени), PDF-отчёт и подпись клиента. В него входит файл README, объясняющий, как любой желающий может самостоятельно проверить хеши с помощью стандартных инструментов, таких как <strong>shasum</strong>.</div>
+        <div class="answer">Пакет доказательств — это ZIP-файл, содержащий все оригинальные фотографии, машиночитаемый манифест доказательств (хеши SHA-256, GPS, метки времени, а для импортированных фото также их источник и время импорта), PDF-отчёт и подпись клиента. В него входит файл README, объясняющий, как любой желающий может самостоятельно проверить хеши с помощью стандартных инструментов, таких как <strong>shasum</strong>.</div>
       </details>
 
       <details>
         <summary>Что входит в версии «Бесплатно» и Pro?</summary>
-        <div class="answer">Версия <strong>«Бесплатно»</strong> включает съёмку «до» и «после», экспорт сравнений, PDF-отчёты и до 3 работ. Версия <strong>Pro (9,99 $ единоразово)</strong> открывает режим защиты от споров, подпись клиента, экспорт видео с ползунком, фирменное оформление компании, качество HD/печати, а также неограниченное число работ и задач. Без подписки — одна покупка навсегда.</div>
+        <div class="answer">Версия <strong>«Бесплатно»</strong> включает съёмку «до» и «после», сравнительные изображения и PDF-отчёты в пределах 3 проектов, 3 задач на проект и 3 проектов в Showroom; на файлах, экспортированных в бесплатной версии, есть небольшой водяной знак SiteProof, а пример проекта в лимитах не учитывается. Версия <strong>Pro</strong> — это разовая покупка, которая открывает Dispute-Proof Mode, одобрение клиента, экспорт видео с ползунком, фирменное оформление Вашей компании без водяного знака, качество HD/печати, а также неограниченное число проектов, задач и проектов в Showroom. Без подписки: одна покупка навсегда.</div>
+      </details>
+
+      <details>
+        <summary>Как восстановить покупку Pro?</summary>
+        <div class="answer">Pro включается автоматически, если Вы вошли в App Store с тем же Apple ID, с помощью которого была совершена покупка. Если этого не произошло, откройте вкладку <strong>«Настройки»</strong> и нажмите <strong>«Восстановить покупку»</strong>. После включения Pro остаётся активным, даже если позже на устройстве будет выполнен выход из App Store; отключить его может только возврат средств.</div>
+      </details>
+
+      <details>
+        <summary>Что такое пример проекта «Ремонт кухни»?</summary>
+        <div class="answer">При новой установке в приложении уже есть завершённый пример проекта, чтобы Вы могли сразу попробовать экспорт, отчёты и проверку. Он не учитывается в лимитах бесплатной версии, его фотографии нельзя изменить, а удалить его можно в любой момент (нажмите и удерживайте его карточку, затем нажмите <strong>«Удалить проект»</strong>). После удаления он больше не появится.</div>
       </details>
 
       <details>
         <summary>Могу ли я добавить фирменное оформление своей компании?</summary>
-        <div class="answer">Да (Pro). Загрузите логотип компании, задайте фирменный цвет и введите название компании, телефон, электронную почту и веб-сайт. Ваше фирменное оформление появится на всех экспортированных сравнениях, видео с ползунком и PDF-отчётах.</div>
+        <div class="answer">Да (Pro). На вкладке <strong>«Настройки»</strong> добавьте логотип компании, фирменный цвет, а также название компании, телефон, электронную почту и веб-сайт. Ваше фирменное оформление появится на сравнительных изображениях, видео с ползунком и PDF-отчётах вместо водяного знака SiteProof.</div>
       </details>
 
       <details>
         <summary>Работает ли приложение без подключения к интернету?</summary>
-        <div class="answer">Да. Вся съёмка фотографий, создание отчётов, криптографическая проверка и подпись клиента работают без подключения к интернету. Единственная сетевая активность — это проверка покупки через StoreKit с помощью Apple и, если включено, аналитика использования и отчёты о сбоях через Google Firebase (которые Вы можете отключить в настройках).</div>
+        <div class="answer">Да. Съёмка фотографий, создание отчётов, криптографическая проверка и одобрение клиента работают без подключения к интернету. Приложение выходит в интернет только для покупок в App Store (через Apple), для определения адреса по координатам GPS, когда включена «Автоматическая GPS-метка» (через службы геолокации Apple), и, если Вы это разрешите, для отправки аналитики использования и отчётов о сбоях через Google Firebase (которые Вы можете отключить в настройках).</div>
       </details>
 
       <details>
         <summary>Поддерживает ли приложение горизонтальные фотографии?</summary>
-        <div class="answer">Да. Горизонтальные фотографии являются полноценным форматом. Широкие сцены, такие как кухни, террасы и линии крыш, снимаются и отображаются без обрезки. Приложение отслеживает, была ли фотография «до» сделана в горизонтальной ориентации, и требует совпадения ориентации для снимка «после», чтобы обеспечить единообразие пар.</div>
+        <div class="answer">Да. Горизонтальные фотографии являются полноценным форматом: широкие сцены, такие как кухни, террасы и линии крыш, снимаются и отображаются без обрезки. Если Вы держите телефон иначе, чем при съёмке фото «До», камера напомнит повернуть его и скроет наложение, пока ориентация не совпадёт, но никогда не помешает сделать снимок.</div>
       </details>
 
       <details>
         <summary>Защищены ли мои данные?</summary>
-        <div class="answer">Да. Ваши фотографии, сведения о работах, информация о клиентах и подписи полностью остаются на Вашем устройстве &mdash; они никогда не загружаются на сервер, и учётная запись не требуется. Чтобы улучшать приложение, SiteProof собирает аналитику использования и отчёты о сбоях через Google Firebase &mdash; включая то, какие функции используются, и случайный идентификатор, который связывает эту активность между сессиями с установкой (но никогда с Вами лично). Она никогда не включает Ваш контент и не используется для рекламы. Вы можете отключить её в любой момент в разделе <strong>«Настройки &rarr; Данные и конфиденциальность»</strong>, а в ЕС/Великобритании/Швейцарии она остаётся выключенной, пока Вы не дадите согласие. Подробнее см. в нашей <a href="https://hugolamarreftc.github.io/SiteProof-legal/">политике конфиденциальности</a>.</div>
+        <div class="answer">Да. Ваши фотографии, сведения о работах, информация о клиентах и подписи полностью остаются на Вашем устройстве &mdash; они никогда не загружаются на сервер, и учётная запись не требуется. Чтобы улучшать приложение, SiteProof собирает аналитику использования и отчёты о сбоях через Google Firebase &mdash; включая то, какие функции используются, и случайный идентификатор, который связывает эту активность между сессиями с установкой (но никогда с Вами лично). Она никогда не включает Ваш контент и не используется для рекламы. Вы можете отключить её в любой момент в разделе <strong>«Настройки &rarr; Данные и конфиденциальность»</strong>, а в ЕС, ЕЭЗ, Великобритании и Швейцарии она остаётся выключенной, пока Вы не дадите согласие. Подробнее см. в нашей <a href="https://hugolamarreftc.github.io/SiteProof-legal/">политике конфиденциальности</a>.</div>
       </details>
 
       <details>
@@ -961,57 +1281,97 @@
 
       <details>
         <summary>Apa itu SiteProof?</summary>
-        <div class="answer">SiteProof adalah aplikasi dokumentasi bukti kerja untuk kontraktor dan tenaga profesional bidang konstruksi. Ambil foto sebelum dan sesudah di lokasi pekerjaan, hasilkan perbandingan bermerek dan laporan PDF, serta secara opsional segel semuanya dengan bukti kriptografis dan persetujuan klien.</div>
+        <div class="answer">SiteProof adalah aplikasi dokumentasi bukti kerja untuk kontraktor dan tenaga profesional bidang konstruksi. Ambil foto sebelum dan sesudah di lokasi pekerjaan, lalu jadikan gambar perbandingan dan laporan PDF. Dengan Pro, tambahkan merek perusahaan Anda, video pengungkap geser, bukti anti-perubahan, dan persetujuan klien.</div>
+      </details>
+
+      <details>
+        <summary>Di mana Pengaturan dan Showroom?</summary>
+        <div class="answer">SiteProof memiliki tiga tab di bagian bawah layar: <strong>Pekerjaan</strong>, <strong>Showroom</strong>, dan <strong>Pengaturan</strong>. Pengaturan berisi merek perusahaan Anda, opsi Dispute-Proof, Data &amp; Privasi, Pulihkan pembelian, Yang Baru, dan masukan. Showroom mengumpulkan hasil sebelum-sesudah terbaik Anda agar dapat Anda tunjukkan kepada klien.</div>
       </details>
 
       <details>
         <summary>Bagaimana cara kerja pengambilan foto sebelum/sesudah?</summary>
-        <div class="answer">Buka SiteProof di lokasi pekerjaan dan ambil foto <strong>Sebelum</strong>. Aplikasi secara otomatis mencatat cap waktu, lokasi GPS, dan informasi perangkat. Saat pekerjaan selesai, beralihlah ke mode <strong>Sesudah</strong> — hamparan bayangan dari foto asli membantu Anda menyelaraskan bidikan dengan tepat. Aplikasi juga menyesuaikan pengaturan flash/senter dari foto Sebelum.</div>
+        <div class="answer">Buat pekerjaan, tambahkan tugas, lalu ketuk <strong>Ambil Sebelum</strong> di lokasi pekerjaan. Aplikasi mencatat tanggal, waktu, dan informasi perangkat, serta lokasi dan alamat jalan jika Penandaan GPS otomatis aktif. Saat pekerjaan selesai, buka pekerjaan tersebut dan ketuk kotak <strong>SESUDAH</strong> yang masih kosong pada tugas: kamera menampilkan foto Sebelum Anda sebagai bayangan transparan agar Anda dapat membidik gambar yang sama.</div>
+      </details>
+
+      <details>
+        <summary>Bagaimana cara menyejajarkan foto Sesudah?</summary>
+        <div class="answer">Foto Sebelum muncul sebagai bayangan transparan di atas tampilan kamera. Seret slider untuk membuatnya lebih pekat atau lebih samar, atau ketuk ikon mata untuk menyembunyikannya. Gerakkan kamera hingga pemandangannya cocok: cincin di sekitar rana berubah <strong>hijau</strong> saat posisinya sudah sejajar. Ketuk untuk fokus, cubit untuk zoom (hingga 5&times;), dan aktifkan kisi agar garis tetap lurus. Jika foto Sebelum menggunakan lampu kilat, lampu kilat akan menyala agar sesuai.</div>
+      </details>
+
+      <details>
+        <summary>Bisakah saya menggunakan foto dari galeri foto saya?</summary>
+        <div class="answer">Ya. Di kamera, ketuk tombol galeri foto untuk memilih foto Sebelum atau Sesudah. Foto yang diimpor diberi sidik kriptografis saat Anda mengimpornya, sehingga pengeditan di kemudian hari tetap terdeteksi. Namun, SiteProof tidak dapat mengetahui kapan atau di mana foto tersebut sebenarnya diambil, jadi foto itu ditandai <strong>Diimpor</strong> pada tugas, di laporan PDF, dan di paket bukti, serta tidak pernah ditampilkan sebagai <strong>Pengambilan terverifikasi</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Bagaimana cara mengubah urutan tugas atau mengambil ulang foto?</summary>
+        <div class="answer">Di dalam pekerjaan, seret kartu tugas untuk memindahkannya, atau gunakan <strong>Pindahkan ke atas</strong> / <strong>Pindahkan ke bawah</strong> di menu tugas. Untuk mengambil ulang foto, pilih <strong>Ambil ulang Sebelum</strong> atau <strong>Ambil ulang Sesudah</strong> dari menu yang sama, atau ketuk foto untuk membukanya dalam layar penuh, lalu ketuk <strong>Ambil ulang</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Bagaimana cara menghapus pekerjaan?</summary>
+        <div class="answer">Di tab Pekerjaan, tekan lama kartu pekerjaan tersebut lalu ketuk <strong>Hapus pekerjaan</strong>, atau buka pekerjaan dan ketuk tombol tempat sampah di bagian atas. Tindakan ini menghapus pekerjaan beserta semua fotonya dari perangkat Anda dan tidak dapat dibatalkan.</div>
       </details>
 
       <details>
         <summary>Format ekspor apa saja yang tersedia?</summary>
-        <div class="answer">SiteProof dapat menghasilkan <strong>perbandingan berdampingan</strong> (horizontal atau vertikal), <strong>video pengungkap geser</strong> (Pro), dan <strong>laporan PDF profesional</strong> dengan merek Anda. Anda dapat membagikan hasil ekspor melalui Pesan, email, AirDrop, atau menyimpannya ke pustaka foto Anda.</div>
+        <div class="answer">SiteProof membuat <strong>perbandingan berdampingan</strong> (horizontal atau vertikal) dan <strong>laporan PDF profesional</strong>, serta <strong>video pengungkap geser</strong> dengan Pro. Ekspor versi Gratis diberi watermark SiteProof kecil; dengan Pro, merek Anda menggantikannya. Bagikan melalui Pesan, email, atau AirDrop, simpan gambar dan video ke Foto, dan simpan laporan PDF ke File.</div>
       </details>
 
       <details>
-        <summary>Apa itu Mode Tahan Sengketa?</summary>
-        <div class="answer">Mode Tahan Sengketa (Pro) melakukan hash kriptografis pada setiap foto dengan <strong>SHA-256</strong> pada saat pengambilan. Jika ada orang yang mengubah berkas setelahnya, verifikasi akan mendeteksinya. Anda dapat memverifikasi ulang foto pekerjaan apa pun kapan saja dari dalam aplikasi. Ini menciptakan dokumentasi yang menunjukkan bukti perubahan yang melindungi Anda dalam sengketa.</div>
+        <summary>Apa itu Dispute-Proof Mode?</summary>
+        <div class="answer">Dispute-Proof Mode (Pro) memberi sidik kriptografis pada setiap foto tepat saat foto diambil: hash <strong>SHA-256</strong> yang ditandatangani dengan kunci yang tidak pernah meninggalkan perangkat Anda. Jika ada orang yang mengubah berkas setelahnya, verifikasi akan mendeteksinya. Periksa pekerjaan apa pun kapan saja dengan tombol perisai di bagian atas pekerjaan. Foto yang diimpor dari galeri diberi sidik kriptografis saat diimpor dan ditandai <strong>Diimpor</strong>, tidak pernah <strong>Pengambilan terverifikasi</strong>.</div>
       </details>
 
       <details>
         <summary>Bagaimana cara kerja persetujuan klien?</summary>
-        <div class="answer">Saat sebuah pekerjaan selesai, serahkan perangkat Anda kepada klien. Mereka meninjau pekerjaan dengan rentang tanggal-waktu untuk setiap tugas, membaca teks perjanjian, memasukkan nama lengkap mereka, dan menggambar tanda tangan mereka langsung di layar. Tanda tangan, perjanjian, nama, dan cap waktu disegel bersama dengan pekerjaan tersebut.</div>
+        <div class="answer">Saat sebuah pekerjaan selesai, ketuk <strong>Dapatkan persetujuan klien</strong> (Pro) dan serahkan perangkat Anda kepada klien. Mereka meninjau setiap tugas beserta tanggalnya, membaca perjanjian, memasukkan nama lengkap mereka, dan menandatangani di layar. Tanda tangan, perjanjian, nama, waktu, dan sidik kriptografis setiap foto dalam pekerjaan tersebut disegel bersama.</div>
+      </details>
+
+      <details>
+        <summary>Mengapa saya tidak bisa mengubah foto setelah klien menandatangani?</summary>
+        <div class="answer">Tanda tangan klien menyegel foto-foto pekerjaan sebagaimana adanya saat mereka menandatangani. Mengubah foto setelahnya akan merusak bukti tersebut, jadi setelah pekerjaan ditandatangani, fotonya dikunci: tidak ada pengambilan ulang, pengambilan foto baru, atau penghapusan tugas. Anda tetap dapat mengedit judul, catatan, dan urutan tugas.</div>
       </details>
 
       <details>
         <summary>Apa itu paket bukti?</summary>
-        <div class="answer">Paket bukti adalah berkas ZIP yang berisi semua foto asli, manifes bukti yang dapat dibaca mesin (hash SHA-256, GPS, cap waktu), laporan PDF, dan tanda tangan klien. Paket ini menyertakan README yang menjelaskan bagaimana siapa pun dapat memverifikasi hash secara independen menggunakan alat standar seperti <strong>shasum</strong>.</div>
+        <div class="answer">Paket bukti adalah berkas ZIP yang berisi semua foto asli, manifes bukti yang dapat dibaca mesin (hash SHA-256, GPS, cap waktu, serta untuk foto yang diimpor, asal foto dan kapan foto itu diimpor), laporan PDF, dan tanda tangan klien. Paket ini menyertakan README yang menjelaskan bagaimana siapa pun dapat memverifikasi hash secara independen menggunakan alat standar seperti <strong>shasum</strong>.</div>
       </details>
 
       <details>
         <summary>Apa saja yang termasuk dalam versi Gratis dibandingkan Pro?</summary>
-        <div class="answer"><strong>Gratis</strong> mencakup pengambilan foto sebelum/sesudah, ekspor perbandingan, laporan PDF, dan hingga 3 pekerjaan. <strong>Pro (US$9,99 sekali bayar)</strong> membuka Mode Tahan Sengketa, persetujuan klien, ekspor video geser, merek perusahaan, kualitas HD/Cetak, serta pekerjaan dan tugas tak terbatas. Tanpa langganan — satu kali pembelian, selamanya.</div>
+        <div class="answer"><strong>Gratis</strong> mencakup pengambilan foto sebelum/sesudah, gambar perbandingan, dan laporan PDF untuk hingga 3 pekerjaan, 3 tugas per pekerjaan, dan 3 proyek Showroom; ekspor versi Gratis diberi watermark SiteProof kecil, dan pekerjaan contoh tidak dihitung. <strong>Pro</strong> adalah pembelian satu kali yang membuka Dispute-Proof Mode, persetujuan klien, ekspor video geser, merek perusahaan Anda tanpa watermark, kualitas HD/Cetak, serta pekerjaan, tugas, dan proyek Showroom tanpa batas. Tanpa langganan: satu kali pembelian, selamanya.</div>
+      </details>
+
+      <details>
+        <summary>Bagaimana cara memulihkan pembelian Pro saya?</summary>
+        <div class="answer">Pro aktif dengan sendirinya saat Anda masuk ke App Store dengan Apple ID yang Anda gunakan untuk membelinya. Jika tidak, buka tab <strong>Pengaturan</strong> dan ketuk <strong>Pulihkan pembelian</strong>. Setelah Pro aktif, Pro tetap aktif meskipun perangkat kemudian keluar dari App Store; hanya pengembalian dana yang dapat menghapusnya.</div>
+      </details>
+
+      <details>
+        <summary>Apa itu pekerjaan contoh Renovasi dapur?</summary>
+        <div class="answer">Instalasi baru menyertakan satu pekerjaan contoh yang sudah selesai agar Anda dapat langsung mencoba ekspor, laporan, dan verifikasi. Pekerjaan ini tidak dihitung dalam batas versi Gratis, fotonya tidak dapat diubah, dan Anda dapat menghapusnya kapan saja (tekan lama kartunya, lalu ketuk <strong>Hapus pekerjaan</strong>). Setelah dihapus, pekerjaan contoh ini tidak akan muncul lagi.</div>
       </details>
 
       <details>
         <summary>Bisakah saya menambahkan merek perusahaan saya?</summary>
-        <div class="answer">Ya (Pro). Unggah logo perusahaan Anda, tetapkan warna merek, dan masukkan nama, nomor telepon, email, dan situs web perusahaan Anda. Merek Anda akan muncul di semua ekspor perbandingan, video geser, dan laporan PDF.</div>
+        <div class="answer">Ya (Pro). Di tab <strong>Pengaturan</strong>, tambahkan logo perusahaan, warna merek, serta nama, nomor telepon, email, dan situs web perusahaan Anda. Merek Anda akan muncul di gambar perbandingan, video geser, dan laporan PDF, menggantikan watermark SiteProof.</div>
       </details>
 
       <details>
         <summary>Apakah aplikasi berfungsi secara luring?</summary>
-        <div class="answer">Ya. Semua pengambilan foto, pembuatan laporan, verifikasi kriptografis, dan persetujuan klien berfungsi tanpa koneksi internet. Satu-satunya aktivitas jaringan adalah validasi pembelian StoreKit melalui Apple dan, jika diaktifkan, analitik penggunaan serta laporan kerusakan melalui Google Firebase (yang dapat Anda nonaktifkan di Pengaturan).</div>
+        <div class="answer">Ya. Pengambilan foto, pembuatan laporan, verifikasi kriptografis, dan persetujuan klien semuanya berfungsi tanpa koneksi internet. Aplikasi hanya terhubung ke internet untuk pembelian di App Store (melalui Apple), untuk mencari alamat jalan dari GPS saat Penandaan GPS otomatis aktif (melalui layanan lokasi Apple), dan, jika Anda mengizinkan, untuk analitik penggunaan serta laporan kerusakan melalui Google Firebase (yang dapat Anda nonaktifkan di Pengaturan).</div>
       </details>
 
       <details>
         <summary>Apakah aplikasi mendukung foto lanskap?</summary>
-        <div class="answer">Ya. Foto lanskap merupakan elemen utama. Pemandangan lebar seperti dapur, dek, dan garis atap diambil dan ditampilkan tanpa pemotongan. Aplikasi melacak apakah foto Sebelum diambil dalam mode lanskap dan menerapkan orientasi yang cocok untuk bidikan Sesudah guna memastikan pasangan yang konsisten.</div>
+        <div class="answer">Ya. Foto lanskap merupakan elemen utama: pemandangan lebar seperti dapur, dek, dan garis atap diambil dan ditampilkan tanpa pemotongan. Jika Anda memegang ponsel dengan orientasi yang berbeda dari foto Sebelum, kamera akan mengingatkan Anda untuk memutarnya dan menyembunyikan overlay bayangan hingga orientasinya cocok, tetapi tidak pernah menghalangi Anda mengambil foto.</div>
       </details>
 
       <details>
         <summary>Apakah data saya bersifat pribadi?</summary>
-        <div class="answer">Ya. Foto, detail pekerjaan, informasi klien, dan tanda tangan Anda sepenuhnya tetap berada di perangkat Anda &mdash; semuanya tidak pernah diunggah, dan tidak ada akun yang diperlukan. Untuk menyempurnakan aplikasi, SiteProof mengumpulkan analitik penggunaan dan laporan kerusakan melalui Google Firebase &mdash; termasuk fitur mana yang digunakan dan pengidentifikasi acak yang menautkan aktivitas ini lintas sesi ke sebuah pemasangan (tidak pernah ke Anda secara pribadi). Ini tidak pernah menyertakan konten Anda dan tidak digunakan untuk iklan. Anda dapat menonaktifkannya kapan saja di <strong>Pengaturan &rarr; Data &amp; Privasi</strong>, dan di UE/Britania Raya/Swiss fitur ini tetap nonaktif kecuali Anda menyetujuinya. Lihat <a href="https://hugolamarreftc.github.io/SiteProof-legal/">kebijakan privasi</a> kami untuk detail selengkapnya.</div>
+        <div class="answer">Ya. Foto, detail pekerjaan, informasi klien, dan tanda tangan Anda sepenuhnya tetap berada di perangkat Anda &mdash; semuanya tidak pernah diunggah, dan tidak ada akun yang diperlukan. Untuk menyempurnakan aplikasi, SiteProof mengumpulkan analitik penggunaan dan laporan kerusakan melalui Google Firebase &mdash; termasuk fitur mana yang digunakan dan pengidentifikasi acak yang menautkan aktivitas ini lintas sesi ke sebuah pemasangan (tidak pernah ke Anda secara pribadi). Ini tidak pernah menyertakan konten Anda dan tidak digunakan untuk iklan. Anda dapat menonaktifkannya kapan saja di <strong>Pengaturan &rarr; Data &amp; Privasi</strong>, dan di UE, EEA, Britania Raya, dan Swiss fitur ini tetap nonaktif kecuali Anda menyetujuinya. Lihat <a href="https://hugolamarreftc.github.io/SiteProof-legal/">kebijakan privasi</a> kami untuk detail selengkapnya.</div>
       </details>
 
       <details>
@@ -1044,57 +1404,97 @@
 
       <details>
         <summary>Ano ang SiteProof?</summary>
-        <div class="answer">Ang SiteProof ay isang app para sa dokumentasyon ng proof-of-work para sa mga kontratista at propesyonal sa trade. Kumuha ng mga litrato bago at pagkatapos sa job site, gumawa ng mga branded na paghahambing at PDF na report, at opsyonal na seguhin ang lahat gamit ang cryptographic proof at pag-sign-off ng kliyente.</div>
+        <div class="answer">Ang SiteProof ay isang app para sa dokumentasyon ng proof-of-work para sa mga kontratista at propesyonal sa trade. Kumuha ng mga litrato bago at pagkatapos sa job site at gawing mga larawan ng paghahambing at PDF na report ang mga ito. Gamit ang Pro, idagdag ang branding ng iyong kompanya, mga slider reveal video, tamper-evident na patunay, at pag-apruba ng kliyente.</div>
+      </details>
+
+      <details>
+        <summary>Nasaan ang Mga setting at ang Showroom?</summary>
+        <div class="answer">May tatlong tab ang SiteProof sa ibaba ng screen: <strong>Mga trabaho</strong>, <strong>Showroom</strong>, at <strong>Mga setting</strong>. Nasa Mga setting ang branding ng iyong kompanya, ang mga opsyon ng Dispute-Proof, Data at Privacy, I-restore ang pagbili, Ano ang Bago, at feedback. Iniipon ng Showroom ang pinakamagaganda mong before-and-after para maipakita mo ang mga ito sa mga kliyente.</div>
       </details>
 
       <details>
         <summary>Paano gumagana ang pagkuha ng bago/pagkatapos?</summary>
-        <div class="answer">Buksan ang SiteProof sa job site at kumuha ng litrato na <strong>Bago</strong>. Awtomatikong itinatala ng app ang timestamp, lokasyon ng GPS, at impormasyon ng device. Kapag tapos na ang trabaho, lumipat sa mode na <strong>Pagkatapos</strong> — isang ghost overlay ng orihinal na litrato ang tutulong sa iyong maitumpak nang eksakto ang kuha. Itinutugma rin ng app ang mga setting ng flash/torch mula sa litratong Bago.</div>
+        <div class="answer">Gumawa ng trabaho, magdagdag ng task, at i-tap ang <strong>Kunan ng Bago</strong> sa job site. Itinatala ng app ang petsa, oras, at device, at kapag naka-on ang Awtomatikong GPS tagging, pati ang lokasyon at address. Kapag tapos na ang trabaho, buksan ito at i-tap ang bakanteng tile na <strong>PAGKATAPOS</strong> ng task: ipapakita ng camera ang iyong litratong Bago bilang see-through na ghost para makuha mo ang parehong kuha.</div>
+      </details>
+
+      <details>
+        <summary>Paano ko ihahanay ang litratong Pagkatapos?</summary>
+        <div class="answer">Lumalabas ang litratong Bago bilang see-through na ghost sa ibabaw ng camera. I-drag ang slider para gawin itong mas matingkad o mas malabo, o i-tap ang icon ng mata para itago ito. Igalaw ang camera hanggang tumugma ang eksena: nagiging <strong>berde</strong> ang ring sa paligid ng shutter kapag nakahanay ka na. I-tap para mag-focus, mag-pinch para mag-zoom (hanggang 5&times;), at i-on ang grid para sa mga tuwid na linya. Kung gumamit ng flash ang litratong Bago, mag-o-on ang flash para tumugma.</div>
+      </details>
+
+      <details>
+        <summary>Maaari ko bang gamitin ang mga litrato mula sa aking photo library?</summary>
+        <div class="answer">Oo. Sa camera, i-tap ang button ng photo library para pumili ng litratong Bago o Pagkatapos. Nilalagyan ng fingerprint ang mga na-import na litrato kapag in-import mo ang mga ito, kaya natutukoy pa rin ang anumang pag-edit sa ibang pagkakataon. Pero hindi malalaman ng SiteProof kung kailan o saan talaga kinunan ang mga ito, kaya minamarkahan ang mga ito na <strong>Na-import</strong> sa task, sa mga PDF na report, at sa evidence package, at hindi kailanman ipinapakita bilang <strong>Verified na pagkuha</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Paano ko aayusin ang pagkakasunod-sunod ng mga task o kukunan muli ang isang litrato?</summary>
+        <div class="answer">Sa isang trabaho, i-drag ang card ng task para ilipat ito, o gamitin ang <strong>Ilipat pataas</strong> / <strong>Ilipat pababa</strong> sa menu ng task. Para kunan muli ang isang litrato, piliin ang <strong>Kunan muli ang Bago</strong> o <strong>Kunan muli ang Pagkatapos</strong> mula sa parehong menu, o i-tap ang litrato para buksan ito nang full screen at i-tap ang <strong>Kunan muli</strong>.</div>
+      </details>
+
+      <details>
+        <summary>Paano ko tatanggalin ang isang trabaho?</summary>
+        <div class="answer">Sa tab na Mga trabaho, pindutin nang matagal ang card ng trabaho at i-tap ang <strong>Tanggalin ang trabaho</strong>, o buksan ang trabaho at i-tap ang button ng basurahan sa itaas. Tinatanggal nito ang trabaho at ang lahat ng litrato nito mula sa iyong device, at hindi na ito maibabalik.</div>
       </details>
 
       <details>
         <summary>Anong mga export format ang available?</summary>
-        <div class="answer">Maaaring gumawa ang SiteProof ng <strong>magkatabing paghahambing</strong> (pahalang o patayo), <strong>slider reveal videos</strong> (Pro), at <strong>propesyonal na PDF na report</strong> na may branding mo. Maaari mong ibahagi ang mga export sa pamamagitan ng Messages, email, AirDrop, o i-save ang mga ito sa iyong photo library.</div>
+        <div class="answer">Gumagawa ang SiteProof ng <strong>magkatabing paghahambing</strong> (pahalang o patayo) at <strong>propesyonal na PDF na report</strong>, pati na rin ng <strong>slider reveal videos</strong> gamit ang Pro. May maliit na SiteProof watermark ang mga libreng export; sa Pro, papalitan ito ng iyong branding. Magbahagi sa pamamagitan ng Messages, email, o AirDrop, i-save ang mga larawan at video sa Photos, at i-save ang mga PDF na report sa Files.</div>
       </details>
 
       <details>
         <summary>Ano ang Dispute-Proof Mode?</summary>
-        <div class="answer">Ang Dispute-Proof Mode (Pro) ay cryptographically nag-ha-hash ng bawat litrato gamit ang <strong>SHA-256</strong> sa mismong sandali ng pagkuha. Kung may magbabago sa file pagkatapos, matutukoy ito ng verification. Maaari mong muling i-verify ang mga litrato ng anumang job anumang oras mula sa loob ng app. Lumilikha ito ng dokumentasyon na tamper-evident na nagpoprotekta sa iyo sa mga disputa.</div>
+        <div class="answer">Nilalagyan ng Dispute-Proof Mode (Pro) ng fingerprint ang bawat litrato sa mismong sandali ng pagkuha nito: isang <strong>SHA-256</strong> hash na nilagdaan gamit ang key na hindi kailanman umaalis sa iyong device. Kung may magbabago sa file pagkatapos, matutukoy ito ng verification. Suriin ang anumang trabaho anumang oras gamit ang shield button sa itaas ng trabaho. Ang mga litratong in-import mula sa iyong library ay nilalagyan ng fingerprint kapag na-import at minamarkahang <strong>Na-import</strong>, hindi kailanman <strong>Verified na pagkuha</strong>.</div>
       </details>
 
       <details>
-        <summary>Paano gumagana ang pag-sign-off ng kliyente?</summary>
-        <div class="answer">Kapag tapos na ang isang job, iabot ang iyong device sa kliyente. Susuriin nila ang trabaho na may mga saklaw ng petsa-oras para sa bawat task, babasahin ang teksto ng kasunduan, ilalagay ang kanilang buong pangalan, at iguguhit ang kanilang lagda nang direkta sa screen. Ang lagda, kasunduan, pangalan, at timestamp ay magkakasamang ise-seguro kasama ng job.</div>
+        <summary>Paano gumagana ang pag-apruba ng kliyente?</summary>
+        <div class="answer">Kapag tapos na ang isang trabaho, i-tap ang <strong>Kumuha ng pag-apruba ng kliyente</strong> (Pro) at iabot ang iyong device sa kliyente. Susuriin nila ang bawat task kasama ang mga petsa nito, babasahin ang kasunduan, ilalagay ang kanilang buong pangalan, at lalagda sa screen. Magkakasamang sine-seal ang lagda, kasunduan, pangalan, oras, at ang mga fingerprint ng bawat litrato sa trabaho.</div>
+      </details>
+
+      <details>
+        <summary>Bakit hindi ko mabago ang mga litrato pagkatapos lumagda ng kliyente?</summary>
+        <div class="answer">Sine-seal ng lagda ng kliyente ang mga litrato ng trabaho kung ano ang mga ito noong lumagda sila. Masisira ang patunay na iyon kapag binago ang isang litrato pagkatapos, kaya kapag nalagdaan na ang isang trabaho, naka-lock na ang mga litrato nito: walang pagkuha muli, bagong pagkuha, o pagtanggal ng task. Maaari mo pa ring i-edit ang mga pamagat, note, at ang pagkakasunod-sunod ng mga task.</div>
       </details>
 
       <details>
         <summary>Ano ang evidence package?</summary>
-        <div class="answer">Ang evidence package ay isang ZIP file na naglalaman ng lahat ng orihinal na litrato, isang machine-readable na proof manifest (mga SHA-256 hash, GPS, mga timestamp), ang PDF na report, at ang lagda ng kliyente. Kasama rito ang isang README na nagpapaliwanag kung paano maaaring malayang i-verify ng sinuman ang mga hash gamit ang mga karaniwang tool tulad ng <strong>shasum</strong>.</div>
+        <div class="answer">Ang evidence package ay isang ZIP file na naglalaman ng lahat ng orihinal na litrato, isang machine-readable na proof manifest (mga SHA-256 hash, GPS, mga timestamp, at, para sa mga na-import na litrato, kung saan nagmula ang mga ito at kailan na-import), ang PDF na report, at ang lagda ng kliyente. Kasama rito ang isang README na nagpapaliwanag kung paano maaaring malayang i-verify ng sinuman ang mga hash gamit ang mga karaniwang tool tulad ng <strong>shasum</strong>.</div>
       </details>
 
       <details>
         <summary>Ano ang kasama sa Libre vs Pro?</summary>
-        <div class="answer">Kasama sa <strong>Libre</strong> ang pagkuha ng bago/pagkatapos, mga export ng paghahambing, PDF na report, at hanggang 3 job. Bina-unlock ng <strong>Pro ($9.99 nang isang beses)</strong> ang Dispute-Proof Mode, pag-sign-off ng kliyente, slider video export, branding ng kompanya, kalidad na HD/Print, at walang limitasyong job at task. Walang subscription — isang pagbili, panghabambuhay.</div>
+        <div class="answer">Kasama sa <strong>Libre</strong> ang pagkuha ng bago/pagkatapos, mga larawan ng paghahambing, at PDF na report para sa hanggang 3 trabaho, 3 task bawat trabaho, at 3 proyekto sa Showroom; may maliit na SiteProof watermark ang mga libreng export, at hindi binibilang ang halimbawang trabaho. Ang <strong>Pro</strong> ay isang beses na pagbili na nag-a-unlock ng Dispute-Proof Mode, pag-apruba ng kliyente, slider video export, branding ng iyong kompanya nang walang watermark, kalidad na HD/Print, at walang limitasyong trabaho, task, at proyekto sa Showroom. Walang subscription: isang pagbili, panghabambuhay.</div>
+      </details>
+
+      <details>
+        <summary>Paano ko ire-restore ang aking pagbili ng Pro?</summary>
+        <div class="answer">Kusang mag-o-on ang Pro kapag naka-sign in ka sa App Store gamit ang Apple ID na ginamit mo sa pagbili nito. Kung hindi, buksan ang tab na <strong>Mga setting</strong> at i-tap ang <strong>I-restore ang pagbili</strong>. Kapag naka-on na ang Pro, mananatili itong naka-on kahit ma-sign out pa sa App Store ang device sa ibang pagkakataon; refund lang ang makapag-aalis nito.</div>
+      </details>
+
+      <details>
+        <summary>Ano ang halimbawang trabaho na Pag-remodel ng kusina?</summary>
+        <div class="answer">May kasamang isang tapos na halimbawang trabaho ang mga bagong install para masubukan mo agad ang mga export, report, at verification. Hindi ito binibilang sa mga limitasyon ng Libre, hindi mababago ang mga litrato nito, at maaari mo itong tanggalin anumang oras (pindutin nang matagal ang card nito, pagkatapos ay i-tap ang <strong>Tanggalin ang trabaho</strong>). Kapag natanggal na, hindi na ito babalik.</div>
       </details>
 
       <details>
         <summary>Maaari ko bang idagdag ang branding ng aking kompanya?</summary>
-        <div class="answer">Oo (Pro). I-upload ang logo ng iyong kompanya, magtakda ng brand color, at ilagay ang pangalan, telepono, email, at website ng iyong kompanya. Lumalabas ang iyong branding sa lahat ng export ng paghahambing, slider video, at PDF na report.</div>
+        <div class="answer">Oo (Pro). Sa tab na <strong>Mga setting</strong>, idagdag ang logo ng iyong kompanya, isang brand color, at ang pangalan, telepono, email, at website ng iyong kompanya. Lumalabas ang iyong branding sa mga larawan ng paghahambing, slider video, at PDF na report, kapalit ng SiteProof watermark.</div>
       </details>
 
       <details>
         <summary>Gumagana ba ang app nang offline?</summary>
-        <div class="answer">Oo. Ang lahat ng pagkuha ng litrato, paggawa ng report, cryptographic verification, at pag-sign-off ng kliyente ay gumagana nang walang koneksyon sa internet. Ang tanging aktibidad sa network ay ang pag-validate ng pagbili ng StoreKit sa pamamagitan ng Apple at, kung naka-enable, ang usage analytics at mga crash report sa pamamagitan ng Google Firebase (na maaari mong i-off sa Settings).</div>
+        <div class="answer">Oo. Ang pagkuha ng litrato, paggawa ng report, cryptographic verification, at pag-apruba ng kliyente ay gumagana lahat nang walang koneksyon sa internet. Nag-o-online lang ang app para sa mga pagbili sa App Store (sa pamamagitan ng Apple), para hanapin ang address mula sa GPS kapag naka-on ang Awtomatikong GPS tagging (sa pamamagitan ng location services ng Apple), at, kung papayagan mo, para sa usage analytics at mga crash report sa pamamagitan ng Google Firebase (na maaari mong i-off sa Mga setting).</div>
       </details>
 
       <details>
         <summary>Sinusuportahan ba ng app ang mga pahalang na litrato?</summary>
-        <div class="answer">Oo. Ang mga pahalang na litrato ay first-class citizens. Ang malalapad na eksena tulad ng mga kusina, deck, at gilid ng bubong ay nakukuha at naipapakita nang walang pag-crop. Sinusubaybayan ng app kung ang litratong Bago ay kinunan nang pahalang at ipinatutupad ang tugmang oryentasyon para sa kuhang Pagkatapos upang matiyak ang magkakatugmang pares.</div>
+        <div class="answer">Oo. Ang mga pahalang na litrato ay first-class citizens: ang malalapad na eksena tulad ng mga kusina, deck, at gilid ng bubong ay nakukuha at naipapakita nang walang pag-crop. Kung iba ang pagkakahawak mo sa telepono kumpara sa litratong Bago, ipapaalala ng camera na paikutin mo ito at itatago nito ang ghost overlay hanggang tumugma ang oryentasyon, pero hindi ka nito kailanman pipigilang kumuha ng litrato.</div>
       </details>
 
       <details>
         <summary>Pribado ba ang aking data?</summary>
-        <div class="answer">Oo. Ang iyong mga litrato, detalye ng job, impormasyon ng kliyente, at mga lagda ay nananatiling buo sa iyong device &mdash; hindi kailanman ang mga ito ina-upload, at walang kinakailangang account. Upang mapabuti ang app, nangangalap ang SiteProof ng usage analytics at mga crash report sa pamamagitan ng Google Firebase &mdash; kabilang ang kung aling mga feature ang ginagamit at isang random na identifier na nag-uugnay sa aktibidad na ito sa iba't ibang session sa isang install (hindi kailanman sa iyo nang personal). Hindi kailanman kasama rito ang iyong nilalaman at hindi ito ginagamit para sa advertising. Maaari mo itong i-off anumang oras sa <strong>Settings &rarr; Data &amp; Privacy</strong>, at sa EU/UK/Switzerland nananatili itong naka-off maliban kung mag-opt in ka. Tingnan ang aming <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> para sa kumpletong detalye.</div>
+        <div class="answer">Oo. Ang iyong mga litrato, detalye ng trabaho, impormasyon ng kliyente, at mga lagda ay nananatiling buo sa iyong device &mdash; hindi kailanman ang mga ito ina-upload, at walang kinakailangang account. Upang mapabuti ang app, nangangalap ang SiteProof ng usage analytics at mga crash report sa pamamagitan ng Google Firebase &mdash; kabilang ang kung aling mga feature ang ginagamit at isang random na identifier na nag-uugnay sa aktibidad na ito sa iba't ibang session sa isang install (hindi kailanman sa iyo nang personal). Hindi kailanman kasama rito ang iyong nilalaman at hindi ito ginagamit para sa advertising. Maaari mo itong i-off anumang oras sa <strong>Mga setting &rarr; Data at Privacy</strong>, at sa EU, EEA, UK, at Switzerland nananatili itong naka-off maliban kung mag-opt in ka. Tingnan ang aming <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> para sa kumpletong detalye.</div>
       </details>
 
       <details>
@@ -1127,57 +1527,97 @@
 
       <details>
         <summary>SiteProof คืออะไร?</summary>
-        <div class="answer">SiteProof เป็นแอปสำหรับจัดทำเอกสารหลักฐานการทำงานสำหรับผู้รับเหมาและช่างผู้ชำนาญการ ถ่ายภาพก่อนและหลังที่หน้างาน สร้างภาพเปรียบเทียบที่มีตราสินค้าของคุณและรายงาน PDF และหากต้องการ ก็สามารถผนึกทุกอย่างด้วยหลักฐานเชิงรหัสลับและการลงนามรับรองโดยลูกค้า</div>
+        <div class="answer">SiteProof เป็นแอปสำหรับจัดทำเอกสารหลักฐานการทำงานสำหรับผู้รับเหมาและช่างผู้ชำนาญการ ถ่ายภาพก่อนและหลังที่หน้างาน แล้วนำไปสร้างเป็นภาพเปรียบเทียบและรายงาน PDF เมื่อใช้ Pro คุณสามารถเพิ่มตราสินค้าของบริษัท วิดีโอเลื่อนเผยภาพ หลักฐานที่ตรวจจับการดัดแปลงได้ และการอนุมัติของลูกค้า</div>
+      </details>
+
+      <details>
+        <summary>การตั้งค่าและ Showroom อยู่ที่ไหน?</summary>
+        <div class="answer">SiteProof มี 3 แท็บที่ด้านล่างของหน้าจอ ได้แก่ <strong>งาน</strong> <strong>Showroom</strong> และ<strong>การตั้งค่า</strong> การตั้งค่าเป็นที่รวมตราสินค้าของบริษัทคุณ ตัวเลือก Dispute-Proof “ข้อมูลและความเป็นส่วนตัว” “คืนค่าการซื้อ” “มีอะไรใหม่” และการส่งความคิดเห็น ส่วน Showroom จะรวบรวมภาพก่อนและหลังที่ดีที่สุดของคุณไว้ เพื่อให้คุณนำไปแสดงให้ลูกค้าดูได้</div>
       </details>
 
       <details>
         <summary>การถ่ายภาพก่อน/หลังทำงานอย่างไร?</summary>
-        <div class="answer">เปิด SiteProof ที่หน้างานแล้วถ่ายภาพ<strong>ก่อน</strong> แอปจะบันทึกเวลา ตำแหน่ง GPS และข้อมูลอุปกรณ์โดยอัตโนมัติ เมื่อทำงานเสร็จแล้ว ให้สลับไปยังโหมด<strong>หลัง</strong> โดยจะมีภาพซ้อนแบบโปร่งแสงของภาพต้นฉบับช่วยให้คุณจัดองค์ประกอบภาพได้อย่างแม่นยำ แอปยังจับคู่การตั้งค่าแฟลช/ไฟฉายให้ตรงกับภาพก่อนอีกด้วย</div>
+        <div class="answer">สร้างงาน เพิ่มงานย่อย แล้วแตะ<strong>ถ่ายภาพก่อน</strong>ที่หน้างาน แอปจะบันทึกวันที่ เวลา และข้อมูลอุปกรณ์ และหากเปิดแท็ก GPS อัตโนมัติไว้ ก็จะบันทึกตำแหน่งและที่อยู่ด้วย เมื่อทำงานเสร็จแล้ว ให้เปิดงานแล้วแตะช่อง<strong>หลัง</strong>ที่ยังว่างอยู่ของงานย่อย กล้องจะแสดงภาพก่อนของคุณเป็นภาพซ้อนแบบโกสต์ที่โปร่งแสง เพื่อให้คุณจัดองค์ประกอบภาพในมุมเดียวกันได้</div>
+      </details>
+
+      <details>
+        <summary>ฉันจะจัดภาพหลังให้ตรงกับภาพก่อนได้อย่างไร?</summary>
+        <div class="answer">ภาพก่อนจะปรากฏเป็นภาพซ้อนแบบโกสต์ที่โปร่งแสงบนหน้าจอกล้อง ลากแถบเลื่อนเพื่อให้ภาพซ้อนเข้มขึ้นหรือจางลง หรือแตะไอคอนรูปตาเพื่อซ่อน ขยับกล้องจนกว่าฉากจะตรงกัน เมื่อจัดได้ตรงแล้ว วงแหวนรอบปุ่มชัตเตอร์จะเปลี่ยนเป็น<strong>สีเขียว</strong> แตะเพื่อโฟกัส ใช้สองนิ้วเพื่อซูม (สูงสุด 5&times;) และเปิดเส้นตารางเพื่อช่วยให้เส้นตรง หากภาพก่อนถ่ายโดยใช้แฟลช แฟลชจะเปิดให้ตรงกัน</div>
+      </details>
+
+      <details>
+        <summary>ฉันใช้ภาพจากคลังรูปภาพได้หรือไม่?</summary>
+        <div class="answer">ได้ ในกล้อง ให้แตะปุ่มคลังรูปภาพเพื่อเลือกภาพก่อนหรือภาพหลัง ภาพที่นำเข้าจะได้รับลายนิ้วมือดิจิทัลเมื่อคุณนำเข้า การแก้ไขในภายหลังจึงยังตรวจพบได้ แต่ SiteProof ไม่อาจรู้ได้ว่าภาพเหล่านั้นถ่ายเมื่อใดและที่ใดจริง ๆ จึงระบุว่า<strong>นำเข้าแล้ว</strong>บนงานย่อย ในรายงาน PDF และในชุดหลักฐาน และจะไม่แสดงเป็น<strong>การถ่ายที่ตรวจสอบแล้ว</strong></div>
+      </details>
+
+      <details>
+        <summary>ฉันจะจัดลำดับงานย่อยใหม่หรือถ่ายภาพใหม่ได้อย่างไร?</summary>
+        <div class="answer">ภายในงาน ให้ลากการ์ดงานย่อยเพื่อย้ายตำแหน่ง หรือใช้<strong>เลื่อนขึ้น</strong> / <strong>เลื่อนลง</strong>ในเมนูของงานย่อย หากต้องการถ่ายภาพใหม่ ให้เลือก<strong>ถ่ายภาพก่อนใหม่</strong>หรือ<strong>ถ่ายภาพหลังใหม่</strong>จากเมนูเดียวกัน หรือแตะภาพเพื่อเปิดแบบเต็มหน้าจอ แล้วแตะ<strong>ถ่ายใหม่</strong></div>
+      </details>
+
+      <details>
+        <summary>ฉันจะลบงานได้อย่างไร?</summary>
+        <div class="answer">ในแท็บงาน ให้กดการ์ดของงานค้างไว้ แล้วแตะ<strong>ลบงาน</strong> หรือเปิดงานแล้วแตะปุ่มถังขยะที่ด้านบน การดำเนินการนี้จะลบงานและภาพทั้งหมดของงานนั้นออกจากอุปกรณ์ของคุณ และไม่สามารถเลิกทำได้</div>
       </details>
 
       <details>
         <summary>มีรูปแบบการส่งออกใดบ้าง?</summary>
-        <div class="answer">SiteProof สามารถสร้าง<strong>ภาพเปรียบเทียบแบบเคียงข้างกัน</strong> (แนวนอนหรือแนวตั้ง) <strong>วิดีโอเลื่อนเผยภาพ</strong> (Pro) และ<strong>รายงาน PDF ระดับมืออาชีพ</strong>ที่มีตราสินค้าของคุณ คุณสามารถแชร์ไฟล์ที่ส่งออกผ่านข้อความ อีเมล AirDrop หรือบันทึกลงในคลังภาพของคุณได้</div>
+        <div class="answer">SiteProof สร้าง<strong>ภาพเปรียบเทียบแบบเคียงข้างกัน</strong> (แนวนอนหรือแนวตั้ง) และ<strong>รายงาน PDF ระดับมืออาชีพ</strong> รวมถึง<strong>วิดีโอเลื่อนเผยภาพ</strong>เมื่อใช้ Pro ไฟล์ที่ส่งออกจากเวอร์ชันฟรีจะมีลายน้ำ SiteProof ขนาดเล็ก ส่วนใน Pro ตราสินค้าของคุณจะแสดงแทนลายน้ำ แชร์ผ่านข้อความ อีเมล หรือ AirDrop บันทึกภาพและวิดีโอลงในแอปรูปภาพ และบันทึกรายงาน PDF ลงในแอปไฟล์</div>
       </details>
 
       <details>
-        <summary>โหมดป้องกันข้อพิพาท (Dispute-Proof Mode) คืออะไร?</summary>
-        <div class="answer">โหมดป้องกันข้อพิพาท (Pro) จะทำการแฮชภาพทุกภาพด้วย <strong>SHA-256</strong> เชิงรหัสลับในขณะที่ถ่ายภาพ หากมีผู้ใดแก้ไขไฟล์ในภายหลัง การตรวจสอบจะตรวจพบได้ คุณสามารถตรวจสอบภาพของงานใด ๆ ซ้ำได้ทุกเมื่อจากภายในแอป สิ่งนี้สร้างเอกสารที่ตรวจพบการดัดแปลงได้ ซึ่งคุ้มครองคุณในกรณีเกิดข้อพิพาท</div>
+        <summary>Dispute-Proof Mode คืออะไร?</summary>
+        <div class="answer">Dispute-Proof Mode (Pro) จะสร้างลายนิ้วมือดิจิทัลให้กับภาพทุกภาพทันทีที่ถ่าย ซึ่งก็คือค่าแฮช <strong>SHA-256</strong> ที่ลงนามด้วยคีย์ที่ไม่เคยออกไปจากอุปกรณ์ของคุณ หากมีผู้ใดแก้ไขไฟล์ในภายหลัง การตรวจสอบจะตรวจพบได้ คุณตรวจสอบงานใดก็ได้ทุกเมื่อด้วยปุ่มรูปโล่ที่ด้านบนของงาน ภาพที่นำเข้าจากคลังรูปภาพจะได้รับลายนิ้วมือดิจิทัลเมื่อนำเข้า และระบุว่า<strong>นำเข้าแล้ว</strong> โดยจะไม่แสดงเป็น<strong>การถ่ายที่ตรวจสอบแล้ว</strong></div>
       </details>
 
       <details>
-        <summary>การลงนามรับรองโดยลูกค้าทำงานอย่างไร?</summary>
-        <div class="answer">เมื่องานเสร็จสมบูรณ์ ให้ส่งอุปกรณ์ของคุณให้ลูกค้า ลูกค้าจะตรวจสอบงานพร้อมช่วงวันที่และเวลาของแต่ละงาน อ่านข้อความข้อตกลง กรอกชื่อเต็ม และเซ็นลายมือชื่อบนหน้าจอโดยตรง ลายเซ็น ข้อตกลง ชื่อ และเวลาจะถูกผนึกไว้ด้วยกันพร้อมกับงาน</div>
+        <summary>การอนุมัติของลูกค้าทำงานอย่างไร?</summary>
+        <div class="answer">เมื่องานเสร็จสมบูรณ์ ให้แตะ<strong>รับการอนุมัติจากลูกค้า</strong> (Pro) แล้วส่งอุปกรณ์ของคุณให้ลูกค้า ลูกค้าจะตรวจสอบงานย่อยแต่ละรายการพร้อมวันที่ อ่านข้อตกลง กรอกชื่อ-นามสกุล และเซ็นชื่อบนหน้าจอ ลายเซ็น ข้อตกลง ชื่อ เวลา และลายนิ้วมือดิจิทัลของภาพทุกภาพในงานจะถูกผนึกไว้ด้วยกัน</div>
+      </details>
+
+      <details>
+        <summary>ทำไมฉันจึงเปลี่ยนภาพไม่ได้หลังจากลูกค้าลงนามแล้ว?</summary>
+        <div class="answer">ลายเซ็นของลูกค้าจะผนึกภาพของงานไว้ตามสภาพ ณ ตอนที่ลูกค้าลงนาม การเปลี่ยนภาพในภายหลังจะทำให้หลักฐานนั้นใช้ไม่ได้ ดังนั้นเมื่องานได้รับการลงนามแล้ว ภาพของงานจะถูกล็อก คือไม่สามารถถ่ายใหม่ ถ่ายภาพเพิ่ม หรือลบงานย่อยได้ แต่คุณยังแก้ไขชื่อ หมายเหตุ และลำดับของงานย่อยได้</div>
       </details>
 
       <details>
         <summary>ชุดหลักฐาน (evidence package) คืออะไร?</summary>
-        <div class="answer">ชุดหลักฐานคือไฟล์ ZIP ที่ประกอบด้วยภาพต้นฉบับทั้งหมด รายการแสดงหลักฐานที่อ่านได้ด้วยเครื่อง (ค่าแฮช SHA-256, GPS, เวลา) รายงาน PDF และลายเซ็นของลูกค้า โดยมีไฟล์ README อธิบายวิธีที่ผู้ใดก็ตามสามารถตรวจสอบค่าแฮชได้ด้วยตนเองโดยใช้เครื่องมือมาตรฐานอย่างเช่น <strong>shasum</strong></div>
+        <div class="answer">ชุดหลักฐานคือไฟล์ ZIP ที่ประกอบด้วยภาพต้นฉบับทั้งหมด รายการแสดงหลักฐานที่อ่านได้ด้วยเครื่อง (ค่าแฮช SHA-256, GPS, เวลา และสำหรับภาพที่นำเข้า จะระบุแหล่งที่มาของภาพและเวลาที่นำเข้า) รายงาน PDF และลายเซ็นของลูกค้า โดยมีไฟล์ README อธิบายวิธีที่ผู้ใดก็ตามสามารถตรวจสอบค่าแฮชได้ด้วยตนเองโดยใช้เครื่องมือมาตรฐานอย่างเช่น <strong>shasum</strong></div>
       </details>
 
       <details>
         <summary>เวอร์ชันฟรีและ Pro มีอะไรบ้าง?</summary>
-        <div class="answer"><strong>เวอร์ชันฟรี</strong>ประกอบด้วยการถ่ายภาพก่อน/หลัง การส่งออกภาพเปรียบเทียบ รายงาน PDF และงานได้สูงสุด 3 งาน <strong>Pro ($9.99 จ่ายครั้งเดียว)</strong> จะปลดล็อกโหมดป้องกันข้อพิพาท การลงนามรับรองโดยลูกค้า การส่งออกวิดีโอเลื่อนเผยภาพ ตราสินค้าของบริษัท คุณภาพระดับ HD/พิมพ์ และงานกับรายการงานได้ไม่จำกัด ไม่มีการสมัครสมาชิก ซื้อครั้งเดียว ใช้ได้ตลอดไป</div>
+        <div class="answer"><strong>เวอร์ชันฟรี</strong>ประกอบด้วยการถ่ายภาพก่อน/หลัง ภาพเปรียบเทียบ และรายงาน PDF สำหรับงานได้สูงสุด 3 งาน งานย่อย 3 รายการต่องาน และโปรเจกต์ใน Showroom 3 รายการ ไฟล์ที่ส่งออกจากเวอร์ชันฟรีจะมีลายน้ำ SiteProof ขนาดเล็ก และงานตัวอย่างจะไม่ถูกนับรวม <strong>Pro</strong> เป็นการซื้อครั้งเดียวที่จะปลดล็อก Dispute-Proof Mode การอนุมัติของลูกค้า การส่งออกวิดีโอเลื่อนเผยภาพ ตราสินค้าของบริษัทคุณโดยไม่มีลายน้ำ คุณภาพระดับ HD/พิมพ์ รวมถึงงาน งานย่อย และโปรเจกต์ใน Showroom ได้ไม่จำกัด ไม่มีการสมัครสมาชิก ซื้อครั้งเดียว ใช้ได้ตลอดไป</div>
+      </details>
+
+      <details>
+        <summary>ฉันจะคืนค่าการซื้อ Pro ได้อย่างไร?</summary>
+        <div class="answer">Pro จะเปิดใช้งานเองเมื่อคุณลงชื่อเข้าใช้ App Store ด้วย Apple ID ที่ใช้ซื้อ หากไม่เป็นเช่นนั้น ให้เปิดแท็บ<strong>การตั้งค่า</strong>แล้วแตะ<strong>คืนค่าการซื้อ</strong> เมื่อ Pro เปิดใช้งานแล้ว จะยังคงเปิดอยู่แม้ภายหลังอุปกรณ์จะออกจากระบบ App Store ก็ตาม มีเพียงการคืนเงินเท่านั้นที่จะยกเลิก Pro ได้</div>
+      </details>
+
+      <details>
+        <summary>งานตัวอย่าง “รีโนเวทครัว” คืออะไร?</summary>
+        <div class="answer">เมื่อติดตั้งแอปใหม่ จะมีงานตัวอย่างที่เสร็จแล้วหนึ่งงานมาให้ เพื่อให้คุณลองส่งออก ดูรายงาน และตรวจสอบความถูกต้องได้ทันที งานนี้ไม่นับรวมในขีดจำกัดของเวอร์ชันฟรี ภาพของงานนี้เปลี่ยนแปลงไม่ได้ และคุณลบได้ทุกเมื่อ (กดการ์ดของงานค้างไว้ แล้วแตะ<strong>ลบงาน</strong>) เมื่อลบแล้วจะไม่กลับมาอีก</div>
       </details>
 
       <details>
         <summary>ฉันสามารถเพิ่มตราสินค้าของบริษัทได้หรือไม่?</summary>
-        <div class="answer">ได้ (Pro) อัปโหลดโลโก้บริษัทของคุณ กำหนดสีประจำตราสินค้า และกรอกชื่อบริษัท หมายเลขโทรศัพท์ อีเมล และเว็บไซต์ ตราสินค้าของคุณจะปรากฏบนภาพเปรียบเทียบ วิดีโอเลื่อนเผยภาพ และรายงาน PDF ทั้งหมด</div>
+        <div class="answer">ได้ (Pro) ในแท็บ<strong>การตั้งค่า</strong> ให้เพิ่มโลโก้บริษัท สีประจำตราสินค้า รวมถึงชื่อบริษัท หมายเลขโทรศัพท์ อีเมล และเว็บไซต์ของคุณ ตราสินค้าของคุณจะปรากฏบนภาพเปรียบเทียบ วิดีโอเลื่อนเผยภาพ และรายงาน PDF แทนลายน้ำ SiteProof</div>
       </details>
 
       <details>
         <summary>แอปทำงานแบบออฟไลน์ได้หรือไม่?</summary>
-        <div class="answer">ได้ การถ่ายภาพ การสร้างรายงาน การตรวจสอบเชิงรหัสลับ และการลงนามรับรองโดยลูกค้าทั้งหมดทำงานได้โดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต กิจกรรมเครือข่ายอย่างเดียวคือการตรวจสอบการซื้อผ่าน StoreKit ของ Apple และหากเปิดใช้งาน ก็จะมีการวิเคราะห์การใช้งานและรายงานข้อขัดข้องผ่าน Google Firebase (ซึ่งคุณสามารถปิดได้ในการตั้งค่า)</div>
+        <div class="answer">ได้ การถ่ายภาพ การสร้างรายงาน การตรวจสอบเชิงรหัสลับ และการอนุมัติของลูกค้าทั้งหมดทำงานได้โดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต แอปจะเชื่อมต่ออินเทอร์เน็ตเฉพาะเพื่อการซื้อใน App Store (ผ่าน Apple) การค้นหาที่อยู่จาก GPS เมื่อเปิดแท็ก GPS อัตโนมัติ (ผ่านบริการหาตำแหน่งของ Apple) และหากคุณอนุญาต เพื่อส่งการวิเคราะห์การใช้งานและรายงานข้อขัดข้องผ่าน Google Firebase (ซึ่งคุณสามารถปิดได้ในการตั้งค่า)</div>
       </details>
 
       <details>
         <summary>แอปรองรับภาพแนวนอนหรือไม่?</summary>
-        <div class="answer">รองรับ ภาพแนวนอนถือเป็นพลเมืองชั้นหนึ่ง ฉากกว้างอย่างห้องครัว ระเบียง และแนวหลังคาจะถูกถ่ายและแสดงผลโดยไม่มีการครอบตัด แอปจะติดตามว่าภาพก่อนถ่ายในแนวนอนหรือไม่ และบังคับให้การวางแนวของภาพหลังตรงกัน เพื่อให้ได้คู่ภาพที่สอดคล้องกัน</div>
+        <div class="answer">รองรับ ภาพแนวนอนถือเป็นพลเมืองชั้นหนึ่ง ฉากกว้างอย่างห้องครัว ระเบียง และแนวหลังคาจะถูกถ่ายและแสดงผลโดยไม่มีการครอบตัด หากคุณถือโทรศัพท์ในแนวที่ต่างจากภาพก่อน กล้องจะเตือนให้หมุนเครื่อง และซ่อนภาพซ้อนแบบโกสต์จนกว่าการวางแนวจะตรงกัน แต่จะไม่ห้ามคุณถ่ายภาพเลย</div>
       </details>
 
       <details>
         <summary>ข้อมูลของฉันเป็นส่วนตัวหรือไม่?</summary>
-        <div class="answer">เป็นส่วนตัว ภาพถ่าย รายละเอียดงาน ข้อมูลลูกค้า และลายเซ็นของคุณจะอยู่บนอุปกรณ์ของคุณทั้งหมด &mdash; ไม่มีการอัปโหลด และไม่จำเป็นต้องมีบัญชี เพื่อปรับปรุงแอป SiteProof จะเก็บข้อมูลการวิเคราะห์การใช้งานและรายงานข้อขัดข้องผ่าน Google Firebase &mdash; รวมถึงฟีเจอร์ที่มีการใช้งานและตัวระบุแบบสุ่มที่เชื่อมโยงกิจกรรมนี้ข้ามเซสชันเข้ากับการติดตั้งหนึ่ง ๆ (ไม่เคยเชื่อมโยงกับตัวคุณเป็นการส่วนตัว) ซึ่งจะไม่รวมเนื้อหาของคุณและไม่ถูกนำไปใช้เพื่อการโฆษณา คุณสามารถปิดได้ทุกเมื่อใน<strong>การตั้งค่า &rarr; ข้อมูลและความเป็นส่วนตัว</strong> และในสหภาพยุโรป/สหราชอาณาจักร/สวิตเซอร์แลนด์ จะถูกปิดไว้เว้นแต่คุณจะเลือกเปิดใช้งาน ดูรายละเอียดทั้งหมดได้ใน<a href="https://hugolamarreftc.github.io/SiteProof-legal/">นโยบายความเป็นส่วนตัว</a>ของเรา</div>
+        <div class="answer">เป็นส่วนตัว ภาพถ่าย รายละเอียดงาน ข้อมูลลูกค้า และลายเซ็นของคุณจะอยู่บนอุปกรณ์ของคุณทั้งหมด &mdash; ไม่มีการอัปโหลด และไม่จำเป็นต้องมีบัญชี เพื่อปรับปรุงแอป SiteProof จะเก็บข้อมูลการวิเคราะห์การใช้งานและรายงานข้อขัดข้องผ่าน Google Firebase &mdash; รวมถึงฟีเจอร์ที่มีการใช้งานและตัวระบุแบบสุ่มที่เชื่อมโยงกิจกรรมนี้ข้ามเซสชันเข้ากับการติดตั้งหนึ่ง ๆ (ไม่เคยเชื่อมโยงกับตัวคุณเป็นการส่วนตัว) ซึ่งจะไม่รวมเนื้อหาของคุณและไม่ถูกนำไปใช้เพื่อการโฆษณา คุณสามารถปิดได้ทุกเมื่อใน<strong>การตั้งค่า &rarr; ข้อมูลและความเป็นส่วนตัว</strong> และในสหภาพยุโรป เขตเศรษฐกิจยุโรป สหราชอาณาจักร และสวิตเซอร์แลนด์ จะถูกปิดไว้เว้นแต่คุณจะเลือกเปิดใช้งาน ดูรายละเอียดทั้งหมดได้ใน<a href="https://hugolamarreftc.github.io/SiteProof-legal/">นโยบายความเป็นส่วนตัว</a>ของเรา</div>
       </details>
 
       <details>
