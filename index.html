@@ -357,7 +357,7 @@
 
       <details>
         <summary>What is Dispute-Proof Mode?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) fingerprints every photo and video clip the moment it's captured: a <strong>SHA-256</strong> hash, signed with a key that never leaves your device. If anyone changes the file afterwards, verification detects it. Check any job at any time with the shield button at the top of the job. Photos and videos imported from your library are fingerprinted when imported and marked <strong>Imported</strong>, never <strong>Verified Capture</strong>.</div>
+        <div class="answer">Dispute-Proof Mode (Pro) fingerprints every photo and video clip the moment it's captured: a <strong>SHA-256</strong> hash, signed with a key kept on your device (and in your own iCloud Keychain, if you use it). If anyone changes the file afterwards, verification detects it. Check any job at any time with the shield button at the top of the job. Photos and videos imported from your library are fingerprinted when imported and marked <strong>Imported</strong>, never <strong>Verified Capture</strong>.</div>
       </details>
 
       <details>
@@ -373,6 +373,10 @@
       <details>
         <summary>What is the evidence package?</summary>
         <div class="answer">The evidence package is a ZIP file containing all original photos and video clips, a machine-readable proof manifest (SHA-256 hashes, GPS, timestamps, and, for imported photos and videos, where they came from and when they were imported), the PDF report, and the client signature. It includes a README explaining how anyone can independently verify the hashes using standard tools like <strong>shasum</strong>. With video clips a package can be large; if it is over 500 MB, SiteProof tells you its size before exporting, and AirDrop or Save to Files work better than email.</div>
+      </details>
+      <details>
+        <summary>I moved to a new iPhone. Why does verification say Key Unavailable?</summary>
+        <div class="answer">A photo's fingerprint (its SHA-256 hash) can be checked on any device, so SiteProof still confirms the photo is unchanged. Its signature can only be checked with the key of the phone that made it, and iOS doesn't carry that key to a new phone restored from an iCloud backup. So SiteProof also keeps the key in your iCloud Keychain: with iCloud Keychain on, and an up-to-date SiteProof opened on the old phone before you switch, signatures keep verifying on the new one. Without it, earlier photos and sign-offs read <strong>Key Unavailable</strong>: nothing is wrong with them, their signature just can't be re-checked on this phone. Evidence packages you exported earlier are not affected.</div>
       </details>
 
       <details>
@@ -407,7 +411,7 @@
 
       <details>
         <summary>Is my data private?</summary>
-        <div class="answer">Yes. Your photos, video clips, job details, client information, and signatures stay entirely on your device &mdash; they are never uploaded, and no account is required. The microphone is used only while you record a video clip, and only if you allow it. To improve the app, SiteProof collects usage analytics and crash reports via Google Firebase &mdash; including which features are used and a random identifier that links this activity across sessions to an install (never to you personally). This never includes your content and is not used for advertising. You can turn it off anytime in <strong>Settings &rarr; Data &amp; Privacy</strong>, and in the EU, EEA, UK, and Switzerland it stays off unless you opt in. See our <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> for full details.</div>
+        <div class="answer">Yes. Your photos, video clips, job details, client information, and signatures stay entirely on your device &mdash; they are never uploaded, and no account is required. The one thing kept outside your device is the Dispute-Proof signing key, in your own iCloud Keychain if you use it. The microphone is used only while you record a video clip, and only if you allow it. To improve the app, SiteProof collects usage analytics and crash reports via Google Firebase &mdash; including which features are used and a random identifier that links this activity across sessions to an install (never to you personally). This never includes your content and is not used for advertising. You can turn it off anytime in <strong>Settings &rarr; Data &amp; Privacy</strong>, and in the EU, EEA, UK, and Switzerland it stays off unless you opt in. See our <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> for full details.</div>
       </details>
 
       <details>
@@ -500,7 +504,7 @@
 
       <details>
         <summary>Qu'est-ce que Dispute-Proof Mode&nbsp;?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) calcule l'empreinte de chaque photo et de chaque clip vid&eacute;o d&egrave;s sa capture&nbsp;: un hachage <strong>SHA-256</strong>, sign&eacute; avec une cl&eacute; qui ne quitte jamais votre appareil. Si quelqu'un modifie le fichier par la suite, la v&eacute;rification le d&eacute;tecte. V&eacute;rifiez n'importe quel chantier &agrave; tout moment avec le bouton en forme de bouclier en haut de l'&eacute;cran du chantier. Les photos et les vid&eacute;os import&eacute;es depuis votre phototh&egrave;que re&ccedil;oivent leur empreinte lors de l'importation et sont marqu&eacute;es <strong>Import&eacute;e</strong>, jamais <strong>Capture v&eacute;rifi&eacute;e</strong>.</div>
+        <div class="answer">Dispute-Proof Mode (Pro) calcule l'empreinte de chaque photo et de chaque clip vid&eacute;o d&egrave;s sa capture&nbsp;: un hachage <strong>SHA-256</strong>, sign&eacute; avec une cl&eacute; conserv&eacute;e sur votre appareil (et dans votre propre Trousseau iCloud, si vous l'utilisez). Si quelqu'un modifie le fichier par la suite, la v&eacute;rification le d&eacute;tecte. V&eacute;rifiez n'importe quel chantier &agrave; tout moment avec le bouton en forme de bouclier en haut de l'&eacute;cran du chantier. Les photos et les vid&eacute;os import&eacute;es depuis votre phototh&egrave;que re&ccedil;oivent leur empreinte lors de l'importation et sont marqu&eacute;es <strong>Import&eacute;e</strong>, jamais <strong>Capture v&eacute;rifi&eacute;e</strong>.</div>
       </details>
 
       <details>
@@ -516,6 +520,10 @@
       <details>
         <summary>Qu'est-ce que le dossier de preuves&nbsp;?</summary>
         <div class="answer">Le dossier de preuves est un fichier ZIP contenant toutes les photos originales et tous les clips vid&eacute;o, un manifeste de preuves lisible par machine (hachages SHA-256, GPS, horodatages et, pour les photos et les vid&eacute;os import&eacute;es, leur provenance et la date de leur importation), le rapport PDF et la signature du client. Il comprend un fichier README expliquant comment v&eacute;rifier ind&eacute;pendamment les hachages &agrave; l'aide d'outils standards comme <strong>shasum</strong>. Avec des clips vid&eacute;o, un dossier peut &ecirc;tre volumineux&nbsp;; au-del&agrave; de 500&nbsp;Mo, SiteProof vous indique sa taille avant l'exportation, et AirDrop ou l'enregistrement dans Fichiers conviennent mieux que le courriel.</div>
+      </details>
+      <details>
+        <summary>J'ai chang&eacute; d'iPhone. Pourquoi la v&eacute;rification indique-t-elle &laquo;&nbsp;Cl&eacute; indisponible&nbsp;&raquo;&nbsp;?</summary>
+        <div class="answer">L'empreinte d'une photo (son hachage SHA-256) peut &ecirc;tre v&eacute;rifi&eacute;e sur n'importe quel appareil&nbsp;: SiteProof confirme donc toujours que la photo n'a pas &eacute;t&eacute; modifi&eacute;e. Sa signature, en revanche, ne peut &ecirc;tre v&eacute;rifi&eacute;e qu'avec la cl&eacute; du t&eacute;l&eacute;phone qui l'a produite, et iOS ne transmet pas cette cl&eacute; &agrave; un nouveau t&eacute;l&eacute;phone restaur&eacute; &agrave; partir d'une sauvegarde iCloud. SiteProof conserve donc aussi la cl&eacute; dans votre Trousseau iCloud&nbsp;: si le Trousseau iCloud est activ&eacute; et qu'une version &agrave; jour de SiteProof a &eacute;t&eacute; ouverte sur l'ancien t&eacute;l&eacute;phone avant le changement, les signatures continuent d'&ecirc;tre v&eacute;rifi&eacute;es sur le nouveau. Sans cela, les photos et les approbations ant&eacute;rieures affichent <strong>Cl&eacute; indisponible</strong>&nbsp;: elles n'ont aucun probl&egrave;me, mais leur signature ne peut plus &ecirc;tre rev&eacute;rifi&eacute;e sur ce t&eacute;l&eacute;phone. Les dossiers de preuves export&eacute;s auparavant ne sont pas touch&eacute;s.</div>
       </details>
 
       <details>
@@ -550,7 +558,7 @@
 
       <details>
         <summary>Mes donn&eacute;es sont-elles priv&eacute;es&nbsp;?</summary>
-        <div class="answer">Oui. Vos photos, clips vid&eacute;o, d&eacute;tails de chantier, informations client et signatures restent enti&egrave;rement sur votre appareil &mdash; ils ne sont jamais t&eacute;l&eacute;vers&eacute;s, et aucun compte n'est requis. Le micro n'est utilis&eacute; que pendant l'enregistrement d'un clip vid&eacute;o, et seulement si vous l'autorisez. Pour am&eacute;liorer l'application, SiteProof collecte des statistiques d'utilisation et des rapports de plantage via Google Firebase &mdash; y compris les fonctionnalit&eacute;s utilis&eacute;es et un identifiant al&eacute;atoire qui relie cette activit&eacute;, d'une session &agrave; l'autre, &agrave; une installation (jamais &agrave; vous personnellement). Cela n'inclut jamais votre contenu et n'est pas utilis&eacute; &agrave; des fins publicitaires. Vous pouvez le d&eacute;sactiver &agrave; tout moment dans <strong>R&eacute;glages &rarr; Donn&eacute;es et confidentialit&eacute;</strong>, et dans l'UE, dans l'EEE, au Royaume-Uni et en Suisse, cela reste d&eacute;sactiv&eacute; sauf si vous donnez votre consentement. Consultez notre <a href="https://hugolamarreftc.github.io/SiteProof-legal/">politique de confidentialit&eacute;</a> pour tous les d&eacute;tails.</div>
+        <div class="answer">Oui. Vos photos, clips vid&eacute;o, d&eacute;tails de chantier, informations client et signatures restent enti&egrave;rement sur votre appareil &mdash; ils ne sont jamais t&eacute;l&eacute;vers&eacute;s, et aucun compte n'est requis. La seule chose conserv&eacute;e en dehors de votre appareil est la cl&eacute; de signature de Dispute-Proof Mode, dans votre propre Trousseau iCloud si vous l'utilisez. Le micro n'est utilis&eacute; que pendant l'enregistrement d'un clip vid&eacute;o, et seulement si vous l'autorisez. Pour am&eacute;liorer l'application, SiteProof collecte des statistiques d'utilisation et des rapports de plantage via Google Firebase &mdash; y compris les fonctionnalit&eacute;s utilis&eacute;es et un identifiant al&eacute;atoire qui relie cette activit&eacute;, d'une session &agrave; l'autre, &agrave; une installation (jamais &agrave; vous personnellement). Cela n'inclut jamais votre contenu et n'est pas utilis&eacute; &agrave; des fins publicitaires. Vous pouvez le d&eacute;sactiver &agrave; tout moment dans <strong>R&eacute;glages &rarr; Donn&eacute;es et confidentialit&eacute;</strong>, et dans l'UE, dans l'EEE, au Royaume-Uni et en Suisse, cela reste d&eacute;sactiv&eacute; sauf si vous donnez votre consentement. Consultez notre <a href="https://hugolamarreftc.github.io/SiteProof-legal/">politique de confidentialit&eacute;</a> pour tous les d&eacute;tails.</div>
       </details>
 
       <details>
@@ -643,7 +651,7 @@
 
       <details>
         <summary>&iquest;Qu&eacute; es Dispute-Proof Mode?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) crea una huella criptogr&aacute;fica de cada foto y de cada clip de video en el momento en que se captura: un hash <strong>SHA-256</strong>, firmado con una clave que nunca sale de su dispositivo. Si alguien modifica el archivo despu&eacute;s, la verificaci&oacute;n lo detecta. Verifique cualquier trabajo en cualquier momento con el bot&oacute;n del escudo, en la parte superior de la pantalla del trabajo. Las fotos y los videos importados de su fototeca reciben su huella al importarse y se marcan como <strong>Importada</strong>, nunca como <strong>Captura verificada</strong>.</div>
+        <div class="answer">Dispute-Proof Mode (Pro) crea una huella criptogr&aacute;fica de cada foto y de cada clip de video en el momento en que se captura: un hash <strong>SHA-256</strong>, firmado con una clave guardada en su dispositivo (y en su propio llavero de iCloud, si lo utiliza). Si alguien modifica el archivo despu&eacute;s, la verificaci&oacute;n lo detecta. Verifique cualquier trabajo en cualquier momento con el bot&oacute;n del escudo, en la parte superior de la pantalla del trabajo. Las fotos y los videos importados de su fototeca reciben su huella al importarse y se marcan como <strong>Importada</strong>, nunca como <strong>Captura verificada</strong>.</div>
       </details>
 
       <details>
@@ -659,6 +667,10 @@
       <details>
         <summary>&iquest;Qu&eacute; es el paquete de evidencias?</summary>
         <div class="answer">El paquete de evidencias es un archivo ZIP que contiene todas las fotos originales y los clips de video, un manifiesto de pruebas legible por m&aacute;quina (hashes SHA-256, GPS, marcas de tiempo y, en el caso de las fotos y los videos importados, su procedencia y cu&aacute;ndo se importaron), el informe PDF y la firma del cliente. Incluye un archivo README que explica c&oacute;mo cualquier persona puede verificar independientemente los hashes usando herramientas est&aacute;ndar como <strong>shasum</strong>. Con clips de video, un paquete puede ser grande; si supera los 500 MB, SiteProof le indica su tama&ntilde;o antes de exportarlo, y AirDrop o Guardar en Archivos funcionan mejor que el correo electr&oacute;nico.</div>
+      </details>
+      <details>
+        <summary>He cambiado de iPhone. &iquest;Por qu&eacute; la verificaci&oacute;n indica Clave no disponible?</summary>
+        <div class="answer">La huella de una foto (su hash SHA-256) se puede comprobar en cualquier dispositivo, por lo que SiteProof sigue confirmando que la foto no ha cambiado. Su firma, en cambio, solo se puede comprobar con la clave del tel&eacute;fono que la cre&oacute;, e iOS no traspasa esa clave a un tel&eacute;fono nuevo restaurado desde una copia de seguridad de iCloud. Por eso SiteProof tambi&eacute;n guarda la clave en su llavero de iCloud: con el llavero de iCloud activado, y con una versi&oacute;n actualizada de SiteProof abierta en el tel&eacute;fono anterior antes del cambio, las firmas se siguen verificando en el nuevo. Sin eso, las fotos y las aprobaciones anteriores muestran <strong>Clave no disponible</strong>: no les pasa nada, simplemente su firma no se puede volver a comprobar en este tel&eacute;fono. Los paquetes de evidencias exportados antes no se ven afectados.</div>
       </details>
 
       <details>
@@ -693,7 +705,7 @@
 
       <details>
         <summary>&iquest;Mis datos son privados?</summary>
-        <div class="answer">S&iacute;. Sus fotos, clips de video, detalles de trabajos, informaci&oacute;n de clientes y firmas permanecen completamente en su dispositivo &mdash; nunca se suben, y no se requiere cuenta. El micr&oacute;fono solo se usa mientras graba un clip de video, y solo si usted lo permite. Para mejorar la aplicaci&oacute;n, SiteProof recopila estad&iacute;sticas de uso e informes de fallos a trav&eacute;s de Google Firebase &mdash; incluidas las funciones que se utilizan y un identificador aleatorio que vincula esta actividad entre sesiones a una instalaci&oacute;n (nunca a usted personalmente). Esto nunca incluye su contenido ni se utiliza con fines publicitarios. Puede desactivarlo en cualquier momento en <strong>Ajustes &rarr; Datos y privacidad</strong>, y en la UE, el EEE, el Reino Unido y Suiza permanece desactivado a menos que d&eacute; su consentimiento. Consulte nuestra <a href="https://hugolamarreftc.github.io/SiteProof-legal/">pol&iacute;tica de privacidad</a> para todos los detalles.</div>
+        <div class="answer">S&iacute;. Sus fotos, clips de video, detalles de trabajos, informaci&oacute;n de clientes y firmas permanecen completamente en su dispositivo &mdash; nunca se suben, y no se requiere cuenta. Lo &uacute;nico que se conserva fuera de su dispositivo es la clave de firma de Dispute-Proof Mode, en su propio llavero de iCloud si lo utiliza. El micr&oacute;fono solo se usa mientras graba un clip de video, y solo si usted lo permite. Para mejorar la aplicaci&oacute;n, SiteProof recopila estad&iacute;sticas de uso e informes de fallos a trav&eacute;s de Google Firebase &mdash; incluidas las funciones que se utilizan y un identificador aleatorio que vincula esta actividad entre sesiones a una instalaci&oacute;n (nunca a usted personalmente). Esto nunca incluye su contenido ni se utiliza con fines publicitarios. Puede desactivarlo en cualquier momento en <strong>Ajustes &rarr; Datos y privacidad</strong>, y en la UE, el EEE, el Reino Unido y Suiza permanece desactivado a menos que d&eacute; su consentimiento. Consulte nuestra <a href="https://hugolamarreftc.github.io/SiteProof-legal/">pol&iacute;tica de privacidad</a> para todos los detalles.</div>
       </details>
 
       <details>
@@ -786,7 +798,7 @@
 
       <details>
         <summary>Was ist Dispute-Proof Mode?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) versieht jedes Foto und jeden Videoclip im Moment der Aufnahme mit einem Fingerabdruck: einem <strong>SHA-256</strong>-Hash, signiert mit einem Schl&uuml;ssel, der Ihr Ger&auml;t nie verl&auml;sst. Wenn jemand die Datei nachtr&auml;glich &auml;ndert, erkennt die Verifizierung dies. Pr&uuml;fen Sie jeden Auftrag jederzeit &uuml;ber das Schild-Symbol oben in der Auftragsansicht. Aus Ihrer Fotomediathek importierte Fotos und Videos erhalten ihren Fingerabdruck beim Import und werden als <strong>Importiert</strong> gekennzeichnet, nie als <strong>Verifizierte Aufnahme</strong>.</div>
+        <div class="answer">Dispute-Proof Mode (Pro) versieht jedes Foto und jeden Videoclip im Moment der Aufnahme mit einem Fingerabdruck: einem <strong>SHA-256</strong>-Hash, signiert mit einem Schl&uuml;ssel, der auf Ihrem Ger&auml;t (und, falls Sie ihn nutzen, in Ihrem eigenen iCloud-Schl&uuml;sselbund) gespeichert ist. Wenn jemand die Datei nachtr&auml;glich &auml;ndert, erkennt die Verifizierung dies. Pr&uuml;fen Sie jeden Auftrag jederzeit &uuml;ber das Schild-Symbol oben in der Auftragsansicht. Aus Ihrer Fotomediathek importierte Fotos und Videos erhalten ihren Fingerabdruck beim Import und werden als <strong>Importiert</strong> gekennzeichnet, nie als <strong>Verifizierte Aufnahme</strong>.</div>
       </details>
 
       <details>
@@ -802,6 +814,10 @@
       <details>
         <summary>Was ist das Beweispaket?</summary>
         <div class="answer">Das Beweispaket ist eine ZIP-Datei mit allen Originalfotos und Videoclips, einem maschinenlesbaren Nachweismanifest (SHA-256-Hashes, GPS, Zeitstempel und, bei importierten Fotos und Videos, deren Herkunft und Importzeitpunkt), dem PDF-Bericht und der Kundenunterschrift. Es enth&auml;lt eine README-Datei, die erkl&auml;rt, wie jeder die Hashes unabh&auml;ngig mit Standardtools wie <strong>shasum</strong> &uuml;berpr&uuml;fen kann. Mit Videoclips kann ein Paket gro&szlig; werden; ist es gr&ouml;&szlig;er als 500 MB, teilt SiteProof Ihnen die Gr&ouml;&szlig;e vor dem Export mit, und AirDrop oder Sichern in Dateien eignen sich dann besser als E-Mail.</div>
+      </details>
+      <details>
+        <summary>Ich habe ein neues iPhone. Warum meldet die Verifizierung Schl&uuml;ssel nicht verf&uuml;gbar?</summary>
+        <div class="answer">Der Fingerabdruck eines Fotos (sein SHA-256-Hash) l&auml;sst sich auf jedem Ger&auml;t pr&uuml;fen, daher best&auml;tigt SiteProof weiterhin, dass das Foto unver&auml;ndert ist. Die Signatur l&auml;sst sich dagegen nur mit dem Schl&uuml;ssel des Telefons pr&uuml;fen, das sie erstellt hat, und iOS &uuml;bertr&auml;gt diesen Schl&uuml;ssel nicht auf ein neues Telefon, das aus einem iCloud-Backup wiederhergestellt wird. Deshalb bewahrt SiteProof den Schl&uuml;ssel auch in Ihrem iCloud-Schl&uuml;sselbund auf: Ist der iCloud-Schl&uuml;sselbund aktiviert und wurde vor dem Wechsel eine aktuelle Version von SiteProof auf dem alten Telefon ge&ouml;ffnet, werden Signaturen auch auf dem neuen weiterhin verifiziert. Ohne das zeigen fr&uuml;here Fotos und Kundenfreigaben <strong>Schl&uuml;ssel nicht verf&uuml;gbar</strong> an: Mit ihnen ist nichts falsch, nur ihre Signatur kann auf diesem Telefon nicht erneut gepr&uuml;ft werden. Zuvor exportierte Beweispakete sind nicht betroffen.</div>
       </details>
 
       <details>
@@ -836,7 +852,7 @@
 
       <details>
         <summary>Sind meine Daten privat?</summary>
-        <div class="answer">Ja. Ihre Fotos, Videoclips, Auftragsdetails, Kundeninformationen und Unterschriften verbleiben vollst&auml;ndig auf Ihrem Ger&auml;t &mdash; sie werden niemals hochgeladen, und es ist kein Konto erforderlich. Das Mikrofon wird nur w&auml;hrend der Aufnahme eines Videoclips verwendet, und nur, wenn Sie es erlauben. Zur Verbesserung der App erhebt SiteProof Nutzungsstatistiken und Absturzberichte &uuml;ber Google Firebase &mdash; einschlie&szlig;lich der genutzten Funktionen und einer zuf&auml;lligen Kennung, die diese Aktivit&auml;t sitzungs&uuml;bergreifend mit einer Installation verkn&uuml;pft (niemals mit Ihnen pers&ouml;nlich). Dies umfasst niemals Ihre Inhalte und wird nicht f&uuml;r Werbung verwendet. Sie k&ouml;nnen dies jederzeit unter <strong>Einstellungen &rarr; Daten &amp; Datenschutz</strong> deaktivieren, und in der EU, im EWR, im UK und in der Schweiz bleibt es deaktiviert, sofern Sie nicht zustimmen. Lesen Sie unsere <a href="https://hugolamarreftc.github.io/SiteProof-legal/">Datenschutzerkl&auml;rung</a> f&uuml;r alle Details.</div>
+        <div class="answer">Ja. Ihre Fotos, Videoclips, Auftragsdetails, Kundeninformationen und Unterschriften verbleiben vollst&auml;ndig auf Ihrem Ger&auml;t &mdash; sie werden niemals hochgeladen, und es ist kein Konto erforderlich. Das Einzige, was au&szlig;erhalb Ihres Ger&auml;ts aufbewahrt wird, ist der Signaturschl&uuml;ssel von Dispute-Proof Mode, in Ihrem eigenen iCloud-Schl&uuml;sselbund, sofern Sie ihn nutzen. Das Mikrofon wird nur w&auml;hrend der Aufnahme eines Videoclips verwendet, und nur, wenn Sie es erlauben. Zur Verbesserung der App erhebt SiteProof Nutzungsstatistiken und Absturzberichte &uuml;ber Google Firebase &mdash; einschlie&szlig;lich der genutzten Funktionen und einer zuf&auml;lligen Kennung, die diese Aktivit&auml;t sitzungs&uuml;bergreifend mit einer Installation verkn&uuml;pft (niemals mit Ihnen pers&ouml;nlich). Dies umfasst niemals Ihre Inhalte und wird nicht f&uuml;r Werbung verwendet. Sie k&ouml;nnen dies jederzeit unter <strong>Einstellungen &rarr; Daten &amp; Datenschutz</strong> deaktivieren, und in der EU, im EWR, im UK und in der Schweiz bleibt es deaktiviert, sofern Sie nicht zustimmen. Lesen Sie unsere <a href="https://hugolamarreftc.github.io/SiteProof-legal/">Datenschutzerkl&auml;rung</a> f&uuml;r alle Details.</div>
       </details>
 
       <details>
@@ -929,7 +945,7 @@
 
       <details>
         <summary>O que é o Dispute-Proof Mode?</summary>
-        <div class="answer">O Dispute-Proof Mode (Pro) cria uma impressão digital de cada foto e de cada clip de vídeo no momento em que são capturados: um resumo (hash) <strong>SHA-256</strong>, assinado com uma chave que nunca sai do seu dispositivo. Se alguém modificar o ficheiro posteriormente, a verificação deteta-o. Verifique qualquer trabalho a qualquer momento com o botão do escudo, no topo do ecrã do trabalho. As fotos e os vídeos importados da sua fototeca recebem a impressão digital no momento da importação e são marcados como <strong>Importada</strong>, nunca como <strong>Captura verificada</strong>.</div>
+        <div class="answer">O Dispute-Proof Mode (Pro) cria uma impressão digital de cada foto e de cada clip de vídeo no momento em que são capturados: um resumo (hash) <strong>SHA-256</strong>, assinado com uma chave guardada no seu dispositivo (e no seu próprio Porta-chaves iCloud, se o utilizar). Se alguém modificar o ficheiro posteriormente, a verificação deteta-o. Verifique qualquer trabalho a qualquer momento com o botão do escudo, no topo do ecrã do trabalho. As fotos e os vídeos importados da sua fototeca recebem a impressão digital no momento da importação e são marcados como <strong>Importada</strong>, nunca como <strong>Captura verificada</strong>.</div>
       </details>
 
       <details>
@@ -945,6 +961,10 @@
       <details>
         <summary>O que é o pacote de evidências?</summary>
         <div class="answer">O pacote de evidências é um ficheiro ZIP que contém todas as fotos originais e clips de vídeo, um manifesto de provas legível por máquina (resumos SHA-256, GPS, datas e horas e, no caso das fotos e dos vídeos importados, a sua origem e o momento da importação), o relatório em PDF e a assinatura do cliente. Inclui um README que explica como qualquer pessoa pode verificar os resumos de forma independente utilizando ferramentas padrão como o <strong>shasum</strong>. Com clips de vídeo, um pacote pode ser grande; se tiver mais de 500 MB, o SiteProof indica-lhe o tamanho antes de exportar, e o AirDrop ou Guardar em Ficheiros funcionam melhor do que o e-mail.</div>
+      </details>
+      <details>
+        <summary>Mudei de iPhone. Porque é que a verificação indica Chave indisponível?</summary>
+        <div class="answer">A impressão digital de uma foto (o seu resumo SHA-256) pode ser verificada em qualquer dispositivo, pelo que o SiteProof continua a confirmar que a foto não foi alterada. A assinatura só pode ser verificada com a chave do telemóvel que a criou, e o iOS não transfere essa chave para um telemóvel novo restaurado a partir de uma cópia de segurança do iCloud. Por isso, o SiteProof guarda também a chave no seu Porta-chaves iCloud: com o Porta-chaves iCloud ativado, e uma versão atualizada do SiteProof aberta no telemóvel antigo antes da mudança, as assinaturas continuam a ser verificadas no novo. Sem isso, as fotos e as aprovações do cliente anteriores apresentam <strong>Chave indisponível</strong>: não há nada de errado com elas, apenas não é possível voltar a verificar a sua assinatura neste telemóvel. Os pacotes de evidências exportados anteriormente não são afetados.</div>
       </details>
 
       <details>
@@ -979,7 +999,7 @@
 
       <details>
         <summary>Os meus dados são privados?</summary>
-        <div class="answer">Sim. As suas fotos, clips de vídeo, detalhes de trabalhos, informações de clientes e assinaturas permanecem inteiramente no seu dispositivo &mdash; nunca são carregados e não é necessária qualquer conta. O microfone só é usado enquanto grava um clip de vídeo, e só se o permitir. Para melhorar a aplicação, o SiteProof recolhe análises de utilização e relatórios de falhas através do Google Firebase &mdash; incluindo as funcionalidades utilizadas e um identificador aleatório que associa esta atividade, ao longo das sessões, a uma instalação (nunca a si pessoalmente). Isto nunca inclui o seu conteúdo e não é utilizado para publicidade. Pode desativá-lo a qualquer momento em <strong>Definições &rarr; Dados e Privacidade</strong> e, na UE, no EEE, no Reino Unido e na Suíça, permanece desativado a menos que opte por ativá-lo. Consulte a nossa <a href="https://hugolamarreftc.github.io/SiteProof-legal/">política de privacidade</a> para todos os detalhes.</div>
+        <div class="answer">Sim. As suas fotos, clips de vídeo, detalhes de trabalhos, informações de clientes e assinaturas permanecem inteiramente no seu dispositivo &mdash; nunca são carregados e não é necessária qualquer conta. A única coisa que fica fora do seu dispositivo é a chave de assinatura do Dispute-Proof Mode, no seu próprio Porta-chaves iCloud, se o utilizar. O microfone só é usado enquanto grava um clip de vídeo, e só se o permitir. Para melhorar a aplicação, o SiteProof recolhe análises de utilização e relatórios de falhas através do Google Firebase &mdash; incluindo as funcionalidades utilizadas e um identificador aleatório que associa esta atividade, ao longo das sessões, a uma instalação (nunca a si pessoalmente). Isto nunca inclui o seu conteúdo e não é utilizado para publicidade. Pode desativá-lo a qualquer momento em <strong>Definições &rarr; Dados e Privacidade</strong> e, na UE, no EEE, no Reino Unido e na Suíça, permanece desativado a menos que opte por ativá-lo. Consulte a nossa <a href="https://hugolamarreftc.github.io/SiteProof-legal/">política de privacidade</a> para todos os detalhes.</div>
       </details>
 
       <details>
@@ -1072,7 +1092,7 @@
 
       <details>
         <summary>Dispute-Proof Mode とは何ですか。</summary>
-        <div class="answer">Dispute-Proof Mode（Pro）は、撮影した瞬間にすべての写真と動画クリップにフィンガープリントを付けます。これは、お使いのデバイスから外に出ることのないキーで署名された <strong>SHA-256</strong> ハッシュです。その後に誰かがファイルを改変した場合、検証によってそれを検出できます。どの案件も、案件画面の上部にある盾のボタンからいつでも確認できます。ライブラリからインポートした写真と動画には、インポート時にフィンガープリントが付けられ、<strong>インポート済み</strong>と表示されます。<strong>検証済みの撮影</strong>と表示されることはありません。</div>
+        <div class="answer">Dispute-Proof Mode（Pro）は、撮影した瞬間にすべての写真と動画クリップにフィンガープリントを付けます。これは、お使いのデバイス（および、ご利用の場合はご自身のiCloudキーチェーン）に保管されたキーで署名された <strong>SHA-256</strong> ハッシュです。その後に誰かがファイルを改変した場合、検証によってそれを検出できます。どの案件も、案件画面の上部にある盾のボタンからいつでも確認できます。ライブラリからインポートした写真と動画には、インポート時にフィンガープリントが付けられ、<strong>インポート済み</strong>と表示されます。<strong>検証済みの撮影</strong>と表示されることはありません。</div>
       </details>
 
       <details>
@@ -1088,6 +1108,10 @@
       <details>
         <summary>証拠パッケージとは何ですか。</summary>
         <div class="answer">証拠パッケージは、すべての元の写真と動画クリップ、機械可読の証明マニフェスト（SHA-256 ハッシュ、GPS、タイムスタンプ、さらにインポートした写真や動画についてはその取り込み元とインポート日時）、PDF レポート、そしてクライアントの署名を含む ZIP ファイルです。<strong>shasum</strong> などの標準的なツールを使って、誰でも独立してハッシュを検証する方法を説明した README が含まれています。動画クリップがあるとパッケージが大きくなることがあります。500 MB を超える場合は、エクスポートの前に SiteProof がサイズをお知らせします。メールよりも、AirDrop や「ファイル」に保存する方法のほうが適しています。</div>
+      </details>
+      <details>
+        <summary>新しい iPhone に移行しました。検証で「鍵が利用できません」と表示されるのはなぜですか。</summary>
+        <div class="answer">写真のフィンガープリント（SHA-256 ハッシュ）はどのデバイスでも確認できるため、SiteProof は引き続き写真が変更されていないことを確認できます。一方、署名はその写真を撮影した iPhone の鍵でしか確認できず、iCloud バックアップから復元した新しい iPhone には、iOS がその鍵を引き継ぎません。そこで SiteProof は、その鍵をお使いのiCloudキーチェーンにも保管します。iCloudキーチェーンがオンで、機種変更の前に古い iPhone で最新版の SiteProof を開いていれば、新しい iPhone でも署名の検証を続けられます。そうでない場合、以前の写真やクライアントの承認には<strong>鍵が利用できません</strong>と表示されます。写真自体に問題はなく、この iPhone ではその署名を再確認できないだけです。以前にエクスポートした証拠パッケージには影響しません。</div>
       </details>
 
       <details>
@@ -1122,7 +1146,7 @@
 
       <details>
         <summary>私のデータは保護されますか。</summary>
-        <div class="answer">はい。あなたの写真、動画クリップ、案件の詳細、クライアントの情報、署名は、すべてあなたのデバイス内にとどまります&mdash;これらがアップロードされることはなく、アカウントも不要です。マイクは、動画クリップを撮影している間だけ、しかもあなたが許可した場合にのみ使用されます。アプリを改善するため、SiteProof は Google Firebase を通じて利用状況分析とクラッシュレポートを収集します&mdash;これには、利用された機能、およびこの利用状況をセッションをまたいでインストール単位で関連付けるランダムな識別子が含まれます（あなた個人に結び付くことはありません）。これにあなたのコンテンツが含まれることは決してなく、広告目的で使用されることもありません。<strong>設定 &rarr; データとプライバシー</strong>からいつでもオフにでき、EU、EEA、英国、スイスでは、あなたが同意しない限りオフのままです。詳しくは<a href="https://hugolamarreftc.github.io/SiteProof-legal/">プライバシーポリシー</a>をご覧ください。</div>
+        <div class="answer">はい。あなたの写真、動画クリップ、案件の詳細、クライアントの情報、署名は、すべてあなたのデバイス内にとどまります&mdash;これらがアップロードされることはなく、アカウントも不要です。デバイスの外に保管されるのは Dispute-Proof Mode の署名用キーだけで、iCloudキーチェーンをご利用の場合に限り、ご自身のiCloudキーチェーンに保管されます。マイクは、動画クリップを撮影している間だけ、しかもあなたが許可した場合にのみ使用されます。アプリを改善するため、SiteProof は Google Firebase を通じて利用状況分析とクラッシュレポートを収集します&mdash;これには、利用された機能、およびこの利用状況をセッションをまたいでインストール単位で関連付けるランダムな識別子が含まれます（あなた個人に結び付くことはありません）。これにあなたのコンテンツが含まれることは決してなく、広告目的で使用されることもありません。<strong>設定 &rarr; データとプライバシー</strong>からいつでもオフにでき、EU、EEA、英国、スイスでは、あなたが同意しない限りオフのままです。詳しくは<a href="https://hugolamarreftc.github.io/SiteProof-legal/">プライバシーポリシー</a>をご覧ください。</div>
       </details>
 
       <details>
@@ -1215,7 +1239,7 @@
 
       <details>
         <summary>Czym jest Dispute-Proof Mode?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) zabezpiecza każde zdjęcie i każdy klip filmowy kryptograficznym odciskiem w chwili jego wykonania: skrótem <strong>SHA-256</strong> podpisanym kluczem, który nigdy nie opuszcza Państwa urządzenia. Jeśli ktokolwiek później zmieni plik, weryfikacja to wykryje. Każde zlecenie można w dowolnym momencie sprawdzić przyciskiem z tarczą u góry ekranu zlecenia. Zdjęcia i filmy zaimportowane z biblioteki otrzymują odcisk w chwili importu i są oznaczane jako <strong>Zaimportowane</strong>, nigdy jako <strong>Zweryfikowane wykonanie</strong>.</div>
+        <div class="answer">Dispute-Proof Mode (Pro) zabezpiecza każde zdjęcie i każdy klip filmowy kryptograficznym odciskiem w chwili jego wykonania: skrótem <strong>SHA-256</strong> podpisanym kluczem przechowywanym na Państwa urządzeniu (oraz, jeśli Państwo z niego korzystają, we własnym Pęku kluczy iCloud). Jeśli ktokolwiek później zmieni plik, weryfikacja to wykryje. Każde zlecenie można w dowolnym momencie sprawdzić przyciskiem z tarczą u góry ekranu zlecenia. Zdjęcia i filmy zaimportowane z biblioteki otrzymują odcisk w chwili importu i są oznaczane jako <strong>Zaimportowane</strong>, nigdy jako <strong>Zweryfikowane wykonanie</strong>.</div>
       </details>
 
       <details>
@@ -1231,6 +1255,10 @@
       <details>
         <summary>Czym jest pakiet dowodowy?</summary>
         <div class="answer">Pakiet dowodowy to plik ZIP zawierający wszystkie oryginalne zdjęcia i klipy filmowe, odczytywalny maszynowo manifest dowodowy (skróty SHA-256, GPS, znaczniki czasu, a w przypadku zaimportowanych zdjęć i filmów także dane o tym, skąd pochodzą i kiedy zostały zaimportowane), raport PDF oraz podpis klienta. Zawiera też plik README wyjaśniający, jak każdy może niezależnie zweryfikować skróty za pomocą standardowych narzędzi, takich jak <strong>shasum</strong>. Przy klipach filmowych pakiet może być duży; jeśli przekracza 500 MB, SiteProof poinformuje o jego rozmiarze przed eksportem, a AirDrop lub zapis w aplikacji Pliki sprawdzają się lepiej niż e-mail.</div>
+      </details>
+      <details>
+        <summary>Mam nowego iPhone'a. Dlaczego weryfikacja pokazuje komunikat Klucz niedostępny?</summary>
+        <div class="answer">Odcisk zdjęcia (jego skrót SHA-256) można sprawdzić na każdym urządzeniu, więc SiteProof nadal potwierdza, że zdjęcie nie zostało zmienione. Jego podpis można natomiast sprawdzić tylko kluczem telefonu, który go utworzył, a system iOS nie przenosi tego klucza na nowy telefon przywrócony z kopii zapasowej iCloud. Dlatego SiteProof przechowuje klucz także w Państwa Pęku kluczy iCloud: gdy Pęk kluczy iCloud jest włączony, a przed zmianą telefonu na starym otwarto aktualną wersję SiteProof, podpisy nadal są weryfikowane na nowym. Bez tego wcześniejsze zdjęcia i akceptacje klienta pokazują <strong>Klucz niedostępny</strong>: nic im nie dolega, po prostu ich podpisu nie da się ponownie sprawdzić na tym telefonie. Wcześniej wyeksportowane pakiety dowodowe nie są dotknięte.</div>
       </details>
 
       <details>
@@ -1265,7 +1293,7 @@
 
       <details>
         <summary>Czy moje dane są prywatne?</summary>
-        <div class="answer">Tak. Państwa zdjęcia, klipy filmowe, szczegóły zleceń, informacje o klientach oraz podpisy pozostają w całości na urządzeniu &mdash; nigdy nie są przesyłane, a konto nie jest wymagane. Mikrofon jest używany wyłącznie podczas nagrywania klipu filmowego i tylko wtedy, gdy Państwo na to zezwolą. Aby ulepszać aplikację, SiteProof zbiera analitykę użytkowania oraz raporty o awariach za pośrednictwem Google Firebase &mdash; w tym informacje o używanych funkcjach oraz losowy identyfikator, który łączy tę aktywność między sesjami z instalacją (nigdy z Państwem osobiście). Nigdy nie obejmuje to Państwa treści i nie jest wykorzystywane do celów reklamowych. Funkcję tę można wyłączyć w dowolnym momencie w sekcji <strong>Ustawienia &rarr; Dane i prywatność</strong>, a w UE, EOG, Wielkiej Brytanii i Szwajcarii pozostaje ona wyłączona, dopóki nie wyrażą Państwo zgody. Pełne informacje zawiera nasza <a href="https://hugolamarreftc.github.io/SiteProof-legal/">polityka prywatności</a>.</div>
+        <div class="answer">Tak. Państwa zdjęcia, klipy filmowe, szczegóły zleceń, informacje o klientach oraz podpisy pozostają w całości na urządzeniu &mdash; nigdy nie są przesyłane, a konto nie jest wymagane. Jedyną rzeczą przechowywaną poza urządzeniem jest klucz podpisu Dispute-Proof Mode, we własnym Pęku kluczy iCloud, jeśli Państwo z niego korzystają. Mikrofon jest używany wyłącznie podczas nagrywania klipu filmowego i tylko wtedy, gdy Państwo na to zezwolą. Aby ulepszać aplikację, SiteProof zbiera analitykę użytkowania oraz raporty o awariach za pośrednictwem Google Firebase &mdash; w tym informacje o używanych funkcjach oraz losowy identyfikator, który łączy tę aktywność między sesjami z instalacją (nigdy z Państwem osobiście). Nigdy nie obejmuje to Państwa treści i nie jest wykorzystywane do celów reklamowych. Funkcję tę można wyłączyć w dowolnym momencie w sekcji <strong>Ustawienia &rarr; Dane i prywatność</strong>, a w UE, EOG, Wielkiej Brytanii i Szwajcarii pozostaje ona wyłączona, dopóki nie wyrażą Państwo zgody. Pełne informacje zawiera nasza <a href="https://hugolamarreftc.github.io/SiteProof-legal/">polityka prywatności</a>.</div>
       </details>
 
       <details>
@@ -1358,7 +1386,7 @@
 
       <details>
         <summary>Что такое Dispute-Proof Mode?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) защищает каждое фото и каждый видеоклип криптографическим отпечатком в момент съёмки: хешем <strong>SHA-256</strong>, подписанным ключом, который никогда не покидает Ваше устройство. Если кто-либо изменит файл впоследствии, проверка это обнаружит. Проверить любой проект можно в любой момент кнопкой со щитом вверху экрана проекта. Фото и видео, импортированные из медиатеки, получают отпечаток при импорте и помечаются как <strong>«Импортировано»</strong>, но никогда как <strong>«Подтверждённая съёмка»</strong>.</div>
+        <div class="answer">Dispute-Proof Mode (Pro) защищает каждое фото и каждый видеоклип криптографическим отпечатком в момент съёмки: хешем <strong>SHA-256</strong>, подписанным ключом, который хранится на Вашем устройстве (и в Вашей собственной Связке ключей iCloud, если Вы ею пользуетесь). Если кто-либо изменит файл впоследствии, проверка это обнаружит. Проверить любой проект можно в любой момент кнопкой со щитом вверху экрана проекта. Фото и видео, импортированные из медиатеки, получают отпечаток при импорте и помечаются как <strong>«Импортировано»</strong>, но никогда как <strong>«Подтверждённая съёмка»</strong>.</div>
       </details>
 
       <details>
@@ -1374,6 +1402,10 @@
       <details>
         <summary>Что такое пакет доказательств?</summary>
         <div class="answer">Пакет доказательств — это ZIP-файл, содержащий все оригинальные фотографии и видеоклипы, машиночитаемый манифест доказательств (хеши SHA-256, GPS, метки времени, а для импортированных фото и видео также их источник и время импорта), PDF-отчёт и подпись клиента. В него входит файл README, объясняющий, как любой желающий может самостоятельно проверить хеши с помощью стандартных инструментов, таких как <strong>shasum</strong>. Из-за видеоклипов пакет может получиться большим; если он превышает 500 МБ, SiteProof сообщит его размер перед экспортом, а AirDrop или сохранение в «Файлы» подойдут лучше, чем электронная почта.</div>
+      </details>
+      <details>
+        <summary>Я перешёл на новый iPhone. Почему при проверке написано «Ключ недоступен»?</summary>
+        <div class="answer">Отпечаток фотографии (её хеш SHA-256) можно проверить на любом устройстве, поэтому SiteProof по-прежнему подтверждает, что фотография не изменялась. А вот подпись можно проверить только ключом того телефона, который её создал, и iOS не переносит этот ключ на новый телефон, восстановленный из резервной копии iCloud. Поэтому SiteProof хранит ключ ещё и в Вашей Связке ключей iCloud: если Связка ключей iCloud включена, а перед переходом на старом телефоне была открыта актуальная версия SiteProof, подписи продолжают проверяться и на новом. Без этого прежние фото и одобрения клиентов показывают <strong>Ключ недоступен</strong>: с ними всё в порядке, просто их подпись нельзя перепроверить на этом телефоне. Ранее экспортированные пакеты доказательств это не затрагивает.</div>
       </details>
 
       <details>
@@ -1408,7 +1440,7 @@
 
       <details>
         <summary>Защищены ли мои данные?</summary>
-        <div class="answer">Да. Ваши фотографии, видеоклипы, сведения о работах, информация о клиентах и подписи полностью остаются на Вашем устройстве &mdash; они никогда не загружаются на сервер, и учётная запись не требуется. Микрофон используется только во время записи видеоклипа и только если Вы это разрешили. Чтобы улучшать приложение, SiteProof собирает аналитику использования и отчёты о сбоях через Google Firebase &mdash; включая то, какие функции используются, и случайный идентификатор, который связывает эту активность между сессиями с установкой (но никогда с Вами лично). Она никогда не включает Ваш контент и не используется для рекламы. Вы можете отключить её в любой момент в разделе <strong>«Настройки &rarr; Данные и конфиденциальность»</strong>, а в ЕС, ЕЭЗ, Великобритании и Швейцарии она остаётся выключенной, пока Вы не дадите согласие. Подробнее см. в нашей <a href="https://hugolamarreftc.github.io/SiteProof-legal/">политике конфиденциальности</a>.</div>
+        <div class="answer">Да. Ваши фотографии, видеоклипы, сведения о работах, информация о клиентах и подписи полностью остаются на Вашем устройстве &mdash; они никогда не загружаются на сервер, и учётная запись не требуется. Единственное, что хранится за пределами Вашего устройства, — это ключ подписи Dispute-Proof Mode, в Вашей собственной Связке ключей iCloud, если Вы ею пользуетесь. Микрофон используется только во время записи видеоклипа и только если Вы это разрешили. Чтобы улучшать приложение, SiteProof собирает аналитику использования и отчёты о сбоях через Google Firebase &mdash; включая то, какие функции используются, и случайный идентификатор, который связывает эту активность между сессиями с установкой (но никогда с Вами лично). Она никогда не включает Ваш контент и не используется для рекламы. Вы можете отключить её в любой момент в разделе <strong>«Настройки &rarr; Данные и конфиденциальность»</strong>, а в ЕС, ЕЭЗ, Великобритании и Швейцарии она остаётся выключенной, пока Вы не дадите согласие. Подробнее см. в нашей <a href="https://hugolamarreftc.github.io/SiteProof-legal/">политике конфиденциальности</a>.</div>
       </details>
 
       <details>
@@ -1501,7 +1533,7 @@
 
       <details>
         <summary>Apa itu Dispute-Proof Mode?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) memberi sidik kriptografis pada setiap foto dan klip video tepat saat diambil: hash <strong>SHA-256</strong> yang ditandatangani dengan kunci yang tidak pernah meninggalkan perangkat Anda. Jika ada orang yang mengubah berkas setelahnya, verifikasi akan mendeteksinya. Periksa pekerjaan apa pun kapan saja dengan tombol perisai di bagian atas pekerjaan. Foto dan video yang diimpor dari galeri diberi sidik kriptografis saat diimpor dan ditandai <strong>Diimpor</strong>, tidak pernah <strong>Pengambilan terverifikasi</strong>.</div>
+        <div class="answer">Dispute-Proof Mode (Pro) memberi sidik kriptografis pada setiap foto dan klip video tepat saat diambil: hash <strong>SHA-256</strong> yang ditandatangani dengan kunci yang disimpan di perangkat Anda (dan di Rantai Kunci iCloud Anda sendiri, jika Anda menggunakannya). Jika ada orang yang mengubah berkas setelahnya, verifikasi akan mendeteksinya. Periksa pekerjaan apa pun kapan saja dengan tombol perisai di bagian atas pekerjaan. Foto dan video yang diimpor dari galeri diberi sidik kriptografis saat diimpor dan ditandai <strong>Diimpor</strong>, tidak pernah <strong>Pengambilan terverifikasi</strong>.</div>
       </details>
 
       <details>
@@ -1517,6 +1549,10 @@
       <details>
         <summary>Apa itu paket bukti?</summary>
         <div class="answer">Paket bukti adalah berkas ZIP yang berisi semua foto asli dan klip video, manifes bukti yang dapat dibaca mesin (hash SHA-256, GPS, cap waktu, serta untuk foto dan video yang diimpor, asalnya dan kapan diimpor), laporan PDF, dan tanda tangan klien. Paket ini menyertakan README yang menjelaskan bagaimana siapa pun dapat memverifikasi hash secara independen menggunakan alat standar seperti <strong>shasum</strong>. Dengan klip video, ukuran paket bisa besar; jika lebih dari 500 MB, SiteProof memberi tahu ukurannya sebelum mengekspor, dan AirDrop atau Simpan ke File lebih cocok daripada email.</div>
+      </details>
+      <details>
+        <summary>Saya pindah ke iPhone baru. Mengapa verifikasi menampilkan Kunci tidak tersedia?</summary>
+        <div class="answer">Sidik jari sebuah foto (hash SHA-256-nya) dapat diperiksa di perangkat mana pun, sehingga SiteProof tetap memastikan foto tersebut tidak berubah. Namun tanda tangannya hanya dapat diperiksa dengan kunci dari ponsel yang membuatnya, dan iOS tidak membawa kunci itu ke ponsel baru yang dipulihkan dari cadangan iCloud. Karena itu SiteProof juga menyimpan kunci di Rantai Kunci iCloud Anda: dengan Rantai Kunci iCloud aktif, dan SiteProof versi terbaru dibuka di ponsel lama sebelum Anda berpindah, tanda tangan tetap dapat diverifikasi di ponsel baru. Tanpa itu, foto dan persetujuan sebelumnya akan menampilkan <strong>Kunci tidak tersedia</strong>: tidak ada yang salah dengan semuanya itu, hanya saja tanda tangannya tidak dapat diperiksa ulang di ponsel ini. Paket bukti yang sudah Anda ekspor sebelumnya tidak terpengaruh.</div>
       </details>
 
       <details>
@@ -1551,7 +1587,7 @@
 
       <details>
         <summary>Apakah data saya bersifat pribadi?</summary>
-        <div class="answer">Ya. Foto, klip video, detail pekerjaan, informasi klien, dan tanda tangan Anda sepenuhnya tetap berada di perangkat Anda &mdash; semuanya tidak pernah diunggah, dan tidak ada akun yang diperlukan. Mikrofon hanya digunakan saat Anda merekam klip video, dan hanya jika Anda mengizinkannya. Untuk menyempurnakan aplikasi, SiteProof mengumpulkan analitik penggunaan dan laporan kerusakan melalui Google Firebase &mdash; termasuk fitur mana yang digunakan dan pengidentifikasi acak yang menautkan aktivitas ini lintas sesi ke sebuah pemasangan (tidak pernah ke Anda secara pribadi). Ini tidak pernah menyertakan konten Anda dan tidak digunakan untuk iklan. Anda dapat menonaktifkannya kapan saja di <strong>Pengaturan &rarr; Data &amp; Privasi</strong>, dan di UE, EEA, Britania Raya, dan Swiss fitur ini tetap nonaktif kecuali Anda menyetujuinya. Lihat <a href="https://hugolamarreftc.github.io/SiteProof-legal/">kebijakan privasi</a> kami untuk detail selengkapnya.</div>
+        <div class="answer">Ya. Foto, klip video, detail pekerjaan, informasi klien, dan tanda tangan Anda sepenuhnya tetap berada di perangkat Anda &mdash; semuanya tidak pernah diunggah, dan tidak ada akun yang diperlukan. Satu-satunya yang disimpan di luar perangkat Anda adalah kunci penandatanganan Dispute-Proof Mode, di Rantai Kunci iCloud Anda sendiri jika Anda menggunakannya. Mikrofon hanya digunakan saat Anda merekam klip video, dan hanya jika Anda mengizinkannya. Untuk menyempurnakan aplikasi, SiteProof mengumpulkan analitik penggunaan dan laporan kerusakan melalui Google Firebase &mdash; termasuk fitur mana yang digunakan dan pengidentifikasi acak yang menautkan aktivitas ini lintas sesi ke sebuah pemasangan (tidak pernah ke Anda secara pribadi). Ini tidak pernah menyertakan konten Anda dan tidak digunakan untuk iklan. Anda dapat menonaktifkannya kapan saja di <strong>Pengaturan &rarr; Data &amp; Privasi</strong>, dan di UE, EEA, Britania Raya, dan Swiss fitur ini tetap nonaktif kecuali Anda menyetujuinya. Lihat <a href="https://hugolamarreftc.github.io/SiteProof-legal/">kebijakan privasi</a> kami untuk detail selengkapnya.</div>
       </details>
 
       <details>
@@ -1644,7 +1680,7 @@
 
       <details>
         <summary>Ano ang Dispute-Proof Mode?</summary>
-        <div class="answer">Nilalagyan ng Dispute-Proof Mode (Pro) ng fingerprint ang bawat litrato at video clip sa mismong sandali ng pagkuha nito: isang <strong>SHA-256</strong> hash na nilagdaan gamit ang key na hindi kailanman umaalis sa iyong device. Kung may magbabago sa file pagkatapos, matutukoy ito ng verification. Suriin ang anumang trabaho anumang oras gamit ang shield button sa itaas ng trabaho. Ang mga litrato at video na in-import mula sa iyong library ay nilalagyan ng fingerprint kapag na-import at minamarkahang <strong>Na-import</strong>, hindi kailanman <strong>Verified na pagkuha</strong>.</div>
+        <div class="answer">Nilalagyan ng Dispute-Proof Mode (Pro) ng fingerprint ang bawat litrato at video clip sa mismong sandali ng pagkuha nito: isang <strong>SHA-256</strong> hash na nilagdaan gamit ang key na nakatago sa iyong device (at sa sarili mong iCloud Keychain, kung ginagamit mo ito). Kung may magbabago sa file pagkatapos, matutukoy ito ng verification. Suriin ang anumang trabaho anumang oras gamit ang shield button sa itaas ng trabaho. Ang mga litrato at video na in-import mula sa iyong library ay nilalagyan ng fingerprint kapag na-import at minamarkahang <strong>Na-import</strong>, hindi kailanman <strong>Verified na pagkuha</strong>.</div>
       </details>
 
       <details>
@@ -1660,6 +1696,10 @@
       <details>
         <summary>Ano ang evidence package?</summary>
         <div class="answer">Ang evidence package ay isang ZIP file na naglalaman ng lahat ng orihinal na litrato at video clip, isang machine-readable na proof manifest (mga SHA-256 hash, GPS, mga timestamp, at, para sa mga na-import na litrato at video, kung saan nagmula ang mga ito at kailan na-import), ang PDF na report, at ang lagda ng kliyente. Kasama rito ang isang README na nagpapaliwanag kung paano maaaring malayang i-verify ng sinuman ang mga hash gamit ang mga karaniwang tool tulad ng <strong>shasum</strong>. Kapag may mga video clip, maaaring malaki ang isang package; kung lampas ito sa 500 MB, sasabihin ng SiteProof ang laki nito bago mag-export, at mas mainam ang AirDrop o I-save sa Files kaysa sa email.</div>
+      </details>
+      <details>
+        <summary>Lumipat ako sa bagong iPhone. Bakit sinasabi ng verification na Hindi available ang key?</summary>
+        <div class="answer">Maaaring suriin sa anumang device ang fingerprint ng isang litrato (ang SHA-256 hash nito), kaya patuloy na nakukumpirma ng SiteProof na hindi nagbago ang litrato. Ang signature nito ay masusuri lamang gamit ang key ng telepono na gumawa nito, at hindi inililipat ng iOS ang key na iyon sa bagong telepono na na-restore mula sa iCloud backup. Kaya itinatago rin ng SiteProof ang key sa iyong iCloud Keychain: kapag naka-on ang iCloud Keychain, at nabuksan ang up-to-date na SiteProof sa lumang telepono bago ka lumipat, patuloy na mabe-verify ang mga signature sa bago. Kung wala iyon, ang mga naunang litrato at sign-off ay magpapakita ng <strong>Hindi available ang key</strong>: walang problema sa mga ito, hindi lang masusuri muli ang kanilang signature sa teleponong ito. Hindi apektado ang mga evidence package na na-export mo na dati.</div>
       </details>
 
       <details>
@@ -1694,7 +1734,7 @@
 
       <details>
         <summary>Pribado ba ang aking data?</summary>
-        <div class="answer">Oo. Ang iyong mga litrato, video clip, detalye ng trabaho, impormasyon ng kliyente, at mga lagda ay nananatiling buo sa iyong device &mdash; hindi kailanman ang mga ito ina-upload, at walang kinakailangang account. Ginagamit lamang ang mikropono habang nagre-record ka ng video clip, at kung papayagan mo lamang ito. Upang mapabuti ang app, nangangalap ang SiteProof ng usage analytics at mga crash report sa pamamagitan ng Google Firebase &mdash; kabilang ang kung aling mga feature ang ginagamit at isang random na identifier na nag-uugnay sa aktibidad na ito sa iba't ibang session sa isang install (hindi kailanman sa iyo nang personal). Hindi kailanman kasama rito ang iyong nilalaman at hindi ito ginagamit para sa advertising. Maaari mo itong i-off anumang oras sa <strong>Mga setting &rarr; Data at Privacy</strong>, at sa EU, EEA, UK, at Switzerland nananatili itong naka-off maliban kung mag-opt in ka. Tingnan ang aming <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> para sa kumpletong detalye.</div>
+        <div class="answer">Oo. Ang iyong mga litrato, video clip, detalye ng trabaho, impormasyon ng kliyente, at mga lagda ay nananatiling buo sa iyong device &mdash; hindi kailanman ang mga ito ina-upload, at walang kinakailangang account. Ang tanging itinatago sa labas ng iyong device ay ang signing key ng Dispute-Proof Mode, sa sarili mong iCloud Keychain kung ginagamit mo ito. Ginagamit lamang ang mikropono habang nagre-record ka ng video clip, at kung papayagan mo lamang ito. Upang mapabuti ang app, nangangalap ang SiteProof ng usage analytics at mga crash report sa pamamagitan ng Google Firebase &mdash; kabilang ang kung aling mga feature ang ginagamit at isang random na identifier na nag-uugnay sa aktibidad na ito sa iba't ibang session sa isang install (hindi kailanman sa iyo nang personal). Hindi kailanman kasama rito ang iyong nilalaman at hindi ito ginagamit para sa advertising. Maaari mo itong i-off anumang oras sa <strong>Mga setting &rarr; Data at Privacy</strong>, at sa EU, EEA, UK, at Switzerland nananatili itong naka-off maliban kung mag-opt in ka. Tingnan ang aming <a href="https://hugolamarreftc.github.io/SiteProof-legal/">privacy policy</a> para sa kumpletong detalye.</div>
       </details>
 
       <details>
@@ -1787,7 +1827,7 @@
 
       <details>
         <summary>Dispute-Proof Mode คืออะไร?</summary>
-        <div class="answer">Dispute-Proof Mode (Pro) จะสร้างลายนิ้วมือดิจิทัลให้กับภาพและคลิปวิดีโอทุกรายการทันทีที่ถ่าย ซึ่งก็คือค่าแฮช <strong>SHA-256</strong> ที่ลงนามด้วยคีย์ที่ไม่เคยออกไปจากอุปกรณ์ของคุณ หากมีผู้ใดแก้ไขไฟล์ในภายหลัง การตรวจสอบจะตรวจพบได้ คุณตรวจสอบงานใดก็ได้ทุกเมื่อด้วยปุ่มรูปโล่ที่ด้านบนของงาน ภาพและวิดีโอที่นำเข้าจากคลังรูปภาพจะได้รับลายนิ้วมือดิจิทัลเมื่อนำเข้า และระบุว่า<strong>นำเข้าแล้ว</strong> โดยจะไม่แสดงเป็น<strong>การถ่ายที่ตรวจสอบแล้ว</strong></div>
+        <div class="answer">Dispute-Proof Mode (Pro) จะสร้างลายนิ้วมือดิจิทัลให้กับภาพและคลิปวิดีโอทุกรายการทันทีที่ถ่าย ซึ่งก็คือค่าแฮช <strong>SHA-256</strong> ที่ลงนามด้วยคีย์ที่เก็บไว้บนอุปกรณ์ของคุณ (และในพวงกุญแจ iCloud ของคุณเอง หากคุณใช้งาน) หากมีผู้ใดแก้ไขไฟล์ในภายหลัง การตรวจสอบจะตรวจพบได้ คุณตรวจสอบงานใดก็ได้ทุกเมื่อด้วยปุ่มรูปโล่ที่ด้านบนของงาน ภาพและวิดีโอที่นำเข้าจากคลังรูปภาพจะได้รับลายนิ้วมือดิจิทัลเมื่อนำเข้า และระบุว่า<strong>นำเข้าแล้ว</strong> โดยจะไม่แสดงเป็น<strong>การถ่ายที่ตรวจสอบแล้ว</strong></div>
       </details>
 
       <details>
@@ -1803,6 +1843,10 @@
       <details>
         <summary>ชุดหลักฐาน (evidence package) คืออะไร?</summary>
         <div class="answer">ชุดหลักฐานคือไฟล์ ZIP ที่ประกอบด้วยภาพต้นฉบับและคลิปวิดีโอทั้งหมด รายการแสดงหลักฐานที่อ่านได้ด้วยเครื่อง (ค่าแฮช SHA-256, GPS, เวลา และสำหรับภาพและวิดีโอที่นำเข้า จะระบุแหล่งที่มาและเวลาที่นำเข้า) รายงาน PDF และลายเซ็นของลูกค้า โดยมีไฟล์ README อธิบายวิธีที่ผู้ใดก็ตามสามารถตรวจสอบค่าแฮชได้ด้วยตนเองโดยใช้เครื่องมือมาตรฐานอย่างเช่น <strong>shasum</strong> เมื่อมีคลิปวิดีโอ ชุดหลักฐานอาจมีขนาดใหญ่ หากเกิน 500 MB SiteProof จะแจ้งขนาดให้ทราบก่อนส่งออก และการใช้ AirDrop หรือบันทึกลงในแอปไฟล์จะเหมาะกว่าอีเมล</div>
+      </details>
+      <details>
+        <summary>ฉันเปลี่ยนไปใช้ iPhone เครื่องใหม่ ทำไมการตรวจสอบจึงแสดงว่า ไม่พบคีย์?</summary>
+        <div class="answer">ลายนิ้วมือดิจิทัลของภาพ (ค่าแฮช SHA-256) ตรวจสอบได้บนอุปกรณ์ทุกเครื่อง SiteProof จึงยังยืนยันได้ว่าภาพไม่ถูกแก้ไข แต่ลายเซ็นของภาพตรวจสอบได้เฉพาะด้วยคีย์ของโทรศัพท์เครื่องที่สร้างลายเซ็นนั้น และ iOS จะไม่ส่งต่อคีย์นั้นไปยังโทรศัพท์เครื่องใหม่ที่กู้คืนจากข้อมูลสำรอง iCloud ดังนั้น SiteProof จึงเก็บคีย์ไว้ในพวงกุญแจ iCloud ของคุณด้วย: หากเปิดพวงกุญแจ iCloud ไว้ และได้เปิด SiteProof เวอร์ชันล่าสุดบนโทรศัพท์เครื่องเก่าก่อนเปลี่ยนเครื่อง ลายเซ็นจะยังตรวจสอบได้บนเครื่องใหม่ หากไม่ได้ทำเช่นนั้น ภาพและการลงนามรับรองก่อนหน้านี้จะแสดง<strong>ไม่พบคีย์</strong> ซึ่งไม่ได้มีอะไรผิดปกติกับรายการเหล่านั้น เพียงแต่ไม่สามารถตรวจสอบลายเซ็นซ้ำบนโทรศัพท์เครื่องนี้ได้ ชุดหลักฐานที่ส่งออกไปก่อนหน้านี้ไม่ได้รับผลกระทบ</div>
       </details>
 
       <details>
@@ -1837,7 +1881,7 @@
 
       <details>
         <summary>ข้อมูลของฉันเป็นส่วนตัวหรือไม่?</summary>
-        <div class="answer">เป็นส่วนตัว ภาพถ่าย คลิปวิดีโอ รายละเอียดงาน ข้อมูลลูกค้า และลายเซ็นของคุณจะอยู่บนอุปกรณ์ของคุณทั้งหมด &mdash; ไม่มีการอัปโหลด และไม่จำเป็นต้องมีบัญชี ไมโครโฟนจะถูกใช้เฉพาะขณะที่คุณบันทึกคลิปวิดีโอ และเฉพาะเมื่อคุณอนุญาตเท่านั้น เพื่อปรับปรุงแอป SiteProof จะเก็บข้อมูลการวิเคราะห์การใช้งานและรายงานข้อขัดข้องผ่าน Google Firebase &mdash; รวมถึงฟีเจอร์ที่มีการใช้งานและตัวระบุแบบสุ่มที่เชื่อมโยงกิจกรรมนี้ข้ามเซสชันเข้ากับการติดตั้งหนึ่ง ๆ (ไม่เคยเชื่อมโยงกับตัวคุณเป็นการส่วนตัว) ซึ่งจะไม่รวมเนื้อหาของคุณและไม่ถูกนำไปใช้เพื่อการโฆษณา คุณสามารถปิดได้ทุกเมื่อใน<strong>การตั้งค่า &rarr; ข้อมูลและความเป็นส่วนตัว</strong> และในสหภาพยุโรป เขตเศรษฐกิจยุโรป สหราชอาณาจักร และสวิตเซอร์แลนด์ จะถูกปิดไว้เว้นแต่คุณจะเลือกเปิดใช้งาน ดูรายละเอียดทั้งหมดได้ใน<a href="https://hugolamarreftc.github.io/SiteProof-legal/">นโยบายความเป็นส่วนตัว</a>ของเรา</div>
+        <div class="answer">เป็นส่วนตัว ภาพถ่าย คลิปวิดีโอ รายละเอียดงาน ข้อมูลลูกค้า และลายเซ็นของคุณจะอยู่บนอุปกรณ์ของคุณทั้งหมด &mdash; ไม่มีการอัปโหลด และไม่จำเป็นต้องมีบัญชี สิ่งเดียวที่เก็บไว้นอกอุปกรณ์ของคุณคือคีย์ลงนามของ Dispute-Proof Mode ซึ่งอยู่ในพวงกุญแจ iCloud ของคุณเอง หากคุณใช้งาน ไมโครโฟนจะถูกใช้เฉพาะขณะที่คุณบันทึกคลิปวิดีโอ และเฉพาะเมื่อคุณอนุญาตเท่านั้น เพื่อปรับปรุงแอป SiteProof จะเก็บข้อมูลการวิเคราะห์การใช้งานและรายงานข้อขัดข้องผ่าน Google Firebase &mdash; รวมถึงฟีเจอร์ที่มีการใช้งานและตัวระบุแบบสุ่มที่เชื่อมโยงกิจกรรมนี้ข้ามเซสชันเข้ากับการติดตั้งหนึ่ง ๆ (ไม่เคยเชื่อมโยงกับตัวคุณเป็นการส่วนตัว) ซึ่งจะไม่รวมเนื้อหาของคุณและไม่ถูกนำไปใช้เพื่อการโฆษณา คุณสามารถปิดได้ทุกเมื่อใน<strong>การตั้งค่า &rarr; ข้อมูลและความเป็นส่วนตัว</strong> และในสหภาพยุโรป เขตเศรษฐกิจยุโรป สหราชอาณาจักร และสวิตเซอร์แลนด์ จะถูกปิดไว้เว้นแต่คุณจะเลือกเปิดใช้งาน ดูรายละเอียดทั้งหมดได้ใน<a href="https://hugolamarreftc.github.io/SiteProof-legal/">นโยบายความเป็นส่วนตัว</a>ของเรา</div>
       </details>
 
       <details>
